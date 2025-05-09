@@ -4,10 +4,18 @@
   {%- if request.page_type == 'password' -%}
     {{- shop.name -}}
   {%- else -%}
+    {%- if template == 'index' -%}
+      <title>MahaShe - Australian Cotton Clothing</title>
+      <meta name="description" content="Explore MahaShe's range of Australian cotton clothing. Discover quality cotton pieces–from cotton dresses, tops, shirts, trousers, and more. Shop now!">
+    {%- elsif canonical_url == "https://mahashe.com/collections/all" -%}
+      <title>Shop All Products - Cotton Clothing | MahaShe</title>
+      <meta name="description" content="Discover comfort and sustainability with our Australian cotton clothing collection at MahaShe–from women's dresses, tops, men's tailored shirts & more!">
+    {%- else -%}
     {{- page_title -}}
     {%- if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif -%}
     {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
     {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    {%- endif -%}
   {%- endif -%}
 </title>
 
