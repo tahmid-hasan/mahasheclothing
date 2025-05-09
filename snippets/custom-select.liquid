@@ -91,6 +91,13 @@
         </li>
       {%- endif -%}
       {%- for value in option_values -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         <li class="custom-select__option flex items-center js-option" id="{{ id }}-opt-{{ forloop.index0 }}" role="option"
             data-value="{{ value | escape }}"
             {%- if swatches %} data-swatch="{{ value | escape | downcase }}"
@@ -122,6 +129,13 @@
         <option value="">{{ default_option }}</option>
       {%- endunless -%}
       {%- for value in option_values -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         <option value="{{ value | escape }}"{% if value == selected_value %} selected{% endif %}>
           {{- option_names[forloop.index0] -}}
         </option>

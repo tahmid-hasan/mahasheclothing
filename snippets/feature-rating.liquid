@@ -33,6 +33,13 @@
 
   <div class="segment-bar" role="presentation">
     {% for i in (1..segments) %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
       <div class="segment-bar__segment{% if i == active_segment or i < active_segment and fill_segments %} segment-bar__segment--filled{% endif %}"></div>
     {% endfor %}
   </div>

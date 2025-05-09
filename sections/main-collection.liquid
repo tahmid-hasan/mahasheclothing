@@ -1,3 +1,8 @@
+{%- comment -%} Wholesale_Hub_Product_Visibility_Resource_Page Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility" %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% render "orbit_wholesale_page_replacement" %}
+{%- else -%}
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
@@ -32,6 +37,13 @@
       <div class="container{% if header_image_enabled %} container--not-mobile{% endif %} lightish-spaced-row-above">
         <related-collection-link-buttons class="related-collection-links related-collection-links--buttons align-center{% if header_image_enabled %} image-overlay__over{% endif %}" data-expander-btn-text="{{ 'sections.collection.view_all_related_collections' | t }}">
           {%- for loop_collection in section.settings.related_collections -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: loop_collection %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             {%- unless loop_collection.handle == collection.handle -%}
               <a class="btn btn--tertiary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
             {%- endunless -%}
@@ -61,6 +73,13 @@
           <div class="slider slider--no-scrollbar" id="slider-{{ section.id }}">
             <div class="slider__grid">
               {%- for loop_collection in section.settings.related_collections -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: loop_collection %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 {%- unless loop_collection.handle == collection.handle -%}
                   <div class="slider__item
                       gallery__item
@@ -230,6 +249,13 @@
               <button class="link-dropdown__button has-motion" aria-expanded="false" aria-controls="sort-dropdown-options" aria-describedby="sort-dropdown-heading">
                 <span class="link-dropdown__button-text">
                   {%- for option in collection.sort_options -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: option %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                     {%- if current_sort == option.value -%}
                       {{ option.name | escape }}
                       {%- break -%}
@@ -240,6 +266,13 @@
               </button>
               <div class="link-dropdown__options" id="sort-dropdown-options">
                 {%- for option in collection.sort_options -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: option %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   {%- liquid
                     if section.settings.sort_show_featured == false and option.value == 'manual' and collection.default_sort_by != 'manual'
                       continue
@@ -344,6 +377,9 @@
 </div>
 
 
+
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_Resource_Page End {%- endcomment -%}
 {% schema %}
 {
   "name": "Collection pages",

@@ -13,6 +13,13 @@
 
         <div class="article-list article-layout--columns article-layout--one-row">
           {% for article in blog.articles limit: section.settings.post_limit %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: article %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
           {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
           {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
           <div class="article" {%- render 'animation-attrs', attrs: animation_attrs -%}>
@@ -60,6 +67,13 @@
 
       <div class="article-list article-layout--columns article-layout--one-row">
         {% for i in (1..section.settings.post_limit) %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         <div class="article">
           <div class="article__inner">
             <div class="article-image">

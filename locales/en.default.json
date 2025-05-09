@@ -10,7 +10,7 @@
 {
   "general": {
     "localization": {
-      "country_label": "Country/Region",
+      "country_label": "Country\/Region",
       "countries_error": "Error fetching countries, please try again.",
       "language_label": "Language",
       "update": "Update"
@@ -81,7 +81,7 @@
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
-      "added_to_cart_with_link_html": "Added to your <a href=\"{{ cart_url }}\">Cart</a>",
+      "added_to_cart_with_link_html": "Added to your <a href=\"{{ cart_url }}\">Cart<\/a>",
       "backorder": "is backordered and will ship as soon as it is back in stock.",
       "barcode": "Barcode:",
       "choose_a": "Choose a",
@@ -100,9 +100,9 @@
       "pickup_availability": {
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <strong>{{ location_name }}</strong>",
+        "pick_up_available_at_html": "Pickup available at <strong>{{ location_name }}<\/strong>",
         "pick_up_unavailable": "Pickup currently unavailable",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <strong>{{ location_name }}</strong>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <strong>{{ location_name }}<\/strong>",
         "refresh": "Refresh",
         "unavailable": "Couldn't load pickup availability",
         "view_store_info": "View store information"
@@ -111,7 +111,7 @@
       "prev_product": "Previous",
       "price": {
         "unit_price": "Unit price",
-        "unit_price_separator": " / "
+        "unit_price_separator": " \/ "
       },
       "product_variants": "Product variants",
       "quantity": "Quantity",
@@ -121,7 +121,7 @@
         "other": "{{ count }} reviews"
       },
       "sale": "Sale",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "sku": "SKU:",
       "sold_out": "Sold out",
       "value_reduction_html": "{{ amount }} off",
@@ -168,7 +168,7 @@
       "cart": "Cart"
     },
     "footer": {
-      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}</a>."
+      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}<\/a>."
     },
     "faq_header": {
       "search_label": "Search FAQ",
@@ -212,7 +212,7 @@
         "powered_by": "This shop will be powered by"
       },
       "login_form": {
-        "admin_link_html": "Are you the store owner? <a href=\"/admin\">Log in here</a>",
+        "admin_link_html": "Are you the store owner? <a href=\"\/admin\">Log in here<\/a>",
         "heading": "Enter store using password",
         "password_label": "Password",
         "password_placeholder": "Password",
@@ -277,11 +277,11 @@
       "title": "Your cart",
       "backorder": "Product is backordered and will ship as soon as it is back in stock.",
       "free_shipping": "Your order is eligible for free shipping!",
-      "free_shipping_deficit_html": "Spend <strong>{{ amount }}</strong> more for <strong>free shipping</strong>!",
+      "free_shipping_deficit_html": "Spend <strong>{{ amount }}<\/strong> more for <strong>free shipping<\/strong>!",
       "taxes_and_shipping_at_checkout": "Taxes, discounts and shipping calculated at checkout.",
-      "taxes_and_shipping_at_checkout_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_and_shipping_at_checkout_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout.",
       "taxes_included_shipping_at_checkout": "Tax included, shipping and discounts calculated at checkout.",
-      "taxes_included_shipping_at_checkout_html": "Tax included, <a href=\"{{ link }}\">shipping</a> and discounts calculated at checkout.",
+      "taxes_included_shipping_at_checkout_html": "Tax included, <a href=\"{{ link }}\">shipping<\/a> and discounts calculated at checkout.",
       "update": "Update cart"
     },
     "items": {
@@ -303,7 +303,7 @@
       "title": "Estimate shipping",
       "country": "Country",
       "province": "Province",
-      "zip": "Zip/Postal Code",
+      "zip": "Zip\/Postal Code",
       "submit": "Calculate",
       "single_rate": "There is one shipping rate for this destination:",
       "multiple_rates": "There are multiple shipping rates for this destination:",
@@ -316,7 +316,7 @@
       "continue_shopping": "Continue shopping"
     },
     "terms": {
-      "agreement_html": "I agree to the <a href=\"{{ terms_url }}\" target=\"_blank\">terms and refund policy</a>",
+      "agreement_html": "I agree to the <a href=\"{{ terms_url }}\" target=\"_blank\">terms and refund policy<\/a>",
       "confirmation": "You must agree to the terms and conditions before continuing."
     }
   },
@@ -351,7 +351,7 @@
       "city": "City",
       "country": "Country",
       "province": "Province",
-      "zip": "Postal/Zip code",
+      "zip": "Postal\/Zip code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",

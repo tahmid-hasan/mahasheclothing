@@ -10,6 +10,13 @@
       {%- if form.errors -%}
         <ul class="styled-list"{% if form != blank %} autofocus{% endif %}>
           {%- for field in form.errors -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: field %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             <li>
               {% if field != 'form' %}
                 {{ form.errors.translated_fields[field] | replace: 'body', 'message' | capitalize }} 

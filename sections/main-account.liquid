@@ -45,6 +45,13 @@
               </thead>
               <tbody>
                 {% for order in customer.orders %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: order %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 <tr class="{% if order.cancelled %}cancelled_order{% endif %}">
                   <td class="responsive-table__cell-head">
                     <span class="responsive-table__cell-label">{{ 'customer.orders.order_number' | t }}</span>

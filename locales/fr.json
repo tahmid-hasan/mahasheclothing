@@ -81,7 +81,7 @@
   "products": {
     "product": {
       "add_to_cart": "Ajouter au panier",
-      "added_to_cart_with_link_html": "Ajouté à votre <a href=\"{{ cart_url }}\">Panier</a>",
+      "added_to_cart_with_link_html": "Ajouté à votre <a href=\"{{ cart_url }}\">Panier<\/a>",
       "backorder": "est en rupture de stock et sera expédié dès qu’il sera de retour en stock.",
       "barcode": "Code-barres:",
       "choose_a": "Choisir un",
@@ -100,9 +100,9 @@
       "pickup_availability": {
         "check_other_stores": "Vérifier la disponibilité dans d’autres boutiques",
         "pick_up_available": "Service de retrait disponible",
-        "pick_up_available_at_html": "Service de retrait disponible à <strong>{{ location_name }}</strong>",
+        "pick_up_available_at_html": "Service de retrait disponible à <strong>{{ location_name }}<\/strong>",
         "pick_up_unavailable": "Service de retrait actuellement indisponible",
-        "pick_up_unavailable_at_html": "Service de retrait actuellement indisponible à <strong>{{ location_name }}</strong>",
+        "pick_up_unavailable_at_html": "Service de retrait actuellement indisponible à <strong>{{ location_name }}<\/strong>",
         "refresh": "Actualiser",
         "unavailable": "Impossible de charger la disponibilité pour le Service de retrait",
         "view_store_info": "Voir les informations de la boutique"
@@ -111,7 +111,7 @@
       "prev_product": "Précédent",
       "price": {
         "unit_price": "Prix unitaire",
-        "unit_price_separator": " / "
+        "unit_price_separator": " \/ "
       },
       "product_variants": "Variantes de produit",
       "quantity": "Quantité",
@@ -121,7 +121,7 @@
         "other": "{{ count }} avis"
       },
       "sale": "Solde",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Frais de livraison</a> calculés lors du paiement.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frais de livraison<\/a> calculés lors du paiement.",
       "sku": "SKU :",
       "sold_out": "Épuisé",
       "value_reduction_html": "{{ amount }} de réduction",
@@ -168,7 +168,7 @@
       "cart": "Panier"
     },
     "footer": {
-      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}</a>."
+      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}<\/a>."
     },
     "faq_header": {
       "search_label": "Rechercher dans la FAQ",
@@ -212,7 +212,7 @@
         "powered_by": "Cette boutique est propulsée par"
       },
       "login_form": {
-        "admin_link_html": "Vous êtes propriétaire de cette boutique ? <a href=\"/admin\">Connectez-vous ici</a>",
+        "admin_link_html": "Vous êtes propriétaire de cette boutique ? <a href=\"\/admin\">Connectez-vous ici<\/a>",
         "heading": "Entrer dans la boutique avec un mot de passe",
         "password_label": "Mot de passe",
         "password_placeholder": "Mot de passe",
@@ -277,11 +277,11 @@
       "title": "Votre panier",
       "backorder": "Le produit est en rupture de stock et sera expédié dès qu’il sera de retour en stock.",
       "free_shipping": "Votre commande est éligible à la livraison gratuite !",
-      "free_shipping_deficit_html": "Dépensez <strong>{{ amount }}</strong> de plus pour <strong>la livraison gratuite</strong> !",
+      "free_shipping_deficit_html": "Dépensez <strong>{{ amount }}<\/strong> de plus pour <strong>la livraison gratuite<\/strong> !",
       "taxes_and_shipping_at_checkout": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement.",
-      "taxes_and_shipping_at_checkout_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "taxes_and_shipping_at_checkout_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition<\/a> calculés à l’étape du paiement.",
       "taxes_included_shipping_at_checkout": "Taxe incluse, frais d’expédition et réductions calculés à l’étape du paiement.",
-      "taxes_included_shipping_at_checkout_html": "Taxe incluse. <a href=\"{{ link }}\">Frais d’expédition</a> et réductions calculés à l’étape du paiement.",
+      "taxes_included_shipping_at_checkout_html": "Taxe incluse. <a href=\"{{ link }}\">Frais d’expédition<\/a> et réductions calculés à l’étape du paiement.",
       "update": "Mettre à jour le panier"
     },
     "items": {
@@ -316,7 +316,7 @@
       "continue_shopping": "Continuer les achats"
     },
     "terms": {
-      "agreement_html": "J’accepte les <a href=\"{{ terms_url }}\" target=\"_blank\">conditions générales de vente et la politique de remboursement</a>",
+      "agreement_html": "J’accepte les <a href=\"{{ terms_url }}\" target=\"_blank\">conditions générales de vente et la politique de remboursement<\/a>",
       "confirmation": "Vous devez accepter les termes et conditions avant de continuer."
     }
   },

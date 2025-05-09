@@ -14,6 +14,13 @@
         style="--duration: {{ 42 | minus: section.settings.speed }}s; --space: {{ section.settings.space }}px; --text-size: {{ section.settings.text_size }}px" role="marquee">
       {%- capture scrolling_content -%}
         {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
           {%- if block.type == 'text' %}
             {%- liquid
               assign text = block.settings.text
@@ -117,6 +124,13 @@
       {%- endcapture -%}
 
       {%- for i in (1..15) -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         <span class="marquee-content{% if contains_link %} marquee-content--contains-link{% endif %}"{% unless forloop.first %} aria-hidden="true"{% endunless %}>
           {%- if forloop.first -%}
             {{ scrolling_content }}

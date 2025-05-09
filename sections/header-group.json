@@ -25,7 +25,7 @@
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "Announce <a href=\"#\">something</a> here",
+            "text": "Announce <a href=\"#\">something<\/a> here",
             "bg_color": "#f4f6f8",
             "text_color": "#4c4c4b"
           }

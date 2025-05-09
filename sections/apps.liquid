@@ -1,6 +1,13 @@
 <div class="{% if section.settings.show_space %}fully-spaced-row--medium{% endif %}">
   {%- unless section.settings.full_width -%}<div class="container">{%- endunless -%}
     {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
       {% render block %}
     {%- endfor -%}
   {%- unless section.settings.full_width -%}</div>{%- endunless -%}

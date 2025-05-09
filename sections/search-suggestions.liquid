@@ -7,11 +7,25 @@
         </span>
         <ul class="search-suggestions__results-list">
           {%- for query in predictive_search.resources.queries -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: query %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             <li class="search-suggestions__list-item">
               <a href="{{ query.url }}" class="search-suggestions__item">{{ query.styled_text }}</a>
             </li>
           {%- endfor -%}
           {%- for collection in predictive_search.resources.collections -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: collection %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             <li class="search-suggestions__list-item search-suggestions__list-item--collection">
               <a href="{{ collection.url }}" class="search-suggestions__item">{{ collection.title }}</a>
             </li>

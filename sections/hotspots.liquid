@@ -18,6 +18,13 @@
   }
 
   {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
     .section-id-{{ section.id }} .hotspot-{{ forloop.index }} {
       top: {{ block.settings.hotspot_y }}%;
       left: {{ block.settings.hotspot_x }}%;
@@ -31,6 +38,13 @@
       }
 
       {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         .section-id-{{ section.id }} .hotspot-{{ forloop.index }} {
           top: {{ block.settings.hotspot_y_mobile }}%;
           left: {{ block.settings.hotspot_x_mobile }}%;
@@ -96,6 +110,13 @@
 
     <div class="hotspot-container">
       {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
         {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
         <div class="hotspot hotspot-{{ forloop.index }} hotspot--outer-{{ section.settings.outer_circle }} hotspot--on-{% if block.settings.hotspot_x < 50 %}right{% else %}left{% endif %}" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>

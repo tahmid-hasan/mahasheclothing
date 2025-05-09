@@ -10,7 +10,7 @@
 {
   "general": {
     "localization": {
-      "country_label": "Land/Regio",
+      "country_label": "Land\/Regio",
       "countries_error": "Fout bij het ophalen van landen, probeer het opnieuw.",
       "language_label": "Taal",
       "update": "Bijwerken"
@@ -81,7 +81,7 @@
   "products": {
     "product": {
       "add_to_cart": "Toevoegen aan winkelwagen",
-      "added_to_cart_with_link_html": "Toegevoegd aan uw <a href=\"{{ cart_url }}\">Winkelwagen</a>",
+      "added_to_cart_with_link_html": "Toegevoegd aan uw <a href=\"{{ cart_url }}\">Winkelwagen<\/a>",
       "backorder": "is nabesteld en wordt verzonden zodra het weer op voorraad is.",
       "barcode": "Streepjescode:",
       "choose_a": "Kiezen",
@@ -100,9 +100,9 @@
       "pickup_availability": {
         "check_other_stores": "Bekijk beschikbaarheid in andere winkels",
         "pick_up_available": "Pick-up beschikbaar",
-        "pick_up_available_at_html": "Pick-up beschikbaar bij <strong>{{ location_name }}</strong>",
+        "pick_up_available_at_html": "Pick-up beschikbaar bij <strong>{{ location_name }}<\/strong>",
         "pick_up_unavailable": "Pick-up momenteel niet beschikbaar",
-        "pick_up_unavailable_at_html": "Pick-up momenteel niet beschikbaar bij <strong>{{ location_name }}</strong>",
+        "pick_up_unavailable_at_html": "Pick-up momenteel niet beschikbaar bij <strong>{{ location_name }}<\/strong>",
         "refresh": "Vernieuw",
         "unavailable": "Kon pick-up beschikbaarheid niet laden",
         "view_store_info": "Bekijk winkelinformatie"
@@ -111,7 +111,7 @@
       "prev_product": "Vorige",
       "price": {
         "unit_price": "Eenheid prijs",
-        "unit_price_separator": " / "
+        "unit_price_separator": " \/ "
       },
       "product_variants": "Productvarianten",
       "quantity": "Aantal",
@@ -121,7 +121,7 @@
         "other": "{{ count }} beoordelingen"
       },
       "sale": "Uitverkoop",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzending</a> berekend bij het afrekenen.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzending<\/a> berekend bij het afrekenen.",
       "sku": "SKU:",
       "sold_out": "Uitverkocht",
       "value_reduction_html": "{{ amount }} korting",
@@ -168,7 +168,7 @@
       "cart": "Winkelwagen"
     },
     "footer": {
-      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}</a>."
+      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}<\/a>."
     },
     "faq_header": {
       "search_label": "Zoek naar veelgestelde vragen",
@@ -212,7 +212,7 @@
         "powered_by": "Deze winkel wordt aangedreven door"
       },
       "login_form": {
-        "admin_link_html": "Bent u de eigenaar van de winkel? <a href=\"/admin\">Hier inloggen</a>",
+        "admin_link_html": "Bent u de eigenaar van de winkel? <a href=\"\/admin\">Hier inloggen<\/a>",
         "heading": "Ga winkel binnen met wachtwoord",
         "password_label": "Wachtwoord",
         "password_placeholder": "Wachtwoord",
@@ -277,11 +277,11 @@
       "title": "Uw winkelwagen",
       "backorder": "Het product is nabesteld en wordt verzonden zodra het weer op voorraad is.",
       "free_shipping": "Uw bestelling komt in aanmerking voor gratis verzending!",
-      "free_shipping_deficit_html": "Spendeer <strong>{{ amount }}</strong> voor <strong>gratis verzending</strong>!",
+      "free_shipping_deficit_html": "Spendeer <strong>{{ amount }}<\/strong> voor <strong>gratis verzending<\/strong>!",
       "taxes_and_shipping_at_checkout": "Belastingen, kortingen en verzending worden bij de checkout berekend.",
-      "taxes_and_shipping_at_checkout_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
+      "taxes_and_shipping_at_checkout_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending<\/a> worden bij de checkout berekend.",
       "taxes_included_shipping_at_checkout": "Inclusief belasting; verzendkosten en kortingen worden bij de checkout berekend.",
-      "taxes_included_shipping_at_checkout_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending</a> en kortingen worden bij de checkout berekend.",
+      "taxes_included_shipping_at_checkout_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending<\/a> en kortingen worden bij de checkout berekend.",
       "update": "Winkelwagen bijwerken"
     },
     "items": {
@@ -316,7 +316,7 @@
       "continue_shopping": "Doorgaan met winkelen"
     },
     "terms": {
-      "agreement_html": "Ik ga akkoord met de <a href=\"{{ terms_url }}\" target=\"_blank\">voorwaarden en het restitutiebeleid</a>",
+      "agreement_html": "Ik ga akkoord met de <a href=\"{{ terms_url }}\" target=\"_blank\">voorwaarden en het restitutiebeleid<\/a>",
       "confirmation": "U moet akkoord gaan met de voorwaarden voordat u verdergaat."
     }
   },

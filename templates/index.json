@@ -20,7 +20,7 @@
             "title": "Slide heading",
             "title_size": 84,
             "title_size_mobile": 46,
-            "text": "<p>And optional subtext</p>",
+            "text": "<p>And optional subtext<\/p>",
             "enlarge_text": true,
             "text_alignment": "center center"
           }
@@ -33,7 +33,7 @@
             "title": "Slide heading",
             "title_size": 84,
             "title_size_mobile": 46,
-            "text": "<p>And optional subtext</p>",
+            "text": "<p>And optional subtext<\/p>",
             "enlarge_text": true,
             "text_alignment": "bottom left"
           }
@@ -67,7 +67,7 @@
         "1635927863703110df-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
             "enlarge_text": true
           }
         }
@@ -114,7 +114,7 @@
         "ae36be52-0e56-4829-ac5d-f47fd671d46b": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>",
+            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
             "enlarge_text": false
           }
         },
@@ -260,7 +260,7 @@
         "7e652131-c89a-42cd-b26d-2a7d6d2950b7": {
           "type": "text",
           "settings": {
-            "text": "<p>Use a video to get a customer's attention</p>",
+            "text": "<p>Use a video to get a customer's attention<\/p>",
             "enlarge_text": true
           }
         },
@@ -280,7 +280,7 @@
         "c9a40eba-4d41-4ab8-afa3-bebce9e038a9"
       ],
       "settings": {
-        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_external": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_description": "",
         "text_alignment": "center center",
         "height_desktop": 580,
@@ -296,7 +296,7 @@
           "type": "text_block",
           "settings": {
             "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
             "button_label": "Optional button",
             "link": ""
           }
@@ -305,7 +305,7 @@
           "type": "text_block",
           "settings": {
             "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
             "button_label": "Optional button",
             "link": ""
           }
@@ -314,7 +314,7 @@
           "type": "text_block",
           "settings": {
             "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
             "button_label": "Optional button",
             "link": ""
           }
@@ -399,7 +399,7 @@
       "settings": {
         "full_width": true,
         "heading": "Our store",
-        "address": "<p>123 Fake St.<br/>Toronto, Canada</p><p>Mon - Fri, 10am - 9pm<br/>Saturday, 11am - 9pm<br/>Sunday, 11am - 5pm</p>",
+        "address": "<p>123 Fake St.<br\/>Toronto, Canada<\/p><p>Mon - Fri, 10am - 9pm<br\/>Saturday, 11am - 9pm<br\/>Sunday, 11am - 5pm<\/p>",
         "button": "Directions",
         "show_pin": true,
         "show_feature_image": true,

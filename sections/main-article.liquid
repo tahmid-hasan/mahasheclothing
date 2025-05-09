@@ -75,6 +75,13 @@
         <div class="iconmeta tags">
           <span class="label">{{ 'blogs.tags.label' | t }}:</span>
           {% for tag in article.tags %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: tag %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             {{ tag | link_to_tag: tag }}
           {% endfor %}
         </div>
@@ -133,6 +140,13 @@
 
           {% comment %} Loop through approved comments: {% endcomment %}
           {% for comment in article.comments %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: comment %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             <div class="comment {% if forloop.first %}first{% endif %}">
               <div class="text">{{ comment.content }}</div>
               <div class="author small-text">&mdash; {{ comment.author }}</div>

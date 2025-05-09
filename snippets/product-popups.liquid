@@ -8,6 +8,13 @@
 -%}
 
 {%- for block in popups -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
   <modal-dialog class="modal modal--for-product fixed top-0 left-0 w-full h-full flex items-center justify-center" id="modal-{{ block.id }}" role="dialog" aria-label="{{ block.settings.link_text | escape }}" aria-modal="true" tabindex="-1" {{ block.shopify_attributes }}>
     <div class="modal__window relative bg-theme-bg text-theme-text text-start overflow-hidden has-motion">
       <button type="button" class="modal__close-btn absolute js-close-modal">

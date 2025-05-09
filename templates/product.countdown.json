@@ -71,8 +71,7 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -83,8 +82,7 @@
         },
         "vendor": {
           "type": "vendor",
-          "settings": {
-          }
+          "settings": {}
         },
         "651f80d0-6c6c-4fb7-9c1c-4e72770b5735": {
           "type": "richtext",
@@ -227,8 +225,7 @@
       "blocks": {
         "61312c04-eda5-4f76-9c1e-5df2cfc0c9b9": {
           "type": "subheading",
-          "settings": {
-          }
+          "settings": {}
         },
         "07cf6c3c-c7fc-45a1-ac2b-90da59b1418f": {
           "type": "heading",
@@ -267,8 +264,7 @@
       "blocks": {
         "3cb36bcb-8282-4ea2-a3f7-2d049394c551": {
           "type": "subheading",
-          "settings": {
-          }
+          "settings": {}
         },
         "1cb84edd-a839-44b6-94be-f4618ef1c033": {
           "type": "heading",

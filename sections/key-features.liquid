@@ -44,6 +44,13 @@
 <script src="{{ 'scrolling-image-list.js' | asset_url }}" defer></script>
 
 {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
   {%- if block.settings.video_shopify != blank -%}
     <link rel="stylesheet" href="{{ 'video.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
     <script src="{{ 'video.js' | asset_url }}" defer></script>
@@ -53,6 +60,13 @@
 
 {% style %}
   {% for block in section.blocks %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
     #{{ section.id }}[data-current-index="{{ forloop.index }}"] {
       --text-color: {{ block.settings.text_color.rgb }};
       --heading-color: {{ block.settings.text_color.rgb }};
@@ -81,6 +95,13 @@
     class="scrolling-image-list block use-color-scheme fully-padded-row--{% if section.blocks.size > 1 %}large{% else %}medium{% endif %}"
     style="--image-width: {{ section.settings.image_max_width }}px">
   {% for block in section.blocks %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
     <div class="scrolling-image-list__background" data-index="{{ forloop.index }}"></div>
   {% endfor %}
   <div class="container container--not-mobile">
@@ -90,6 +111,13 @@
           <div class="slider slider--no-scrollbar fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
             <div class="slider__grid md:block">
               {% for block in section.blocks %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 <div class="slider__item flex-none basis-full" {{ block.shopify_attributes }}>
                   <div class="scrolling-image-list__image" data-index="{{ forloop.index }}" tabindex="0">
                     {%- if block.settings.video_shopify != blank -%}
@@ -184,6 +212,13 @@
 
           <div class="scrolling-image-list-dots flex justify-center mobile-only js" role="presentation">
             {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
               <div class="scrolling-image-list-dots__dot" data-index="{{ forloop.index }}"></div>
             {%- endfor -%}
           </div>
@@ -199,6 +234,13 @@
 
             <div class="scrolling-image-list__content-list">
               {% for block in section.blocks %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 <div class="spaced-row scrolling-image-list__content{% if block.settings.show_icon %} scrolling-image-list__content--with-icon{% if block.settings.show_segments and section.settings.segment_position == 'over-text' %} scrolling-image-list__content--icon-beside-rating{% endif %}{% endif %}" data-index="{{ forloop.index }}" tabindex="0">
                   {%- if block.settings.show_icon -%}
                     {%- if block.settings.icon_image == blank -%}
