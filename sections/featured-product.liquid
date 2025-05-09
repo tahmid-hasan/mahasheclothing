@@ -1,69 +1,3 @@
-{% comment %} Wholesale_Club_Product_Prices Start {% endcomment %}
-{% assign base_product = product %}
-{% assign base_variant = product.selected_or_first_available_variant %}
-
-{% if shop.metafields.sawholesale['base_price'] == blank %}
-  {% assign base_price = 'compare_at_price' %}
-{% else %}
-  {% assign base_price = shop.metafields.sawholesale['base_price'] %}
-{% endif %}
-
-{% assign saw_discount = 0 %}{% assign saw_has_discount = false %}
-
-{% if customer.tags != blank %}
-  {% for mf in base_product.metafields.sawholesale %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: mf %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-    {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
-    {% if customer.tags contains product_customer_tag %}
-      {% assign saw_has_discount = true %}
-      {% assign discount_key = product_customer_tag | prepend: 'discount_' %}
-      {% assign price_key = product_customer_tag | prepend: 'price_' %}
-      {% assign saw_discount = base_product.metafields.sawholesale[discount_key] | divided_by: 100.0 %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% assign saw_discount = 1 | minus: saw_discount %}
-
-{% if base_price == 'price' or base_variant.compare_at_price == blank  or base_variant.compare_at_price == 0 or base_variant.compare_at_price < base_variant.price %}
-  {% assign saw_variant_compare_at_price = base_variant.price %}
-{% else %}
-  {% assign saw_variant_compare_at_price = base_variant.compare_at_price %}
-{% endif %}
-
-{% assign cpe = shop.metafields.sawholesale['cpe'] | default: "true" %}
-{% if base_variant.metafields.sawholesale[price_key] != blank and cpe == "true" %}
-  {% assign saw_variant_price = base_variant.metafields.sawholesale[price_key] %}
-{% else %}
-  {% assign saw_variant_price = saw_variant_compare_at_price | times: saw_discount %}
-{% endif %}
-
-{% if saw_has_discount == false or saw_variant_price >= saw_variant_compare_at_price %}
-  {% assign WCProduct_Price = base_product.price %}
-  {% assign WCProduct_ComparePrice = base_product.compare_at_price %}
-  {% assign WCProduct_PriceMin = base_product.price_min %}
-  {% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}
-  {% assign WCProduct_PriceMax = base_product.price_max %}
-  {% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}
-  {% assign WCProduct_VariantPrice = base_variant.price %}
-  {% assign WCProduct_VariantComparePrice = base_variant.compare_at_price %}
-{% else %}   
-  {% assign WCProduct_Price = saw_variant_price %}
-  {% assign WCProduct_PriceMin = base_product.price_min | times: saw_discount %}
-  {% assign WCProduct_PriceMax = base_product.price_max | times: saw_discount %}
-  {% assign WCProduct_ComparePrice = saw_variant_compare_at_price %}
-  {% if base_product.compare_at_price_min != 0 %}{% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}{% else %}{% assign WCProduct_ComparePriceMin = base_product.price_min %}{% endif %}
-  {% if base_product.compare_at_price_max != 0 %}{% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}{% else %}{% assign WCProduct_ComparePriceMax = base_product.price_max %}{% endif %}
-  {% assign WCProduct_VariantPrice = saw_variant_price %}
-  {% assign WCProduct_VariantComparePrice = saw_variant_compare_at_price %}
-{% endif %}
-{% comment %} Wholesale_Club_Product_Prices End {% endcomment %}
 {%- liquid
   assign product = all_products[section.settings.product]
   assign zoom_size = 5000
@@ -92,32 +26,12 @@
   endif
 -%}
 
-```html
-<div class="container section-{{ section.id }} featured-product product-detail {% if WCProduct_VariantComparePrice > WCProduct_VariantPrice %}variant-status--on-sale{% endif %} strongly-spaced-row layout-content-with-image-left layout-content-with-image--large-image valign-middle"
-    data-section-type="featured-product"
-    data-components="accordion,custom-select,modal"
-    data-cc-animate>
 {%- if product.media.size > 1 -%}
   <script src="{{ 'slideshow.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 <product-form class="js-product product-info featured-product strongly-spaced-row container">
-```  {% if product != blank %}
-```html
-    {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-    {%- for media in product.media -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: media %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-      {%- if media.id == featured_media.id -%}
-        {%- assign initial_slide = forloop.index0 -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
-    {% render 'structured-data-product', product: product, current_variant: current_variant %}
+  {% if product != blank %}
     <media-gallery class="media-gallery media-gallery--layout-{{ section.settings.gallery_layout }} media-gallery-size-{{ section.settings.gallery_size }} product-column-left {% if product.media.size > 1 %}has-thumbnails{% endif %}"
       {%- if enable_media_grouping %}
         data-media-grouping-enabled
@@ -131,8 +45,7 @@
       {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
 
       <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
-```        <div class="main-image">
-```html
+        <div class="main-image">
           {%- liquid
             for media in product.media
               if media.id == featured_media.id
@@ -146,12 +59,13 @@
             <div class="slider slider--no-scrollbar" id="slider-{{ section.id }}" aria-live="polite" aria-atomic="true">
               <div class="slider__grid">
                 {%- for media in product.media -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: media %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: media %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   <div class="slider__item{% if forloop.index0 == initial_slide %} is-active{% endif %}"
                     role="group" aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
                     aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
@@ -169,7 +83,7 @@
 
                   </div>
                 {%- endfor -%}
-```              </div>
+              </div>
             </div>
 
             {%- if product.media.size > 1 -%}
@@ -190,6 +104,13 @@
           {%- if section.settings.gallery_layout contains 'collage' or section.settings.gallery_layout contains 'columns' -%}
             <div class="product-media-collage desktop-only">
               {%- for media in product.media -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: media %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 <div class="product-media-collage__item{% if forloop.index0 == initial_slide %} is-active{% endif %}" data-media-id="{{ media.id }}">
                   {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
                     <a class="block show-gallery" href="{{ media.preview_image | image_url: width: zoom_size }}" aria-label="{{ 'products.product.media.load_image' | t: index: forloop.index }}">
@@ -228,40 +149,41 @@
         </div>
 
         {% if product.media.size > 1 %}
-<carousel-slider class="carousel block thumbnails{% unless section.settings.gallery_layout contains 'carousel' %} mobile-only{% endunless %}">
-  <div class="slider slider--no-scrollbar">
-    <ul class="slider__grid">
-      {% for media in product.media %}
-        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-        {%- capture hide_resource -%}{% render "wc_product_visibility", resource: media %}{%- endcapture -%}
-        {%- if hide_resource == "true" -%}
-          {% continue %}
-        {%- endif -%}
-        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-        
-        <li class="slider__item{% if forloop.index0 == initial_slide %} is-active{% endif %}" data-media-id="{{ media.id }}">
-          <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | image_url: width: zoom_size }}{% else %}#{% endif %}">
-            {%- liquid
-              assign custom_aspect_ratio = media.preview_image.aspect_ratio | at_least: min_aspect_ratio
-              render 'image' with media.preview_image, sizes: '65px', widths: '65px, 130px', custom_aspect_ratio: custom_aspect_ratio, custom_crop: 'contain'
-            -%}
+          <carousel-slider class="carousel block thumbnails{% unless section.settings.gallery_layout contains 'carousel' %} mobile-only{% endunless %}">
+            <div class="slider slider--no-scrollbar">
+              <ul class="slider__grid">
+                {% for media in product.media %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: media %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
-            {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-              <div class="thumbnail__badge">
-                {% render 'icon-video-badge-full-color' %}
-              </div>
-            {%- endif -%}
-            {%- if media.media_type == 'model' -%}
-              <div class="thumbnail__badge">
-                {% render 'icon-3d-badge-full-color' %}
-              </div>
-            {%- endif -%}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</carousel-slider>        {% endif %}
+                  <li class="slider__item{% if forloop.index0 == initial_slide %} is-active{% endif %}" data-media-id="{{ media.id }}">
+                    <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | image_url: width: zoom_size }}{% else %}#{% endif %}">
+                      {%- liquid
+                        assign custom_aspect_ratio = media.preview_image.aspect_ratio | at_least: min_aspect_ratio
+                        render 'image' with media.preview_image, sizes: '65px', widths: '65px, 130px', custom_aspect_ratio: custom_aspect_ratio, custom_crop: 'contain'
+                      -%}
+
+                      {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                        <div class="thumbnail__badge">
+                          {% render 'icon-video-badge-full-color' %}
+                        </div>
+                      {%- endif -%}
+                      {%- if media.media_type == 'model' -%}
+                        <div class="thumbnail__badge">
+                          {% render 'icon-3d-badge-full-color' %}
+                        </div>
+                      {%- endif -%}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </carousel-slider>
+        {% endif %}
       </div>
 
       {%- if section.settings.enable_zoom -%}
@@ -290,6 +212,13 @@
               "media": {
                 {%- assign standardMediaFound = false -%}
                 {%- for media in product.media -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: media %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   {%- liquid
                     for variant in sortedVariants
                       if variant.featured_media and variant.featured_media.id == media.id
@@ -328,6 +257,13 @@
             <div class="slider slider--no-scrollbar" id="slider-{{ section.id }}" aria-live="polite" aria-atomic="true">
               <div class="slider__grid">
                 {%- for i in (1..3) -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   <div class="slider__item{% if forloop.first %} is-active{% endif %}"
                     role="group" aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
                     aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
@@ -356,14 +292,15 @@
         {%- if section.settings.gallery_layout contains 'collage' or section.settings.gallery_layout contains 'columns' -%}
           <div class="product-media-collage desktop-only">
             {%- for i in (1..3) -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: i %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
-<div class="product-media-collage__item{% if forloop.first %} is-active{% endif %}" data-media="{{ forloop.index }}">                <div class="placeholder-image">{{ 'product-' | append: i | placeholder_svg_tag }}</div>
+              <div class="product-media-collage__item{% if forloop.first %} is-active{% endif %}" data-media="{{ forloop.index }}">
+                <div class="placeholder-image">{{ 'product-' | append: i | placeholder_svg_tag }}</div>
               </div>
             {%- endfor -%}
           </div>
@@ -373,6 +310,13 @@
           <div class="slider slider--no-scrollbar">
             <ul class="slider__grid">
               {% for i in (1..3) %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                 <li class="slider__item{% if forloop.first %} is-active{% endif %}" data-media-id="{{ forloop.index }}">
                   <a class="thumbnail thumbnail--media-image" href="#">
                     <div class="placeholder-image">{{ 'product-' | append: i | placeholder_svg_tag }}</div>
@@ -381,36 +325,20 @@
               {% endfor %}
             </ul>
           </div>
-```
         </carousel-slider>
-
-        <div class="thumbnails">
-          {% for i in (1..3) %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: i %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-            <a class="thumbnail thumbnail--media-image{% if forloop.first %} selected{% endif %}" href="#" data-media-id="{{ forloop.index }}">
-              <div class="placeholder-image">{{ 'product-' | append: i | placeholder_svg_tag }}</div>
-            </a>
-          {% endfor %}
-        </div>
-```      </div>
+      </div>
     </media-gallery>
   {% endif %}
 
   <div class="detail product-column-right" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
     <div class="product-form{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}" data-ajax-add-to-cart="true" data-product-id="{{ product.id }}">
       {% for block in section.blocks %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: block %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
         {% case block.type %}
           {% when '@app' %}
@@ -429,9 +357,9 @@
 
           {% when 'price' %}
             <div class="price-container" {{ block.shopify_attributes }}>
-<div class="product-info__price product-price product-price--large">
-  {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
-</div>              </div>
+              <div class="product-info__price product-price product-price--large">
+                {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
+              </div>
 
               <div class="price-descriptors">
                 {%- if product != blank -%}
@@ -457,6 +385,156 @@
                 {% if section.settings.inventory_transfers_enable %}
                   <variant-content class="product-inventory-transfer">
                     {%- for variant in product.variants -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: variant %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
+{% comment %} Wholesale_Hub_Product_Prices Start {% endcomment %}
+{% assign base_product = product %}
+{% assign base_variant = variant %}
+{% assign WCNonFractionalCurrencies = "AFN, ALL, BIF, CLP, DJF, GNF, ISK, JPY, KMF, KRW, LAK, LBP, MGA, MMK, PYG, RSD, RWF, SLL, STD, UGX, VND, VUV, XAF, XOF, XPF, YER" | split: ", "%}
+
+{% assign WCCartUsingNonFractionalCurrency = false %}
+{% for non_fractional_currency in WCNonFractionalCurrencies %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: non_fractional_currency %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
+  {% if cart.currency.iso_code == non_fractional_currency %}
+    {% assign WCCartUsingNonFractionalCurrency = true %}
+  {% endif %}
+{% endfor %}
+
+
+{% assign WCCartUsingSecondaryMarketDiscount = false %}
+{% unless shop.metafields.sawholesale.primary_market_id == blank %}
+  {% if localization.market.id != shop.metafields.sawholesale.primary_market_id %}
+    {% assign WCCartUsingSecondaryMarketDiscount = true %}
+  {% endif %}
+{% endunless%}
+
+{% if shop.metafields.sawholesale['base_price'] == blank %}
+  {% assign base_price = 'compare_at_price' %}
+{% else %}
+  {% assign base_price = shop.metafields.sawholesale['base_price'] %}
+{% endif %}
+
+{% assign saw_discount = 0 %}{% assign saw_has_discount = false %}
+
+{% if customer.tags != blank and WCCartUsingSecondaryMarketDiscount == false %}
+  {% for mf in base_product.metafields.sawholesale %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: mf %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
+    {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
+    {% if customer.tags contains product_customer_tag %}
+      {% assign saw_has_discount = true %}
+      {% assign discount_key = product_customer_tag | prepend: 'discount_' %}
+      {% assign price_key = product_customer_tag | prepend: 'price_' %}
+      {% assign saw_discount = base_product.metafields.sawholesale[discount_key] | divided_by: 100.0 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if customer.tags != blank and WCCartUsingSecondaryMarketDiscount == true %}
+  {% for collection in base_product.collections %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: collection %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
+    {% for discount in collection.metafields.sawholesale.discounts.value %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: discount %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
+      {% if customer.tags contains discount.tag %}
+        {% assign saw_has_discount = true %}
+        {% assign this_discount = discount.discount_percent | divided_by: 100.0 %}
+        {% if this_discount > saw_discount %}{% assign saw_discount = this_discount %}{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% comment %}
+  Rather than calculating the percentage remaining after a discount the secondary
+  markets logic uses the raw discount percentage to calculate the saw_variant_price
+  For a 10% discount:
+    In the primary market the saw_discount would be: 90%
+    In the secondary market the saw_discount would be: 10%
+{% endcomment %}
+{% unless WCCartUsingSecondaryMarketDiscount %}
+  {% assign saw_discount = 1 | minus: saw_discount %}
+{% endunless %}
+
+{% if WCCartUsingSecondaryMarketDiscount == true or base_price == 'price' or base_variant.compare_at_price == blank or base_variant.compare_at_price == 0 or base_variant.compare_at_price < base_variant.price %}
+  {% assign saw_variant_compare_at_price = base_variant.price %}
+{% else %}
+  {% assign saw_variant_compare_at_price = base_variant.compare_at_price %}
+{% endif %}
+
+{% assign cpe = shop.metafields.sawholesale['cpe'] | default: "true" %}
+
+{% if base_variant.metafields.sawholesale[price_key] != blank and cpe == "true" %}
+  {% assign saw_variant_price = base_variant.metafields.sawholesale[price_key] %}
+{% else %}
+  {% comment %}
+    For a 10% discount on a variant price of 100:
+      In the primary market the saw_variant_price would be: 100 * 0.90 = 90
+      In the secondary market the saw_variant_price would be: 100 * 0.10 = 10
+      So saw_variant_price is not made available to the global scope in a secondary
+      market. Doing so might cause strange behaviour if not properly accounted for.
+  {% endcomment %}
+  {% if WCCartUsingSecondaryMarketDiscount %}
+    {% assign WCVariant_DiscountAmount = saw_variant_compare_at_price | times: saw_discount %}
+  {% else %}
+    {% assign saw_variant_price = saw_variant_compare_at_price | times: saw_discount %}
+    {% assign WCVariant_DiscountAmount = 0 %}
+  {% endif %}
+{% endif %}
+{% if WCCartUsingSecondaryMarketDiscount %}
+  {% assign WCVariant_Price = saw_variant_compare_at_price %}
+{% else %}
+  {% assign WCVariant_Price = saw_variant_price %}
+{% endif %}
+
+{% if saw_has_discount == false or saw_variant_price >= saw_variant_compare_at_price %}
+  {% assign WCProduct_Price = base_product.price %}
+  {% assign WCProduct_ComparePrice = base_product.compare_at_price %}
+  {% assign WCProduct_PriceMin = base_product.price_min %}
+  {% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}
+  {% assign WCProduct_PriceMax = base_product.price_max %}
+  {% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}
+  {% assign WCProduct_VariantPrice = base_variant.price %}
+  {% assign WCProduct_VariantComparePrice = base_variant.compare_at_price %}
+{% else %}
+  {% assign WCProduct_Price =  WCVariant_Price | minus: WCVariant_DiscountAmount %}
+  {% assign WCProduct_PriceMin = base_product.price_min | times: saw_discount %}
+  {% assign WCProduct_PriceMax = base_product.price_max | times: saw_discount %}
+  {% assign WCProduct_ComparePrice = saw_variant_compare_at_price %}
+  {% if base_product.compare_at_price_min != 0 %}{% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}{% else %}{% assign WCProduct_ComparePriceMin = base_product.price_min %}{% endif %}
+  {% if base_product.compare_at_price_max != 0 %}{% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}{% else %}{% assign WCProduct_ComparePriceMax = base_product.price_max %}{% endif %}
+  {% assign WCProduct_VariantPrice = WCVariant_Price | minus: WCVariant_DiscountAmount %}
+  {% assign WCProduct_VariantComparePrice = saw_variant_compare_at_price %}
+{% endif %}
+{% comment %} Wholesale_Hub_Product_Prices End {% endcomment %}
+
                       {%- if variant.incoming -%}
                         {%- liquid
                           if variant.next_incoming_date
@@ -596,106 +674,12 @@
               %}
             </div>
 
-```liquid
-{% when 'buy_buttons' %}
-  <div class="buy-buttons-row" {{ block.shopify_attributes }}>
-    {%- if product != blank -%}
-      {% form 'product', product, id: product_form_id, class: 'form js-product-form', data-product-id: product.id %}
-        <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
-        <select name="id" class="original-selector{% if product.variants.size == 1 %} hidden{% endif %}" aria-label="{{ 'products.product.selector_label' | t | escape }}">
-          {% for variant in product.variants %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: variant %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+          {% when 'buy-buttons' %}
+            <buy-buttons class="buy-buttons-row block" {{ block.shopify_attributes }}>
+              {% if product != blank %}
+                {% form 'product', product, id: product_form_id, class: 'form js-product-form', data-product-id: product.id %}
+                  <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
 
-{% comment %} Wholesale_Club_Product_Prices Start {% endcomment %}
-{% assign base_product = product %}
-{% assign base_variant = variant %}
-
-{% if shop.metafields.sawholesale['base_price'] == blank %}
-  {% assign base_price = 'compare_at_price' %}
-{% else %}
-  {% assign base_price = shop.metafields.sawholesale['base_price'] %}
-{% endif %}
-
-{% assign saw_discount = 0 %}{% assign saw_has_discount = false %}
-
-{% if customer.tags != blank %}
-  {% for mf in base_product.metafields.sawholesale %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: mf %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-    {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
-    {% if customer.tags contains product_customer_tag %}
-      {% assign saw_has_discount = true %}
-      {% assign discount_key = product_customer_tag | prepend: 'discount_' %}
-      {% assign price_key = product_customer_tag | prepend: 'price_' %}
-      {% assign saw_discount = base_product.metafields.sawholesale[discount_key] | divided_by: 100.0 %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% assign saw_discount = 1 | minus: saw_discount %}
-
-{% if base_price == 'price' or base_variant.compare_at_price == blank  or base_variant.compare_at_price == 0 or base_variant.compare_at_price < base_variant.price %}
-  {% assign saw_variant_compare_at_price = base_variant.price %}
-{% else %}
-  {% assign saw_variant_compare_at_price = base_variant.compare_at_price %}
-{% endif %}
-
-{% assign cpe = shop.metafields.sawholesale['cpe'] | default: "true" %}
-{% if base_variant.metafields.sawholesale[price_key] != blank and cpe == "true" %}
-  {% assign saw_variant_price = base_variant.metafields.sawholesale[price_key] %}
-{% else %}
-  {% assign saw_variant_price = saw_variant_compare_at_price | times: saw_discount %}
-{% endif %}
-
-{% if saw_has_discount == false or saw_variant_price >= saw_variant_compare_at_price %}
-  {% assign WCProduct_Price = base_product.price %}
-  {% assign WCProduct_ComparePrice = base_product.compare_at_price %}
-  {% assign WCProduct_PriceMin = base_product.price_min %}
-  {% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}
-  {% assign WCProduct_PriceMax = base_product.price_max %}
-  {% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}
-  {% assign WCProduct_VariantPrice = base_variant.price %}
-  {% assign WCProduct_VariantComparePrice = base_variant.compare_at_price %}
-{% else %}   
-  {% assign WCProduct_Price = saw_variant_price %}
-  {% assign WCProduct_PriceMin = base_product.price_min | times: saw_discount %}
-  {% assign WCProduct_PriceMax = base_product.price_max | times: saw_discount %}
-  {% assign WCProduct_ComparePrice = saw_variant_compare_at_price %}
-  {% if base_product.compare_at_price_min != 0 %}{% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}{% else %}{% assign WCProduct_ComparePriceMin = base_product.price_min %}{% endif %}
-  {% if base_product.compare_at_price_max != 0 %}{% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}{% else %}{% assign WCProduct_ComparePriceMax = base_product.price_max %}{% endif %}
-  {% assign WCProduct_VariantPrice = saw_variant_price %}
-  {% assign WCProduct_VariantComparePrice = saw_variant_compare_at_price %}
-{% endif %}
-{% comment %} Wholesale_Club_Product_Prices End {% endcomment %}
-
-            <option value="{{ variant.id }}"
-              {% if variant == product.selected_or_first_available_variant %} selected="selected"{% endif %}
-              {% if section.settings.inventory_transfers_enable and variant.incoming %}
-                {%- if variant.next_incoming_date -%}
-                  {%- assign date = variant.next_incoming_date | date: format: 'date' -%}
-                  {%- if variant.available -%}
-                    data-inventory-transfer="{{ 'products.transfers.will_not_ship_until' | t: date: date | escape }}"
-                  {%- else -%}
-                    data-inventory-transfer="{{ 'products.transfers.will_be_in_stock_after' | t: date: date | escape }}"
-                  {%- endif -%}
-                {%- else -%}
-                  data-inventory-transfer="{{ 'products.transfers.waiting_for_stock' | t | escape }}"
-                {%- endif -%}
-              {% endif %}
-              data-stock="{% if variant.inventory_management == 'shopify' and variant.inventory_quantity <= 0 %}out{% endif %}">{{ variant.title | escape }}</option>
-          {% endfor %}
-        </select>
-```
                   {% if product.available %}
                     {%- liquid
                       assign gift_card_recipient_feature_active = false
@@ -783,103 +767,9 @@
                     </button>
                   </div>
                 </div>
-{% endif %}
-</div>
+              {% endif %}
+            </buy-buttons>
 
-{% when 'inventory_level' %}
-<div class="variant-visibility-area" {{ block.shopify_attributes }}>
-  {%- for variant in product.variants -%}
-    {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-    {%- capture hide_resource -%}{% render "wc_product_visibility", resource: variant %}{%- endcapture -%}
-    {%- if hide_resource == "true" -%}
-      {% continue %}
-    {%- endif -%}
-    {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-    {% comment %} Wholesale_Club_Product_Prices Start {% endcomment %}
-    {% assign base_product = product %}
-    {% assign base_variant = variant %}
-
-    {% if shop.metafields.sawholesale['base_price'] == blank %}
-      {% assign base_price = 'compare_at_price' %}
-    {% else %}
-      {% assign base_price = shop.metafields.sawholesale['base_price'] %}
-    {% endif %}
-
-    {% assign saw_discount = 0 %}{% assign saw_has_discount = false %}
-
-    {% if customer.tags != blank %}
-      {% for mf in base_product.metafields.sawholesale %}
-        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-        {%- capture hide_resource -%}{% render "wc_product_visibility", resource: mf %}{%- endcapture -%}
-        {%- if hide_resource == "true" -%}
-          {% continue %}
-        {%- endif -%}
-        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-        {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
-        {% if customer.tags contains product_customer_tag %}
-          {% assign saw_has_discount = true %}
-          {% assign discount_key = product_customer_tag | prepend: 'discount_' %}
-          {% assign price_key = product_customer_tag | prepend: 'price_' %}
-          {% assign saw_discount = base_product.metafields.sawholesale[discount_key] | divided_by: 100.0 %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-
-    {% assign saw_discount = 1 | minus: saw_discount %}
-
-    {% if base_price == 'price' or base_variant.compare_at_price == blank or base_variant.compare_at_price == 0 or base_variant.compare_at_price < base_variant.price %}
-      {% assign saw_variant_compare_at_price = base_variant.price %}
-    {% else %}
-      {% assign saw_variant_compare_at_price = base_variant.compare_at_price %}
-    {% endif %}
-
-    {% assign cpe = shop.metafields.sawholesale['cpe'] | default: "true" %}
-    {% if base_variant.metafields.sawholesale[price_key] != blank and cpe == "true" %}
-      {% assign saw_variant_price = base_variant.metafields.sawholesale[price_key] %}
-    {% else %}
-      {% assign saw_variant_price = saw_variant_compare_at_price | times: saw_discount %}
-    {% endif %}
-
-    {% if saw_has_discount == false or saw_variant_price >= saw_variant_compare_at_price %}
-      {% assign WCProduct_Price = base_product.price %}
-      {% assign WCProduct_ComparePrice = base_product.compare_at_price %}
-      {% assign WCProduct_PriceMin = base_product.price_min %}
-      {% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}
-      {% assign WCProduct_PriceMax = base_product.price_max %}
-      {% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}
-      {% assign WCProduct_VariantPrice = base_variant.price %}
-      {% assign WCProduct_VariantComparePrice = base_variant.compare_at_price %}
-    {% else %}   
-      {% assign WCProduct_Price = saw_variant_price %}
-      {% assign WCProduct_PriceMin = base_product.price_min | times: saw_discount %}
-      {% assign WCProduct_PriceMax = base_product.price_max | times: saw_discount %}
-      {% assign WCProduct_ComparePrice = saw_variant_compare_at_price %}
-      {% if base_product.compare_at_price_min != 0 %}{% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}{% else %}{% assign WCProduct_ComparePriceMin = base_product.price_min %}{% endif %}
-      {% if base_product.compare_at_price_max != 0 %}{% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}{% else %}{% assign WCProduct_ComparePriceMax = base_product.price_max %}{% endif %}
-      {% assign WCProduct_VariantPrice = saw_variant_price %}
-      {% assign WCProduct_VariantComparePrice = saw_variant_compare_at_price %}
-    {% endif %}
-    {% comment %} Wholesale_Club_Product_Prices End {% endcomment %}
-
-    {% if variant.inventory_management == 'shopify' and variant.inventory_quantity > 0 %}
-      {% if block.settings.show_inventory_notice == 'always' or variant.inventory_quantity <= block.settings.inventory_threshold %}
-        <script type="text/template" data-variant-id="{{ variant.id }}">
-          {%- liquid
-            assign show_inventory_count = false
-            if block.settings.show_inventory_count == 'always'
-              assign show_inventory_count = true
-            endif
-            if block.settings.show_inventory_count == 'low' and variant.inventory_quantity <= block.settings.inventory_threshold
-              assign show_inventory_count = true
-            endif
-          -%}
-        </script>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</div>
           {% when 'inventory-level' %}
             <div {{ block.shopify_attributes }}>
               {%- render 'product-inventory', product: product, current_variant: current_variant, block: block -%}
@@ -1112,12 +1002,13 @@
                         <fieldset>
                           <legend class="label">{{ block.settings.label | escape }}</legend>
                           {% for option in custom_options %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: option %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: option %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                             <label class="label">
                               <input type="radio" form="{{ product_form_id }}" name="{{ custom_input_name }}" value="{{ option | escape }}"{% if forloop.first %} checked{% endif %}>
                               <span class="label__text-beside-input">{{ option | escape }}</span>
@@ -1126,6 +1017,7 @@
                         </fieldset>
                       </div>
                     {% endif %}
+
                 {% endcase %}
               </div>
             {%- endif -%}
@@ -1170,6 +1062,13 @@
                 {%- if block.settings.style == 'card' -%}
                   <div class="fixed-layout">
                     {%- for related_product in block.settings.product_list -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: related_product %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                       <div class="column column--half">
                         {%- render 'product-block', product: related_product, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio, grid: 5 -%}
                       </div>
@@ -1179,6 +1078,13 @@
                   <div class="related-swatches" style="--image-width: {{ block.settings.image_width }}px">
                     {%- capture widths -%}{{ block.settings.image_width }}, {{ block.settings.image_width | times: 2 }}{%- endcapture -%}
                     {%- for related_product in block.settings.product_list -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: related_product %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                       <a class="related-swatch img-var
                           {%- if related_product.id == product.id %} related-swatch--active{% endif %}
                           {%- unless related_product.available %} related-swatch--unavailable{% endunless %}"
@@ -1249,6 +1155,13 @@
                       <div class="collection-listing slider slider--no-scrollbar">
                         <div class="product-grid product-grid--per-row-2 product-grid--per-row-mob-2 slider__grid product-grid--carousel">
                           {% for related_product in recommendations.products limit: block.settings.max_products %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: related_product %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                             <div class="slider__item{% if forloop.first %} is-active{% endif %}">
                               {%- render 'product-block', product: related_product, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio, grid: 5 -%}
                             </div>
@@ -1330,19 +1243,19 @@
     </div>
   </div>
 
-{% if product != blank %}
-  {%- render 'wc_product_json', product: product -%}
-  {%- render 'product-popups', product: product -%}
-  {%- render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant -%}
-{% endif %}
-
+  {%- if product != blank -%}
+    {%- render 'product-popups', product: product -%}
+    {%- render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant -%}
+  {%- endif -%}
 </product-form>
 
-{% if product != blank %}
+{%- if product != blank -%}
   <script type="application/json" id="ProductJson-{{ product.id }}">
-    {{- product | json -}}
+    {%- render 'orbit_wholesale_product_json', product: product -%}
   </script>
-{% endif %}
+{%- endif -%}
+
+
 {% schema %}
 {
   "name": "Featured product",

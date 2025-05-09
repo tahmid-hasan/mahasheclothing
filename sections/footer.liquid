@@ -1,7 +1,23 @@
+{% comment %}Determine customer type{% endcomment %}
+{% assign customer_type = 'retail' %}
+{% for tag in customer.tags %}
+  {% if tag == 'wholesale' %}
+    {% assign customer_type = 'wholesale' %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 {% if section.blocks != blank %}
   <div class="container container--no-max section-footer__row-container">
     <div class="section-footer__row section-footer__row--blocks" data-num-blocks="{{ section.blocks.size }}">
       {% for block in section.blocks %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         {% case block.type %}
         {% when '@app' %}
           <div class="section-footer__row__col">
@@ -13,13 +29,28 @@
             {% if block.settings.title != blank %}
               {%- assign title_word_count = block.settings.title | split: ' ' | size -%}
               <div class="section-footer__title heading-font h6{% if title_word_count < 4 %} no-wrap{% endif %}">
-                {{- block.settings.title | escape -}}
+                {%- if customer_type == 'retail'-%}
+                  {{- block.settings.title | escape -}}
+                {%- else -%}
+                  {{- block.settings.title_wholesale | escape -}}
+                {%- endif -%}
               </div>
             {% endif %}
 
-            {% if block.settings.menu != blank %}
+            {%- assign menu = block.settings.menu -%}
+            {%- if customer_type == 'wholesale' and block.settings.menu_wholesale != blank -%}
+              {%- assign menu = block.settings.menu_wholesale -%}
+            {%- endif -%}
+            {% if menu != blank %}
               <ul class="section-footer__menu-block__menu" {{ block.shopify_attributes }}>
                 {% for link in linklists[block.settings.menu].links %}
+                  {%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+                  {%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: link %}{%- endcapture -%}
+                  {%- if hide_resource == "true" -%}
+                    {% continue %}
+                  {%- endif -%}
+                  {%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   <li>
                     <a href="{{ link.url }}" {% if link.title.size < 25 %}class="no-wrap"{% endif %}>
                       {{- link.title -}}
@@ -153,6 +184,13 @@
       {% if section.settings.show_payment_icons %}
         <div class="section-footer__payment-icons">
           {% for type in shop.enabled_payment_types %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: type %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             {{ type | payment_type_svg_tag: class: 'section-footer__payment-icon' }}
           {% endfor %}
         </div>
@@ -162,6 +200,13 @@
         <div class="section-footer__lower-menu" role="navigation">
           <ul class="section-footer__lower-menu__list" aria-label="{{ 'accessibility.secondary_navigation' | t }}">
             {% for link in linklists[section.settings.lower_menu].links %}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: link %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
               <li>
                 <a href="{{ link.url }}">
                   {{- link.title -}}
@@ -267,6 +312,19 @@
           "type": "link_list",
           "id": "menu",
           "label": "Menu",
+          "info": "This menu won't show dropdown items",
+          "default": "footer"
+        },
+        {
+          "type": "text",
+          "id": "title_wholesale",
+          "label": "Heading (Wholesale)",
+          "default": "Quick links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu_wholesale",
+          "label": "Menu (Wholesale)",
           "info": "This menu won't show dropdown items",
           "default": "footer"
         }

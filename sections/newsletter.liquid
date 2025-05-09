@@ -2,6 +2,7 @@
   <div class="container strongly-padded-row align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
 
     <h2 class="hometitle h4 in-content">{{ section.settings.title | escape }}</h2>
+
     <div class="rte lightly-spaced-row">{{ section.settings.subheading }}</div>
 
     <div class="signup-form">
@@ -11,23 +12,9 @@
             <h4>{{ 'newsletter.success' | t }}</h4>
           </div>
         {% else %}
-{%- assign form_errors_id = section.id | append: '-error' -%}
-{%- render 'form-errors', form: form, id: form_errors_id, class: 'inline-block' -%}
-
-{%- if form.errors %}
-  <div class="signup-form__response signup-form__response--error">
-    {%- for field in form.errors %}
-      {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-      {%- capture hide_resource -%}{% render "wc_product_visibility", resource: field %}{%- endcapture -%}
-      {%- if hide_resource == "true" -%}
-        {% continue %}
-      {%- endif -%}
-      {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-      <p class="error">{{ field | capitalize }} - {{ form.errors.messages[field] }}</p>
-    {%- endfor %}
-  </div>
-{%- endif %}          <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
+          {%- assign form_errors_id = section.id | append: '-error' -%}
+          {%- render 'form-errors', form: form, id: form_errors_id, class: 'inline-block' -%}
+          <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
           <div>
             <div class="signup-form__inline-container">
               <input type="email"

@@ -7,12 +7,12 @@
       opacity: {{ section.settings.image_opacity | times: 1.2 | at_most: 100 }}%;
     }
     {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: block %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
       #section-id-{{ section.id }} .logo-list__logo-{{ forloop.index }} .logo-list__logo-image {
         max-width: {{ block.settings.image_width }}px;
@@ -28,15 +28,16 @@
     <div class="logo-list-container">
       <div class="logo-list logo-list--count-{{ section.blocks.size }}">
         {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: block %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
-{%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
-{%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}          {%- if block.settings.link != blank -%}
+          {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
+          {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
+          {%- if block.settings.link != blank -%}
             <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link fade-in-up" href="{{ block.settings.link }}" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
           {%- else -%}
             <div class="logo-list__logo logo-list__logo-{{ forloop.index }} fade-in-up" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
@@ -71,12 +72,12 @@
 
         {% if section.blocks.size == 0 %}
           {%- for i in (1..4) -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: i %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
             <div class="logo-list__logo">
               <div class="logo-list__logo-image">

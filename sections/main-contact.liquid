@@ -30,21 +30,6 @@
             </div>
           {% endif %}
 
-          {% if form.errors %}
-            <ul class="errors">
-              {% for field in form.errors %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: field %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
-
-                <li>{{ field | replace: 'body','Message' | capitalize }} - {{ form.errors.messages[field] }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-
           {%- render 'form-errors', form: form -%}
 
           {%- if request.design_mode -%}
@@ -62,25 +47,34 @@
           {%- endif -%}
 
           {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
             {%- if block.type == 'hidden_input' -%}
               <input type="hidden" name="contact[{{ block.settings.title | handle }}]" value="{{ block.settings.value }}"/>
             {%- endif -%}
           {%- endfor -%}
+
           <div class="flexible-layout flexible-layout--form">
             {% for block in section.blocks %}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "wc_product_visibility", resource: block %}{%- endcapture -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
 
-{%- liquid
-  if block.type == 'hidden_input'
-    continue
-  endif
--%}
-<div class="column column--{% if block.settings.half_width %}half{% else %}full{% endif %}" {{ block.shopify_attributes }}>                {% case block.type %}
+              {%- liquid
+                if block.type == 'hidden_input'
+                  continue
+                endif
+              -%}
+              <div class="column column--{% if block.settings.half_width %}half{% else %}full{% endif %}" {{ block.shopify_attributes }}>
+                {% case block.type %}
                   {% when 'name_input' %}
                     <label for="contact_name">{{ 'contact.form.name' | t }}</label>
                     <input

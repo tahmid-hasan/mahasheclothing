@@ -65,6 +65,13 @@
       {%- endif -%}
 
       {%- for block in section.blocks -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
         {%- if use_slideshow -%}<div class="slideshow__slide{% if forloop.first %} is-active{% endif %}" style="--slide-index: {{ forloop.index }}">{%- endif -%}
 
         <div class="testimonial testimonial-{{ forloop.index }}{% if show_image == false %} reading-width{% endif %}" {{ block.shopify_attributes }}>
@@ -77,6 +84,13 @@
               {%- if block.settings.star_rating > 0 -%}
                 <div class="testimonial__star-rating heading-font">
                   {%- for i in (1..block.settings.star_rating) -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: i %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+
                   <span class="testimonial__star">{% render 'icon-star' %}</span>
                   {%- endfor -%}
                 </div>

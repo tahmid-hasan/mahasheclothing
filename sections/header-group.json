@@ -13,16 +13,39 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "blocks": {
+        "announcement_wpXriD": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE SHIPPING FOR ALL AUSTRALIAN & NZ ORDERS OVER $150 | 30 DAY RETURNS",
+            "link": "shopify://pages/wholesale",
+            "text_wholesale": "Easy re-orders ~  Maximum postage price capped at $40",
+            "link_wholesale": "",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_wpXriD"
+      ],
       "settings": {
-        "announcement_show": true,
-        "announcement_text": "FREE SHIPPING FOR ALL AUSTRALIAN & NZ ORDERS OVER $150 | 30 DAY RETURNS",
-        "announcement_link": "",
-        "announcement_text-wholesale": "Easy re-orders ~  Maximum postage price capped at $40",
-        "announcement_link-wholesale": "shopify://pages/wholesale",
+        "message_font_size": 14,
         "announcement_bar_col": "#f5f0ee",
+        "announcement_bar_gradient": "",
         "announcement_text_col": "#212121",
         "show_social_icons": true,
-        "menu": ""
+        "menu": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false
       }
     },
     "header": {
@@ -32,15 +55,24 @@
         "logo": "shopify://shop_images/G_320x100_logo_Ex.jpg",
         "logo_img_width_int": 255,
         "mobile_logo_img_width_int": 130,
+        "logo_h1": true,
         "enable_sticky": true,
+        "enable_transparent": false,
+        "transparent_color": "#ffffff",
         "menu_linklist": "main-menu",
         "menu_layout": "underneath",
         "nav_featured_link": "",
+        "menu_linklist_mobile": "",
+        "mobile_expand_with_entire_link": true,
         "enable_mobile_promo_carousel": true,
         "enable_nav_mob_products": true,
         "nav_mob_products_title": "LATEST AURORA COLLECTION",
         "nav_mob_products_collection": "new-arrivals",
-        "enable_search": true
+        "enable_search": true,
+        "search_recommendations_title": "",
+        "search_recommendations_menu": "",
+        "icon_strategy": "icons_cart_search",
+        "cart_icon": "basket"
       }
     },
     "store-messages": {
@@ -81,6 +113,9 @@
       ],
       "settings": {
         "head_not_home_only": false,
+        "head_not_col_bg": "#f4f6f8",
+        "head_not_col_txt1": "#171717",
+        "head_not_col_txt2": "#4c4c4b",
         "head_not_mob_show": false,
         "head_not_mob_text": "jhbdfo",
         "head_not_mob_url": ""
