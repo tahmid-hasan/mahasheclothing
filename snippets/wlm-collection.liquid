@@ -1,0 +1,14 @@
+{%- assign w_continue = 'no' -%}
+{% assign wlmHideItem_Collection = false %}{% assign wlmLockedTags203064 = false %}
+
+
+{% assign wlmLockedTags203064 = false %}
+{% for tag in customer.tags %}
+{% if tag == 'Blogger' %}{% assign wlmLockedTags203064 = true %}{% endif %}
+{% endfor %}
+
+
+
+{% if wlmHideItem_Collection == true %}{% continue %}{% endif %}
+
+{%- if wlm_is_render == 'yes' -%}{{- w_continue -}}{%-endif-%}
