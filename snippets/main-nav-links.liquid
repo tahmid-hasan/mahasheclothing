@@ -1,12 +1,5 @@
 <ul class="navigation__tier-1">
   {% for link in linklists[link_list].links %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: link %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
     {%- liquid
       assign has_dropdown = false
       assign use_columns = false
@@ -52,13 +45,6 @@
 
         <div id="NavigationTier2-{{ forloop.index }}{% if mobile %}-mob{% endif %}" class="navigation__tier-2-container navigation__child-tier">
           {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
             {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
             {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-large' -%}
               <div class="navigation__wide-promotion{% if block.settings.enable_fade %} navigation__wide-promotion--with-fade{% endif %}" {{ block.shopify_attributes }}>
@@ -145,13 +131,6 @@
                 {% if use_columns and link.levels == 1 %}
                   <li class="navigation__item navigation__column">
                     {% for child_link in link.links %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: child_link %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                       <a href="{{ child_link.url }}" class="navigation__link{% if featured_links contains child_link.title %} featured-link{% endif %}">
                         {{- child_link.title | escape -}}
                       </a>
@@ -159,13 +138,6 @@
                   </li>
                 {% else %}
                   {% for child_link in link.links %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: child_link %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                     <li class="navigation__item{% if child_link.links != blank %} navigation__item--with-children{% endif %}{% if use_columns %} navigation__column{% endif %}{% if featured_links contains child_link.title %} featured-link{% endif %}">
                       <a href="{{ child_link.url }}" class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true" aria-expanded="false"{% endif %}>
                         {{- child_link.title | escape -}}
@@ -178,13 +150,6 @@
                         <div class="navigation__tier-3-container navigation__child-tier">
                           <ul class="navigation__tier-3">
                             {% for child_child_link in child_link.links %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: child_child_link %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                             <li class="navigation__item{% if featured_links contains child_child_link.title %} featured-link{% endif %}">
                               <a class="navigation__link" href="{{ child_child_link.url }}">{{ child_child_link.title | escape }}</a>
                             </li>
@@ -201,13 +166,6 @@
                   {% # theme-check-enable LiquidTag %}
                   {%- if mobile == false -%}
                     {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                       {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
                       {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-small' -%}
                         <li class="desktop-only navigation__column navigation__column--promotion" {{ block.shopify_attributes }}>
@@ -231,13 +189,6 @@
                   {%- else -%}
                     <li class="navigation__column navigation__column--promotion{% if section.settings.enable_mobile_promo_carousel and link.links.size > 0 %} navigation__column--promotion-carousel{% endif %}">
                       {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                         {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
                         {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-small' -%}
                           <div class="menu-promotion">

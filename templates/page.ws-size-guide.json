@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1649806356cc45b7c1": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Wildflower_Banner_Orchid.jpg",
+        "mobile_image": "shopify://shop_images/230823_MAHASHE_Campaign_13_3675.jpg",
+        "height": "fixed",
+        "height_desktop": 500,
+        "height_mobile": 600,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "1649806373bf85f216": {
+      "type": "rich-text",
+      "blocks": {
+        "1649806373e6b805d9-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Sizing Explained",
+            "use_h1": false
+          }
+        },
+        "1649806373e6b805d9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the beautiful things about MahaShe is that our designs fit many different shapes and sizes.</p><p>Seeing as our clothes are all 100% cotton, there is little room for movement, but the designs are so beautifully shaped this isn't a problem. In fact it is what makes our pieces look so flattering on the body. </p><p>All our garments are preshrunk, so there's no fear of them shrinking on you once they're washed. They will stretch slightly with wear, during the day & also over time. Think jeans.</p><p>Our size runs are from 6 to 18 (XS-XXXL). </p><p>The exact measurements in 'Size & Fit' of each product. </p><p><br/>If you are unsure of sizing feel free to <a href=\"https://mahashe.com/contact/\">contact</a> us at anytime: <a href=\"https://mahashe.com/contact/\">wholesale@mahashe.com</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1649806373e6b805d9-0",
+        "1649806373e6b805d9-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "16498070186b58c453": {
+      "type": "testimonials",
+      "blocks": {
+        "16498070188411106d-0": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Thank you so much for my lovely dress and top, both fitted perfectly! And WOW the speed of delivery was amazing. Very impressed. Will definitely be ordering more items in the future!",
+            "author": "Cath Knipe",
+            "image": "shopify://shop_images/230823_MAHASHE_Campaign_14_3727_186a391d-eded-4294-a1a6-690b88383c59.jpg",
+            "image_caption": "",
+            "link": ""
+          }
+        },
+        "16498070188411106d-1": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Thank you once again for a beautifully made dress really love the style and the fit is perfect . I am an older lady but your style and the sizing is just perfect . This is dress number SIX. I have recommended your clothing to lots of people.",
+            "author": "Pam Semmler",
+            "image": "shopify://shop_images/Bianca_Blossom_3_cec48245-8a5a-4a66-ab94-da9838d5457e.jpg",
+            "image_caption": "",
+            "link": ""
+          }
+        },
+        "5d643568-1d4d-4912-9589-3a630706ce01": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "I received my order (so quick !) thank you and I’m thrilled to say the dresses I chose fit me perfectly!  I am not usually an on-line shopper as I don’t have a “normal” figure so this is a big deal!",
+            "author": "Kathy Finch",
+            "image": "shopify://shop_images/Wildflower_Betty.jpg",
+            "image_caption": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16498070188411106d-0",
+        "16498070188411106d-1",
+        "5d643568-1d4d-4912-9589-3a630706ce01"
+      ],
+      "settings": {
+        "title": "mahashe customer love",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 18,
+        "quote_text_size_mobile": 18,
+        "image_shape": "square",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "1649806356cc45b7c1",
+    "1649806373bf85f216",
+    "16498070186b58c453",
+    "main"
+  ]
+}

@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1648726906145788f3": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        "h1 {color: #ffffff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Aurora_1st_drop_rack_Ex_b60e567b-7eb7-4a3d-84a9-e67869b3720d.jpg",
+        "mobile_image": "shopify://shop_images/Mob_Aurora_Stevie_rack_shot_Ex_c4b1bb13-4a51-42da-90bd-4abd4a7b2fa2.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "1648773512963b0a13": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Mob_Aurora_Us_BTS_Ex.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "164878737909b37a98": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_1382.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "1648787468e31baa27": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_1347_2.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "1648728134d6ad05a7": {
+      "type": "rich-text",
+      "blocks": {
+        "164872813331502aed-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "164872813331502aed-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"We work closely with our suppliers, ensuring an honest and fair working environment, this isn’t something we have had to implement, this has been there from day one.\"</em></p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "164872813331502aed-0",
+        "164872813331502aed-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "16487268894a1dfccd": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Mob_Aurora_White_Check_Ex.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "1649846346325f6a7c": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Compost_Pack_2_edb7a435-de8e-461f-9903-46fd8ec4077d.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "1649846876a3e853de": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/MC_UKI_street_for_mailchimp.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "1649847100470ee324": {
+      "type": "rich-text",
+      "blocks": {
+        "164984710063f3081b-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "164984710063f3081b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"We avoid trends, we obviously can’t help be swayed by the world around us, but we intentionally design with longevity in mind\".</em></p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "164984710063f3081b-0",
+        "164984710063f3081b-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "1649847669a5798fa8": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/DSC01343_B_W.png",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "1648726906145788f3",
+    "1648773512963b0a13",
+    "164878737909b37a98",
+    "1648787468e31baa27",
+    "1648728134d6ad05a7",
+    "16487268894a1dfccd",
+    "1649846346325f6a7c",
+    "1649846876a3e853de",
+    "1649847100470ee324",
+    "1649847669a5798fa8",
+    "main"
+  ]
+}

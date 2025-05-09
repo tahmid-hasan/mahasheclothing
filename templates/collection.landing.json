@@ -133,7 +133,9 @@
         "sort_show_alpha": true,
         "sort_show_price": true,
         "sort_show_date": true,
-        "related_collections": [],
+        "related_collections": [
+
+        ],
         "related_collections_style": "gallery",
         "rel_coll_gall_aspect_ratio": "2",
         "image_position": "center center",
@@ -198,7 +200,8 @@
       "blocks": {
         "subheading_9hbrtY": {
           "type": "subheading",
-          "settings": {}
+          "settings": {
+          }
         },
         "heading_bcDpbD": {
           "type": "heading",
@@ -244,27 +247,33 @@
       "blocks": {
         "collection_9yg96G": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "collection_Ew4WQG": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "collection_HiHMUW": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "collection_RKLYz9": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "collection_W67MwX": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         },
         "collection_UetyWw": {
           "type": "collection",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [

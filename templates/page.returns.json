@@ -262,36 +262,42 @@
       "blocks": {
         "question_MaLPNf": {
           "type": "question",
-          "settings": {}
+          "settings": {
+          }
         },
         "question_WrriD8": {
           "type": "question",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
         "question_MaLPNf",
         "question_WrriD8"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "collapsible_tabs_FAbMDN": {
       "type": "collapsible-tabs",
       "blocks": {
         "question_7CTQQD": {
           "type": "question",
-          "settings": {}
+          "settings": {
+          }
         },
         "question_4D86Qg": {
           "type": "question",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
         "question_7CTQQD",
         "question_4D86Qg"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "contact_form_akYenb": {
       "type": "contact-form",

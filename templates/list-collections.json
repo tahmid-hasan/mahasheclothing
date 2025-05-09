@@ -11,10 +11,184 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "title": "Our collections",
+        "display_type": "all",
+        "grid": 4
+      }
+    },
+    "205819f2-3182-46c5-af1f-34e7884fb0f7": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Aurora_Stevie_White_Check_Ex.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "center"
+      }
+    },
+    "e945bdeb-6961-4e49-9da7-64e3bd3cf61e": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Eliza_Aster_Ex.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "image_with_text_UUmej8": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Home_Page_Isla_Ex.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "11f581e2-c91b-4f28-8483-5b99d201f36d": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Wildflower_Collection.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "8e0bf67d-dba3-47eb-9739-91cd0efbf295": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Violet_Collection_e657cbbe-8497-477f-868e-0d08758be9c9.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "center"
+      }
+    },
+    "800bfc8d-627b-4324-ba2e-20b2d5c7bc19": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Marigold_Collection.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "ef1742ef-229d-48b9-9731-f42512f48eba": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Dusk_Collection_32a2b678-7ce9-4a74-9587-62344ebb84af.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "center"
+      }
+    },
+    "c1106d34-3a08-4e08-9ebb-66978af15c4b": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Emerald_Collection_353d13a6-08e4-47bb-98ef-d5e03b9e1524.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "1648869925a1be59b6": {
+      "type": "collection-list",
+      "blocks": {
+        "5bd06ad6-1e4d-4714-8072-a746f5056f38": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        },
+        "a96dd2b7-703a-4e20-9727-9bdf1a4d0869": {
+          "type": "collection",
+          "settings": {
+            "collection": "violet",
+            "image": "shopify://shop_images/Collection_List_-_Violet_49d5d3ed-3f70-4078-87d4-46fc76b7d003.jpg"
+          }
+        },
+        "e7562bcc-10b0-4658-96b6-ac73bcff5fef": {
+          "type": "collection",
+          "settings": {
+            "collection": "marigold-1",
+            "image": "shopify://shop_images/Collection_List_-_Marigold.jpg"
+          }
+        },
+        "7e2384f7-069a-47fe-b9f9-378721867ba4": {
+          "type": "collection",
+          "settings": {
+            "collection": "dusk-1",
+            "image": "shopify://shop_images/Collection_List_-_Dusk.jpg"
+          }
+        },
+        "a6ff8f89-6984-4243-b472-892cb3b7b3d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "emerald",
+            "image": "shopify://shop_images/Ashley_Nova_1.jpg"
+          }
+        },
+        "7359efa5-3991-45fd-903e-b7600b012008": {
+          "type": "collection",
+          "settings": {
+            "collection": "eden",
+            "image": "shopify://shop_images/Collection_List_-_Eden.jpg"
+          }
+        },
+        "72b62627-eb37-4661-a45c-1d297bf85b9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "magnolia-1",
+            "image": "shopify://shop_images/Collection_List_-_Magnolia_935b351c-f4de-43f3-b648-f3934ad24576.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "5bd06ad6-1e4d-4714-8072-a746f5056f38",
+        "a96dd2b7-703a-4e20-9727-9bdf1a4d0869",
+        "e7562bcc-10b0-4658-96b6-ac73bcff5fef",
+        "7e2384f7-069a-47fe-b9f9-378721867ba4",
+        "a6ff8f89-6984-4243-b472-892cb3b7b3d3",
+        "7359efa5-3991-45fd-903e-b7600b012008",
+        "72b62627-eb37-4661-a45c-1d297bf85b9f"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "MahaShe Collections",
+        "enable_carousel": false,
+        "grid": 3,
+        "full_width": true
+      }
+    },
+    "ad02ff08-9e85-4739-81e6-73257c6f3d5d": {
+      "type": "gallery",
+      "disabled": true,
+      "settings": {
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "full_width": false,
+        "enable_carousel": true,
+        "overlay_style": "full",
+        "button_style": "primary"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "205819f2-3182-46c5-af1f-34e7884fb0f7",
+    "e945bdeb-6961-4e49-9da7-64e3bd3cf61e",
+    "image_with_text_UUmej8",
+    "11f581e2-c91b-4f28-8483-5b99d201f36d",
+    "8e0bf67d-dba3-47eb-9739-91cd0efbf295",
+    "800bfc8d-627b-4324-ba2e-20b2d5c7bc19",
+    "ef1742ef-229d-48b9-9731-f42512f48eba",
+    "c1106d34-3a08-4e08-9ebb-66978af15c4b",
+    "1648869925a1be59b6",
+    "ad02ff08-9e85-4739-81e6-73257c6f3d5d"
   ]
 }

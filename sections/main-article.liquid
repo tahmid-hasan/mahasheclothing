@@ -72,20 +72,20 @@
 
     {%- if section.settings.show_article_tags -%}
       {% capture tag_markup %}
+```html
         <div class="iconmeta tags">
           <span class="label">{{ 'blogs.tags.label' | t }}:</span>
           {% for tag in article.tags %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: tag %}{%- endcapture -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: tag %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
             {{ tag | link_to_tag: tag }}
           {% endfor %}
         </div>
-      {% endcapture %}
+```      {% endcapture %}
     {%- endif -%}
 
     <div class="meta" {%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}>
@@ -138,14 +138,15 @@
             </div>
           {% endif %}
 
+```html
           {% comment %} Loop through approved comments: {% endcomment %}
           {% for comment in article.comments %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: comment %}{%- endcapture -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: comment %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
 
             <div class="comment {% if forloop.first %}first{% endif %}">
               <div class="text">{{ comment.content }}</div>
@@ -153,7 +154,7 @@
             </div>
           {% endfor %}
         </div>
-
+```
         <div class="pagination-row" {%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}>{% render 'pagination-control', paginate: paginate %}</div>
       {% endif %}
     {% endpaginate %}
@@ -170,10 +171,23 @@
           <p>{{ 'blogs.comments.moderated' | t }}</p>
         {% endif %}
 
-        
-        {%- assign error_heading = 'blogs.comments.error_heading' | t -%}
-        {%- render 'form-errors', form: form, error_heading: error_heading -%}
+{% if form.errors %}
+    <ul class="errors">
+    {% for field in form.errors %}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: field %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
 
+        <li>{{ field | capitalize }} {{ form.errors.messages[field] }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{%- assign error_heading = 'blogs.comments.error_heading' | t -%}
+{%- render 'form-errors', form: form, error_heading: error_heading -%}
         <div class="input-row {% if form.errors contains 'author' %}has-error{% endif %}">
           <label for="comment_author">{{ 'blogs.comments.name' | t }}</label>
           <input type="text" id="comment_author" name="comment[author]" size="40" value="{{ form.author }}" />

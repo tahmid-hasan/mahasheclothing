@@ -3,13 +3,7 @@
 {% assign current_language_code = request.locale.iso_code %}
 
 <script>
-  const checkoutProcessingText = "Processing...";
-  const countryCode = "{{ localization.country.iso_code }}";
-  // This is an integer value but wrapping it in a string makes it a bit safer. Especially
-  // if the field is blank for some reason.
-  const marketIdString = "{{ localization.market.id }}";
-  const marketId = marketIdString ? parseInt(marketIdString) : undefined;
-  var baseUrl = "https://api.wholesale.orbitapps.com";
+  var baseUrl = "https://sawholesale.herokuapp.com";
   var shopSlug = "{{shop.permanent_domain}}".replace(".myshopify.com", "");
 
   if (typeof window.currentLanguageCode == "undefined") {
@@ -34,38 +28,6 @@
       })
     }
   }, 1000)
-
-  /**
-   * Use replaceCheckoutElementCopy to replace the text displayed on a checkout button with some copy.
-   *
-   * In addition to replacing checkout element copy. This class allows you to reset copy to the previous state.
-   *
-   * After running replaceCheckoutElementCopy, use resetCheckoutElementCopy to restore all touched checkout elements
-   * to their previous state.
-   */
-  class CheckoutElementCopyReplacer {
-    constructor() {
-      this._checkoutElementsWithOriginalCopy = []
-    }
-
-    flushCheckoutElementCopy() {
-      this._checkoutElementsWithOriginalCopy = [];
-    }
-
-    resetCheckoutElementCopy() {
-      this._checkoutElementsWithOriginalCopy.forEach(([element, originalCopy]) => {
-        element.innerHTML = originalCopy;
-      })
-      this.flushCheckoutElementCopy()
-    }
-
-    replaceCheckoutElementCopy(element, copy) {
-      this._checkoutElementsWithOriginalCopy.push([element, element.innerHTML]);
-      element.innerHTML = copy;
-    }
-  }
-
-  const checkoutElementCopyReplacer = new CheckoutElementCopyReplacer();
 
   /* CART QTY POLLER */
   function startCartPoller() {
@@ -133,10 +95,6 @@
       res.warning_note = "";
     }
 
-    if (res.discount_status && res.discount_status !== "NO_DISCOUNT") {
-      startCartPoller();
-    }
-
     SAWComplete(res);
 
     //show discounted total, even if warnings
@@ -177,16 +135,14 @@
 
     var sawExtraNote = document.querySelector(".saw-extra-note");
 
-    if (sawExtraNote) {
-      if (typeof res.extra_note == "string") {
-        sawExtraNote.innerHTML = res.extra_note;
-      }
+    if (typeof res.extra_note == "string") {
+      sawExtraNote.innerHTML = res.extra_note;
+    }
 
-      if (res.warning_note != "") {
-        sawExtraNote.innerHTML = res.warning_note;
-        sawExtraNote.className += " saw-highlight";
-        return;
-      }
+    if (res.warning_note != "") {
+      sawExtraNote.innerHTML = res.warning_note;
+      sawExtraNote.className += " saw-highlight";
+      return;
     }
 
     if (res.price_difference == 0) {
@@ -263,8 +219,6 @@
           ev.preventDefault();
           ev.stopPropagation();
 
-          checkoutElementCopyReplacer.replaceCheckoutElementCopy(ev.target, checkoutProcessingText)
-
           var xhr = new XMLHttpRequest();
           xhr.open("GET", "cart.js?_=" + Date.now());
           xhr.setRequestHeader(
@@ -283,11 +237,9 @@
 
   function SAWCartCheck() {
     var postData = {
+      shop_slug: shopSlug,
       cart: window.saw_cart,
-      countryCode,
-      customer: window.saw_customer,
-      marketId,
-      shop_slug: shopSlug
+      customer: window.saw_customer
     };
 
     if (window.sawDocCookies.getItem("saw_discount_code")) {
@@ -306,117 +258,6 @@
     xhr.send(JSON.stringify(postData));
   }
 
-  /** @typedef {string} url A valid URL */
-
-  /**
-  * @callback PollingEventCallback
-  * @param {url} invoiceUrl
-  */
-
-  /**
-  * Generates a new InvoicePoller. To use, simply call the `start` method. Once started the InvoicePoller
-  * will query the given invoiceUrl up to 10 times over 9 seconds. The first check is executed without delay.
-  * Should the invoice be created over the 10 attempts the poller will call the onInvoiceReady callback.
-  * Otherwise, the onGiveUp callback will be executed.
-  */
-  class WCInvoicePoller {
-    /**
-    * @constructor
-    * @param {url} invoiceUrl The invoice URL to poll
-    * @param {PollingEventCallback} onInvoiceReady Called when an invoice is found to exist at the given invoiceUrl
-    * @param {PollingEventCallback} [onGiveUp] Called when the max number of poll attempts is reached
-    * @param {PollingEventCallback} [onPollingStarted] Called immediately before the InvoicePoller executes its first polling request.
-    */
-    constructor(invoiceUrl, onInvoiceReady, onGiveUp, onPollingStarted) {
-      /** @type {number} */
-      this._maxPollAttempts = 10;
-
-      /** @type {number | undefined} */
-      this._interval;
-
-      /** @type {number} */
-      this._pollAttempts = 0;
-
-      /** @type {string} May be "READY" or "STARTED" */
-      this._state = "READY";
-
-      this._invoiceUrl = invoiceUrl;
-
-      this._onInvoiceReady = onInvoiceReady;
-
-      this._onGiveUp = onGiveUp;
-
-      this._onPollingStarted = onPollingStarted;
-    }
-
-    resetState() {
-      clearInterval(this._interval);
-      this._state = "READY";
-      this._interval = undefined;
-    }
-
-    /** @returns {Promise<boolean>} */
-    async checkInvoiceReady() {
-      try {
-        const res = await fetch(this._invoiceUrl, {method: "HEAD"});
-
-        if (res.status < 400) {
-          this.resetState();
-          this._onInvoiceReady(this._invoiceUrl);
-          return true;
-        } else {
-          return false;
-        }
-
-      } catch (error) {
-        console.error(
-          "B2B Wholesale Hub InvoicePoller Could not fetch invoice URL due to network error:",
-          error,
-        );
-
-        return false;
-      }
-    }
-
-    pollCheckInvoiceReady() {
-      if (this._state !== "STARTED") return;
-
-      if (this._pollAttempts >= this._maxPollAttempts) {
-        this.resetState();
-
-        if (typeof this._onGiveUp === "function") {
-          this._onGiveUp(this._invoiceUrl);
-        }
-      } else {
-        this._pollAttempts += 1;
-
-        this.checkInvoiceReady();
-      }
-    }
-
-    /**
-    * Initiates the poller
-    */
-    start() {
-      if (this._state === "STARTED") return;
-
-      if (typeof this._onPollingStarted === "function") {
-        this._onPollingStarted()
-      }
-
-      // first execution, it might be ready to go already
-      this.checkInvoiceReady().then((invoiceDoesExist) => {
-        if (invoiceDoesExist) return;
-        // Using arrow functions is important here. The function passed to setInterval is executed in a different context
-        // Arrow functions use a "lexical" `this` meaning they will maintain the `this` property of the context in which
-        // they were declared. See more about this on MDN: https://developer.mozilla.org/en-US/docs/Web/API/setInterval#the_this_problem
-        const interval = setInterval(() => this.pollCheckInvoiceReady(), 1000);
-
-        this._interval = interval;
-        this._state = "STARTED";
-      });
-    }
-  }
   function handleCheckoutCartCheckDiscountsResponse(res) {
     //if no discounts, redirect to checkout, but with params
     if (typeof res.invoice_url != "string") {
@@ -466,27 +307,9 @@
         res.invoice_url += "?" + invoice_url_params.join("&");
       }
 
-      // This will be called if the invoice exists and the checkout page can be loaded.
-      const navigationCallback = (url) => {
-        checkoutElementCopyReplacer.resetCheckoutElementCopy()
-        window.location.assign(url);
-      };
-
-      // This will be called if the checkout page can't be loaded after 10 attempts over 9 seconds.
-      const optionalGiveUpCallback = (url) => {
-        setTimeout(() => {
-          checkoutElementCopyReplacer.resetCheckoutElementCopy()
-          window.location.assign(url);
-        }, 800);
-      };
-
-      const poller = new WCInvoicePoller(
-        res.invoice_url,
-        navigationCallback,
-        optionalGiveUpCallback,
-      );
-
-      poller.start();
+      setTimeout(function() {
+        window.location.href = res.invoice_url;
+      }, 800);
     } else {
       alert(res.status);
     }
@@ -543,13 +366,11 @@
     var note = domNote ? domNote.value : "";
 
     var postData = {
+      shop_slug: shopSlug,
       cart: window.saw_cart,
-      countryCode,
       customer: window.saw_customer,
-      marketId,
       note: note,
-      note_attributes: noteAttributes,
-      shop_slug: shopSlug
+      note_attributes: noteAttributes
     };
 
     if (window.sawDocCookies.getItem("saw_discount_code")) {
@@ -570,6 +391,7 @@
 
   window.saw_cart = {{cart | json}};
   window.saw_cart.items = [];
+  {% assign saw_has_discount = false %}
 
   {% for item in cart.items %}
     var itemjs = {{item | json}} //includes properties
@@ -583,6 +405,16 @@
 
     itemjs.sawholesale = {{item.product.metafields.sawholesale | json}};
 
+    // start cartPoller only if there is a product eligible for discount in the cart
+    {% if customer.tags != blank and saw_has_discount == false %}
+      {% for mf in item.product.metafields.sawholesale %}
+        {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
+        {% if customer.tags contains product_customer_tag %}
+          {% assign saw_has_discount = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
     delete itemjs.image;
     delete itemjs.url;
     window.saw_cart.items.push(itemjs);
@@ -592,15 +424,19 @@
 
   SAWCartCheck();
 
-  var inputElements = document.getElementsByName("updates[]");
+  if ({{saw_has_discount}}) {
+    startCartPoller();
+  }
 
-  for (var i = 0; i < inputElements.length; i++) {
-    inputElements[i].addEventListener("change", function() {
-      var updateButtons = document.getElementsByName("update");
-      if (updateButtons.length) {
-        updateButtons[0].click();
-      }
-    });
+var inputElements = document.getElementsByName("updates[]");
+
+for (var i = 0; i < inputElements.length; i++) {
+  inputElements[i].addEventListener("change", function() {
+    var updateButtons = document.getElementsByName("update");
+    if (updateButtons.length) {
+      updateButtons[0].click();
+    }
+  });
 }
 
 
@@ -610,7 +446,7 @@
 .saw-extra-note {
   font-weight: bold;
   margin: 10px 0px 10px 0px;
-  background-color: #ffd400;
+  background-color: #ffffff;
   color: #000000;
 }
 .saw-extra-note:empty {

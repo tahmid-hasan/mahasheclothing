@@ -61,7 +61,7 @@
       {
         "type": "color",
         "id": "prod_label_sale_text",
-        "label": "Product card \/ page - sale",
+        "label": "Product card / page - sale",
         "default": "#b33323"
       },
       {
@@ -800,7 +800,7 @@
         "type": "checkbox",
         "id": "prod_thumb_show_subtitle",
         "label": "Show subtitle",
-        "info": "Uses product subtitle [metafield](https:\/\/help.shopify.com\/en\/manual\/metafields)",
+        "info": "Uses product subtitle [metafield](https://help.shopify.com/en/manual/metafields)",
         "default": true
       },
       {
@@ -987,13 +987,13 @@
       },
       {
         "type": "paragraph",
-        "content": "Add reviews by installing [a reviews app](https:\/\/apps.shopify.com\/search?q=reviews)"
+        "content": "Add reviews by installing [a reviews app](https://apps.shopify.com/search?q=reviews)"
       },
       {
         "type": "checkbox",
         "id": "enable_product_reviews_collection",
         "label": "Show rating in product cards",
-        "info": "Add reviews by installing [an app](https:\/\/apps.shopify.com\/search?q=reviews). App must support Shopify's standard rating metafield.",
+        "info": "Add reviews by installing [an app](https://apps.shopify.com/search?q=reviews). App must support Shopify's standard rating metafield.",
         "default": true
       }
     ]
@@ -1187,43 +1187,43 @@
         "type": "text",
         "id": "social_facebook_url",
         "label": "Facebook",
-        "info": "https:\/\/facebook.com\/shopify"
+        "info": "https://facebook.com/shopify"
       },
       {
         "type": "text",
         "id": "social_instagram_url",
         "label": "Instagram",
-        "info": "https:\/\/instagram.com\/shopify"
+        "info": "https://instagram.com/shopify"
       },
       {
         "type": "text",
         "id": "social_linkedin_url",
         "label": "Linkedin",
-        "info": "https:\/\/linkedin.com\/company\/shopify"
+        "info": "https://linkedin.com/company/shopify"
       },
       {
         "type": "text",
         "id": "social_pinterest_url",
         "label": "Pinterest",
-        "info": "https:\/\/pinterest.com\/shopify"
+        "info": "https://pinterest.com/shopify"
       },
       {
         "type": "text",
         "id": "social_tiktok_url",
         "label": "TikTok",
-        "info": "https:\/\/tiktok.com\/@shopify"
+        "info": "https://tiktok.com/@shopify"
       },
       {
         "type": "text",
         "id": "social_twitch_url",
         "label": "Twitch",
-        "info": "https:\/\/www.twitch.tv\/shopify"
+        "info": "https://www.twitch.tv/shopify"
       },
       {
         "type": "text",
         "id": "social_twitter_url",
         "label": "X (formerly Twitter)",
-        "info": "https:\/\/x.com\/shopify"
+        "info": "https://x.com/shopify"
       },
       {
         "type": "select",
@@ -1245,61 +1245,61 @@
         "type": "text",
         "id": "social_threads_url",
         "label": "Threads",
-        "info": "https:\/\/www.threads.net\/@shopify"
+        "info": "https://www.threads.net/@shopify"
       },
       {
         "type": "text",
         "id": "social_discord_url",
         "label": "Discord",
-        "info": "https:\/\/discord.com\/servers\/shopify"
+        "info": "https://discord.com/servers/shopify"
       },
       {
         "type": "text",
         "id": "social_mastodon_url",
         "label": "Mastodon",
-        "info": "https:\/\/mastodon.social\/@shopify"
+        "info": "https://mastodon.social/@shopify"
       },
       {
         "type": "text",
         "id": "social_youtube_url",
         "label": "YouTube",
-        "info": "https:\/\/youtube.com\/user\/shopify"
+        "info": "https://youtube.com/user/shopify"
       },
       {
         "type": "text",
         "id": "social_vimeo_url",
         "label": "Vimeo",
-        "info": "https:\/\/vimeo.com\/shopify"
+        "info": "https://vimeo.com/shopify"
       },
       {
         "type": "text",
         "id": "social_tumblr_url",
         "label": "Tumblr",
-        "info": "https:\/\/shopify.tumblr.com"
+        "info": "https://shopify.tumblr.com"
       },
       {
         "type": "text",
         "id": "social_snapchat_url",
         "label": "Snapchat",
-        "info": "https:\/\/www.snapchat.com\/add\/shopify"
+        "info": "https://www.snapchat.com/add/shopify"
       },
       {
         "type": "text",
         "id": "social_spotify_url",
         "label": "Spotify",
-        "info": "https:\/\/open.spotify.com\/artist\/shopify"
+        "info": "https://open.spotify.com/artist/shopify"
       },
       {
         "type": "text",
         "id": "social_wechat_url",
         "label": "WeChat",
-        "info": "weixin:\/\/dl\/chat?shopify"
+        "info": "weixin://dl/chat?shopify"
       },
       {
         "type": "text",
         "id": "social_whatsapp_url",
         "label": "WhatsApp",
-        "info": "https:\/\/api.whatsapp.com\/send?phone=1234"
+        "info": "https://api.whatsapp.com/send?phone=1234"
       },
       {
         "type": "header",
@@ -1315,7 +1315,7 @@
         "type": "text",
         "id": "social_custom_url",
         "label": "Custom link",
-        "info": "https:\/\/socialnetwork.com\/shopify"
+        "info": "https://socialnetwork.com/shopify"
       }
     ]
   },
@@ -1642,11 +1642,11 @@
         "id": "free_shipping_amounts",
         "label": "Amounts",
         "placeholder": "USD:4500",
-        "info": "One price per line. [Read more](https:\/\/cleancanvas.co.uk\/support\/symmetry\/shipping-bar)"
+        "info": "One price per line. [Read more](https://cleancanvas.co.uk/support/symmetry/shipping-bar)"
       },
       {
         "type": "paragraph",
-        "content": "[Currency code reference](https:\/\/www.iso.org\/iso-4217-currency-codes.html) [Country code reference](https:\/\/www.iso.org\/glossary-for-iso-3166.html)"
+        "content": "[Currency code reference](https://www.iso.org/iso-4217-currency-codes.html) [Country code reference](https://www.iso.org/glossary-for-iso-3166.html)"
       },
       {
         "type": "color",
@@ -1743,7 +1743,7 @@
           }
         ],
         "default": "1",
-        "info": "Changing the image quality can affect the page load speed. [Learn more](https:\/\/cleancanvas.co.uk\/support\/symmetry\/settings\/image-quality)"
+        "info": "Changing the image quality can affect the page load speed. [Learn more](https://cleancanvas.co.uk/support/symmetry/settings/image-quality)"
       },
       {
         "type": "checkbox",
@@ -1763,7 +1763,7 @@
         "type": "html",
         "id": "custom_html_head",
         "label": "HTML for <head> tag",
-        "placeholder": "<meta name=\"google-site-verification\" content=\"\"\/>",
+        "placeholder": "<meta name=\"google-site-verification\" content=\"\"/>",
         "info": "Placed at the end of the head tag. Included on all theme pages - this does not include the checkout."
       },
       {
@@ -1772,7 +1772,7 @@
       },
       {
         "type": "paragraph",
-        "content": "For a full list of JavaScript events included with Symmetry, please refer to the \/assets\/custom.js file within the theme code, or read our [JavaScript Technical Guide](https:\/\/cleancanvas.co.uk\/support\/symmetry\/technical-guides\/js)."
+        "content": "For a full list of JavaScript events included with Symmetry, please refer to the /assets/custom.js file within the theme code, or read our [JavaScript Technical Guide](https://cleancanvas.co.uk/support/symmetry/technical-guides/js)."
       }
     ]
   }

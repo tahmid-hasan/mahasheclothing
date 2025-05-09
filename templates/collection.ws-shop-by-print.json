@@ -1,0 +1,429 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_desc_pos": "above",
+        "coll_num_per_page_int": 40,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": true,
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "filter_two_columns": false,
+        "enable_sticky_filter": true,
+        "image_position": "center center"
+      }
+    },
+    "0fdfd1fe-7247-46e5-b133-af81281f08e5": {
+      "type": "collection-list",
+      "blocks": {
+        "37c48394-c1c4-463d-b67d-f0b093db827e": {
+          "type": "collection",
+          "settings": {
+            "collection": "angelica",
+            "image": "shopify://shop_images/Angelica.png"
+          }
+        },
+        "bd5da94d-903c-4cb3-a1ec-3cfac0a9ebbf": {
+          "type": "collection",
+          "settings": {
+            "collection": "bluebell",
+            "image": "shopify://shop_images/Bluebell.png"
+          }
+        },
+        "19057c21-78e5-4a07-9731-6a21dd8c6318": {
+          "type": "collection",
+          "settings": {
+            "collection": "viola",
+            "image": "shopify://shop_images/Viola.png"
+          }
+        },
+        "c371f576-fe9d-43e9-b285-97daf01e68b2": {
+          "type": "collection",
+          "settings": {
+            "collection": "frida",
+            "image": "shopify://shop_images/Frida.png"
+          }
+        },
+        "9ed4b01b-6533-4577-aaee-f910cb2c6dc1": {
+          "type": "collection",
+          "settings": {
+            "collection": "enoki",
+            "image": "shopify://shop_images/Enoki.png"
+          }
+        },
+        "d548c59e-103c-4b04-9b3b-53c93ceeaeca": {
+          "type": "collection",
+          "settings": {
+            "collection": "white-strip",
+            "image": "shopify://shop_images/White_Stripe.png"
+          }
+        },
+        "26177dc1-6330-446c-bf6f-455da36847e0": {
+          "type": "collection",
+          "settings": {
+            "collection": "ume",
+            "image": "shopify://shop_images/Umi.png"
+          }
+        }
+      },
+      "block_order": [
+        "37c48394-c1c4-463d-b67d-f0b093db827e",
+        "bd5da94d-903c-4cb3-a1ec-3cfac0a9ebbf",
+        "19057c21-78e5-4a07-9731-6a21dd8c6318",
+        "c371f576-fe9d-43e9-b285-97daf01e68b2",
+        "9ed4b01b-6533-4577-aaee-f910cb2c6dc1",
+        "d548c59e-103c-4b04-9b3b-53c93ceeaeca",
+        "26177dc1-6330-446c-bf6f-455da36847e0"
+      ],
+      "settings": {
+        "title": "Violet",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "16491333568d9f0843": {
+      "type": "collection-list",
+      "blocks": {
+        "bdc139cc-cf29-4161-9628-c935b9968b56": {
+          "type": "collection",
+          "settings": {
+            "collection": "indigo",
+            "image": "shopify://shop_images/Indigo_75aabf68-c24c-4a10-9633-8461fa381936.png"
+          }
+        },
+        "bbbc1d23-af93-4141-9ad9-c1376b224f34": {
+          "type": "collection",
+          "settings": {
+            "collection": "sunflower-1",
+            "image": "shopify://shop_images/Sunflower.png"
+          }
+        },
+        "0f852eb9-5776-4836-83f7-80e969683cd2": {
+          "type": "collection",
+          "settings": {
+            "collection": "fan-blue",
+            "image": "shopify://shop_images/Fan_Blue.png"
+          }
+        },
+        "c240dd0d-8902-40b2-a1a2-fc45bbf6fd4d": {
+          "type": "collection",
+          "settings": {
+            "collection": "fan-red",
+            "image": "shopify://shop_images/Fan_Red.png"
+          }
+        },
+        "7451c421-d3bc-4525-80a0-2696f8d4edbf": {
+          "type": "collection",
+          "settings": {
+            "collection": "dark-stripe",
+            "image": "shopify://shop_images/Dark_Stripe.png"
+          }
+        }
+      },
+      "block_order": [
+        "bdc139cc-cf29-4161-9628-c935b9968b56",
+        "bbbc1d23-af93-4141-9ad9-c1376b224f34",
+        "0f852eb9-5776-4836-83f7-80e969683cd2",
+        "c240dd0d-8902-40b2-a1a2-fc45bbf6fd4d",
+        "7451c421-d3bc-4525-80a0-2696f8d4edbf"
+      ],
+      "settings": {
+        "title": "Marigold",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "1649132074d6e11bee": {
+      "type": "collection-list",
+      "blocks": {
+        "db827bfe-1b4f-4dd6-8fe3-bc15f05655bc": {
+          "type": "collection",
+          "settings": {
+            "collection": "dahlia",
+            "image": "shopify://shop_images/Dahlia.png"
+          }
+        },
+        "aeb2a711-b4dc-4079-9bc8-d6302be4f60b": {
+          "type": "collection",
+          "settings": {
+            "collection": "frangipani",
+            "image": "shopify://shop_images/Frangipani.png"
+          }
+        },
+        "9278ac94-afd1-4b20-a9ae-ff609466482c": {
+          "type": "collection",
+          "settings": {
+            "collection": "maple",
+            "image": "shopify://shop_images/Maple.png"
+          }
+        },
+        "d1e3752d-fa63-4e98-8005-2af08727331d": {
+          "type": "collection",
+          "settings": {
+            "collection": "primrose",
+            "image": "shopify://shop_images/Primrose.png"
+          }
+        },
+        "08796600-3077-42f2-85b1-28ab253e05fb": {
+          "type": "collection",
+          "settings": {
+            "collection": "protea",
+            "image": "shopify://shop_images/Protea.png"
+          }
+        },
+        "17df684d-5e3c-4c07-a72c-49bcce73f16e": {
+          "type": "collection",
+          "settings": {
+            "collection": "tulip",
+            "image": "shopify://shop_images/Tulip.png"
+          }
+        }
+      },
+      "block_order": [
+        "db827bfe-1b4f-4dd6-8fe3-bc15f05655bc",
+        "aeb2a711-b4dc-4079-9bc8-d6302be4f60b",
+        "9278ac94-afd1-4b20-a9ae-ff609466482c",
+        "d1e3752d-fa63-4e98-8005-2af08727331d",
+        "08796600-3077-42f2-85b1-28ab253e05fb",
+        "17df684d-5e3c-4c07-a72c-49bcce73f16e"
+      ],
+      "settings": {
+        "title": "Dusk",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "1649132350c47a856a": {
+      "type": "collection-list",
+      "blocks": {
+        "5028a954-32f1-4d1b-8d74-e9eece03a725": {
+          "type": "collection",
+          "settings": {
+            "collection": "nova",
+            "image": "shopify://shop_images/Nova_21cafb6c-dc58-4581-8aaf-2739edcd58f2.png"
+          }
+        },
+        "8315c190-7414-461f-bb08-f694d8ed9591": {
+          "type": "collection",
+          "settings": {
+            "collection": "clover-jade",
+            "image": "shopify://shop_images/Clover_Jade.png"
+          }
+        },
+        "2d99fcf6-c88d-481f-b60d-3c3a6ec13803": {
+          "type": "collection",
+          "settings": {
+            "collection": "amla",
+            "image": "shopify://shop_images/Stitch_Amla.png"
+          }
+        },
+        "f5a8361c-884f-4b60-a385-98f662bfd7c7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bodhi",
+            "image": "shopify://shop_images/Stitch_Bodhi.png"
+          }
+        },
+        "0893ea7b-59ea-4cdc-87f9-71bbcc0d7c18": {
+          "type": "collection",
+          "settings": {
+            "collection": "neem",
+            "image": "shopify://shop_images/Stitch_Neem.png"
+          }
+        },
+        "7a8a26ee-faf9-4b77-9320-3c5673961767": {
+          "type": "collection",
+          "settings": {
+            "collection": "azalea",
+            "image": "shopify://shop_images/Azalea_0327bb44-0e68-473e-81ba-7a532160508f.png"
+          }
+        }
+      },
+      "block_order": [
+        "5028a954-32f1-4d1b-8d74-e9eece03a725",
+        "8315c190-7414-461f-bb08-f694d8ed9591",
+        "2d99fcf6-c88d-481f-b60d-3c3a6ec13803",
+        "f5a8361c-884f-4b60-a385-98f662bfd7c7",
+        "0893ea7b-59ea-4cdc-87f9-71bbcc0d7c18",
+        "7a8a26ee-faf9-4b77-9320-3c5673961767"
+      ],
+      "settings": {
+        "title": "Emerald",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "1649132951851a16ba": {
+      "type": "collection-list",
+      "blocks": {
+        "c762fb76-8a9d-4cad-b8da-79bb7c4e3d50": {
+          "type": "collection",
+          "settings": {
+            "collection": "hibiscus",
+            "image": "shopify://shop_images/Hibiscus.png"
+          }
+        },
+        "1fe3afbf-ea72-412b-995f-2219aae842bb": {
+          "type": "collection",
+          "settings": {
+            "collection": "lapis",
+            "image": "shopify://shop_images/Lapis.png"
+          }
+        },
+        "a80fff02-4cf2-4626-85cd-3d3a82d5ddc8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "iris",
+            "image": "shopify://shop_images/IMG_8513.jpg"
+          }
+        },
+        "ecf449db-5724-434f-b099-95b732a6d131": {
+          "type": "collection",
+          "settings": {
+            "collection": "lily",
+            "image": "shopify://shop_images/Lily.png"
+          }
+        }
+      },
+      "block_order": [
+        "c762fb76-8a9d-4cad-b8da-79bb7c4e3d50",
+        "1fe3afbf-ea72-412b-995f-2219aae842bb",
+        "a80fff02-4cf2-4626-85cd-3d3a82d5ddc8",
+        "ecf449db-5724-434f-b099-95b732a6d131"
+      ],
+      "settings": {
+        "title": "Eden",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "1649133090ffc94afd": {
+      "type": "collection-list",
+      "blocks": {
+        "0d9cce8a-27e5-4ac0-858d-97bb9be8a61d": {
+          "type": "collection",
+          "settings": {
+            "collection": "lavender",
+            "image": "shopify://shop_images/Lavender_d184a725-6a71-4a07-8441-6cf31ea4b8b9.png"
+          }
+        },
+        "f7dd1762-6cf3-478d-bc1c-bd9d1cc51123": {
+          "type": "collection",
+          "settings": {
+            "collection": "peach",
+            "image": "shopify://shop_images/Peach.png"
+          }
+        },
+        "907daae1-0b19-43c8-b2f1-da4920326248": {
+          "type": "collection",
+          "settings": {
+            "collection": "turmeric",
+            "image": "shopify://shop_images/Turmeric.png"
+          }
+        },
+        "c98daf75-01f3-490f-871a-501474756cd0": {
+          "type": "collection",
+          "settings": {
+            "collection": "coral",
+            "image": "shopify://shop_images/Coral.png"
+          }
+        },
+        "ae2fbb86-b91f-45a8-8ec8-6a10194ee038": {
+          "type": "collection",
+          "settings": {
+            "collection": "freesia",
+            "image": "shopify://shop_images/Freesia.png"
+          }
+        },
+        "e4c1d8df-5c3f-4468-bea8-8a451bba086f": {
+          "type": "collection",
+          "settings": {
+            "collection": "kaleido-peach",
+            "image": "shopify://shop_images/Kaleido_Peach.png"
+          }
+        },
+        "736f8ba8-3184-49e8-8151-6666286987a3": {
+          "type": "collection",
+          "settings": {
+            "collection": "kaleido-teal",
+            "image": "shopify://shop_images/Kaleido_Teal.png"
+          }
+        },
+        "0a522ee8-e956-41c7-b14c-818558980dbf": {
+          "type": "collection",
+          "settings": {
+            "collection": "magnolia",
+            "image": "shopify://shop_images/Magnolia_1d19a114-1f9e-49bd-b967-7aedc0b98f79.png"
+          }
+        },
+        "fb46d390-3789-4f9a-9864-9777abf8871c": {
+          "type": "collection",
+          "settings": {
+            "collection": "zinnia",
+            "image": "shopify://shop_images/Zinnia-3.png"
+          }
+        }
+      },
+      "block_order": [
+        "0d9cce8a-27e5-4ac0-858d-97bb9be8a61d",
+        "f7dd1762-6cf3-478d-bc1c-bd9d1cc51123",
+        "907daae1-0b19-43c8-b2f1-da4920326248",
+        "c98daf75-01f3-490f-871a-501474756cd0",
+        "ae2fbb86-b91f-45a8-8ec8-6a10194ee038",
+        "e4c1d8df-5c3f-4468-bea8-8a451bba086f",
+        "736f8ba8-3184-49e8-8151-6666286987a3",
+        "0a522ee8-e956-41c7-b14c-818558980dbf",
+        "fb46d390-3789-4f9a-9864-9777abf8871c"
+      ],
+      "settings": {
+        "title": "Magnolia",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    },
+    "ef183d49-6886-4841-8c73-b33b7ccf3586": {
+      "type": "collection-list",
+      "disabled": true,
+      "settings": {
+        "title": "Collection list",
+        "enable_carousel": true,
+        "grid": 4,
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0fdfd1fe-7247-46e5-b133-af81281f08e5",
+    "16491333568d9f0843",
+    "1649132074d6e11bee",
+    "1649132350c47a856a",
+    "1649132951851a16ba",
+    "1649133090ffc94afd",
+    "ef183d49-6886-4841-8c73-b33b7ccf3586"
+  ]
+}

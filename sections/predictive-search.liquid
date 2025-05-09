@@ -63,26 +63,12 @@
     -%}
 
     {%- for page in predictive_search.resources.pages -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: page %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
       <div class="product-block page-block">
         <div class="page-block__title"><a href="{{ page.url }}">{{ page.title }}</a></div>
       </div>
     {%- endfor -%}
 
     {%- for article in predictive_search.resources.articles -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: article %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
       <div class="product-block page-block">
         <div class="page-block__title"><a href="{{ article.url }}">{{ article.title }}</a></div>
       </div>

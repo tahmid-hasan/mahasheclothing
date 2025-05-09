@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ad5a7d76-01e2-465f-856d-c78a1f34da79": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16145259954342__ad5a7d76-01e2-465f-856d-c78a1f34da79-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Photos",
+            "use_h1": false
+          }
+        },
+        "template--16145259954342__ad5a7d76-01e2-465f-856d-c78a1f34da79-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We invest a lot into our photo shoots so we absolutely love it when you use our images too!</p><p>You can download our collection photos using the links below. Please use freely for social media and online stores. </p><p>Please note that high resolution is for high quality printing whereas low resolution is for website and social media.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16145259954342__ad5a7d76-01e2-465f-856d-c78a1f34da79-heading-1",
+        "template--16145259954342__ad5a7d76-01e2-465f-856d-c78a1f34da79-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "eb5ed022-a9fd-4d8b-ae09-5960bd50b2d1": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Stevie_Check_Ex_59c017ad-4130-4bf7-8431-a6a247d1a8e3.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "image_with_text_N9h99K": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Sunday_Stripe_Ex.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "image_with_text_EwqqHU": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Stevie_Tartan_Ex.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "985fde5e-d8ce-4996-9fd0-677da925c7e5": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Wildflower.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "1043ea71-664f-4b1b-b856-f99f716c639a": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Violet_-_2.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "b8955ebb-d464-4cbe-aabd-31f62f06bdf4": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Marigold_1c1a6801-709c-4712-b727-c470e8adbd9b.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "e7b14068-2583-4770-83d1-f69e8d0c83bd": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Dusk.jpg",
+        "image_width": 640,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "be4ba146-10fd-4634-b9c9-14cac621a485": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Emerald.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "aa82251a-46cf-4a26-ad1e-801b9d864a71": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Magnolia.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "d7a41df3-4a01-4a83-8114-a6135546f6a7": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Men_s.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "2ab2126d-d8e0-4637-b562-eb7f5fed8308": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/LOGO.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "ad5a7d76-01e2-465f-856d-c78a1f34da79",
+    "main",
+    "eb5ed022-a9fd-4d8b-ae09-5960bd50b2d1",
+    "image_with_text_N9h99K",
+    "image_with_text_EwqqHU",
+    "985fde5e-d8ce-4996-9fd0-677da925c7e5",
+    "1043ea71-664f-4b1b-b856-f99f716c639a",
+    "b8955ebb-d464-4cbe-aabd-31f62f06bdf4",
+    "e7b14068-2583-4770-83d1-f69e8d0c83bd",
+    "be4ba146-10fd-4634-b9c9-14cac621a485",
+    "aa82251a-46cf-4a26-ad1e-801b9d864a71",
+    "d7a41df3-4a01-4a83-8114-a6135546f6a7",
+    "2ab2126d-d8e0-4637-b562-eb7f5fed8308"
+  ]
+}

@@ -30,7 +30,7 @@
         "richtext": {
           "type": "richtext",
           "settings": {
-            "richtext": "<p><strong>Highlight<\/strong> a feature of your product.<\/p>",
+            "richtext": "<p><strong>Highlight</strong> a feature of your product.</p>",
             "icon": "leaf",
             "icon_size": "small",
             "enable_box": true,

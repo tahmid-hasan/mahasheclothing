@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "1649847100470ee324": {
+      "type": "rich-text",
+      "blocks": {
+        "164984710063f3081b-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": true
+          }
+        },
+        "text_V979Gc": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Customer Love</h1>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "164984710063f3081b-0",
+        "text_V979Gc"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": true
+      }
+    },
+    "16963068329e663c47": {
+      "type": "apps",
+      "blocks": {
+        "6b290bc9-7ee7-47cf-9a5d-5a03e340b002": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "6b290bc9-7ee7-47cf-9a5d-5a03e340b002"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1649847100470ee324",
+    "16963068329e663c47"
+  ]
+}

@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "judgeme_preview_badge_product_page_dc318f6a": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "e56d3980-0b62-4423-993e-973ab2177147": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "show_in_tab": true,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        },
+        "efb9d6c6-0bc5-4459-8c18-128c6ebe4a35": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}</p>",
+            "page": "",
+            "open": true,
+            "show_in_quickbuy": false
+          }
+        },
+        "86eb50ec-2d80-4c13-b42c-eae648ce7772": {
+          "type": "accordion",
+          "settings": {
+            "title": "Details & Care",
+            "icon": "",
+            "content": "<p>CARE INSTRUCTIONS: Cold Gentle Machine Wash. Hang Dry In Shade. Reshape Whilst Damp. Do Not Soak. Warm Iron. Dry Cleanable. </p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "666bd6e8-f501-4ea1-80ac-f2666075caf7": {
+          "type": "accordion",
+          "settings": {
+            "title": "Size & Fit",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.size_fit | metafield_tag }}</p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "fdd37fc0-9b2e-4039-b0f2-cd25aa26428c": {
+          "type": "accordion",
+          "settings": {
+            "title": "Delivery & Returns",
+            "icon": "",
+            "content": "<p><strong>DELIVERY</strong> </p><p>Within Australia & New Zealand:</p><p> - $10 flat rate for purchases <em>under </em>$150</p><p>- FREE delivery for purchases <em>over</em> $150</p><p>Outside of Australia & New Zealand $25 Flat Rate</p><p>View our full delivery details HERE</p><p><strong>RETURNS</strong></p><p>30 day returns. </p><p>FULL PRICED ITEMS are eligible for a refund, exchange or store credit. </p><p>SALE ITMES are eligible for store credit.</p><p>FINAL SALE ITEMS - Are a final purchase. No returns or exchanges. </p><p>View our full returns policy HERE</p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "3a3965eb-9531-481e-80dc-9ceae2be2932": {
+          "type": "sharing",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "judgeme_preview_badge_product_page_dc318f6a",
+        "vendor",
+        "divider",
+        "e56d3980-0b62-4423-993e-973ab2177147",
+        "efb9d6c6-0bc5-4459-8c18-128c6ebe4a35",
+        "86eb50ec-2d80-4c13-b42c-eae648ce7772",
+        "666bd6e8-f501-4ea1-80ac-f2666075caf7",
+        "fdd37fc0-9b2e-4039-b0f2-cd25aa26428c",
+        "3a3965eb-9531-481e-80dc-9ceae2be2932"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "gallery_size": "medium",
+        "enable_zoom": true,
+        "enable_video_looping": false
+      }
+    },
+    "judgeme_section_review_widget_2795": {
+      "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_9a415ee9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_9a415ee9"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    },
+    "1651055051f46cbb1b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Mahashe-Fab-AW22-2.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "16510550275bbbc6cf": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0080.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "judgeme_section_review_widget_2795",
+    "1651055051f46cbb1b",
+    "16510550275bbbc6cf"
+  ]
+}

@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "layout": "list",
+        "show_author": true,
+        "show_date": true,
+        "show_article_tags": true,
+        "show_rss_icon": true
+      }
+    },
+    "image_with_text_overlay_rzP7Ke": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".overlay-text__rte.rte.large-text h1 {color: #fff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Jo_Whitton_Blog_Banner.jpg",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "rich_text_XpVW4K": {
+      "type": "rich-text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "image_with_text_VMtyd7": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Biana_dress_2.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_rzP7Ke",
+    "rich_text_XpVW4K",
+    "image_with_text_VMtyd7"
+  ]
+}

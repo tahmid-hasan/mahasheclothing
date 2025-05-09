@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "full_width": false
+      }
+    },
+    "16497331395e7ce06f": {
+      "type": "contact-form",
+      "blocks": {
+        "16497331398fb0d82e-0": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "a1a7c10e-6e92-448e-b656-85345ceed103": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Store Name",
+            "type": "text",
+            "required": true,
+            "half_width": true
+          }
+        },
+        "16497331398fb0d82e-1": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "278b0fb1-1c61-4837-b0ba-b86897d6ab6d": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Mobile",
+            "type": "number",
+            "required": true,
+            "half_width": true
+          }
+        },
+        "d9c7663e-3052-43b0-bdb0-eed2c6c75ccf": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Store Phone Number",
+            "type": "number",
+            "required": true,
+            "half_width": true
+          }
+        },
+        "b947f670-e6c7-4a84-a3c6-a92e8ec1695d": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Social Media / Website",
+            "type": "text",
+            "required": true,
+            "half_width": true
+          }
+        },
+        "99bc8ab1-3e84-4855-a395-c71009df8b46": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Store Location",
+            "type": "text",
+            "required": true,
+            "half_width": false
+          }
+        },
+        "16497331398fb0d82e-2": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        },
+        "829c01cd-8b2a-4a60-a6d2-cff9036a41bc": {
+          "type": "phone_input",
+          "disabled": true,
+          "settings": {
+            "required": false,
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "16497331398fb0d82e-0",
+        "a1a7c10e-6e92-448e-b656-85345ceed103",
+        "16497331398fb0d82e-1",
+        "278b0fb1-1c61-4837-b0ba-b86897d6ab6d",
+        "d9c7663e-3052-43b0-bdb0-eed2c6c75ccf",
+        "b947f670-e6c7-4a84-a3c6-a92e8ec1695d",
+        "99bc8ab1-3e84-4855-a395-c71009df8b46",
+        "16497331398fb0d82e-2",
+        "829c01cd-8b2a-4a60-a6d2-cff9036a41bc"
+      ],
+      "settings": {
+        "contact_title": "Apply for a MahaShe wholesale account",
+        "contact_text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16497331395e7ce06f"
+  ]
+}

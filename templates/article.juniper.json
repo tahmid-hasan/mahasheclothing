@@ -1,0 +1,572 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_jX7QgX": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bKDtAY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>----- Juniper -----</em></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_bKDtAY"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "slideshow_zNW3nh": {
+      "type": "slideshow",
+      "blocks": {
+        "image_LYfJT3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_Stevie_Tartan_Ex_00131636-afab-4343-a4b1-146524a7a104.jpg",
+            "mobile_image": "shopify://shop_images/Juniper_Tartan_Mob_Ex_250b0e44-4dbc-4427-b074-368f94d9c48d.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_LYfJT3"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "image_with_text_NjRT78": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_2nd_drop_rack_Ex_61426271-78c4-42b5-b4ce-f7553a81c791.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "slideshow_pkacza": {
+      "type": "slideshow",
+      "blocks": {
+        "image_iaGNPd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_Stevie_Stripe_Ex_aaa2bf95-12e8-48e1-bc53-ffef261eaac7.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_stevie_stripe_Ex_546a7fb1-11a1-498d-83fa-47dd189f9364.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_iaGNPd"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_frVD7k": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_89TdDt": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "text_36494n": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_89TdDt",
+        "text_36494n"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "slideshow_dUcEt4": {
+      "type": "slideshow",
+      "blocks": {
+        "image_xCPNQJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_Isla_sitting_Ex_c29a65da-000e-44b0-8a5e-327b5bc6f2ef.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Juniper_Isla_Navy_Sitting_Ex_a3e16cf0-9ba8-4647-b525-4ceb93eb6771.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_xCPNQJ"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_LA7iQK": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Q7exBQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_Andelica_Lotus_Aqua_Ex_c88887e7-95e7-42d3-ba74-e2647fcf3d8d.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Juniper_Angelica_Aqua_Ex_2dc39774-e6eb-4c3a-b7ce-fad72ec623f8.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Q7exBQ"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_a7fHXF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_9AQFhE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_stevie_midnight_Ex.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Stevie_Midnight_Ex_1fb535b9-83dc-42de-a039-6d673a047a23.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_9AQFhE"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_y4JRFm": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Gy3Jk4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_bindi_ecom_Ex_360424b5-89fe-4a2c-acb4-a22557e597f4.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Bindi_double_Ex.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Gy3Jk4"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_QCBgdp": {
+      "type": "slideshow",
+      "blocks": {
+        "image_7CbVwR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_paddock_hall_chairs_Ex_a258dec9-e45c-4dbe-aab3-b146c7ac2b0a.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_chair_Ex.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_7CbVwR"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_yxzrQC": {
+      "type": "slideshow",
+      "blocks": {
+        "image_CCBh6w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_angelica_autumn_blossom_Ex_a4e8729c-e652-4e20-8252-e201b8a04bd8.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Madison_Caramel_Ex_7d7ba6a2-1597-486f-8bc3-d27d7859f2ec.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_CCBh6w"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_TnRLte": {
+      "type": "slideshow",
+      "blocks": {
+        "image_tgTwbr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_Juniper_caramel_Blossom_Ex_b71d8f30-32b6-4d05-9b73-5e4c70be7212.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_Juniper_caramel_Blossom_Ex_faa090eb-1540-4235-89bd-24cf0b4b927a.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_tgTwbr"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 620,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow_njkf4m": {
+      "type": "slideshow",
+      "blocks": {
+        "image_mARR7Y": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Shopify_banner_plants_Ex.jpg",
+            "mobile_image": "shopify://shop_images/Banner_Mob_plant_Ex.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_mARR7Y"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 1000,
+        "height_mobile": 440,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "gallery_YfAaP6": {
+      "type": "gallery",
+      "disabled": true,
+      "settings": {
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "full_width": false,
+        "enable_carousel": true,
+        "overlay_style": "full",
+        "button_style": "primary"
+      }
+    },
+    "image_with_text_VryKft": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Tartan.png",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "rich_text_phz9jC": {
+      "type": "rich-text",
+      "blocks": {
+        "text_89B7HY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_89B7HY"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": true
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "disabled": true,
+      "settings": {
+        "show_date": true,
+        "show_author": true,
+        "show_article_tags": true,
+        "show_sharing_icons": true,
+        "show_featured_image": true,
+        "full_width_image": true,
+        "featured_image_height": "huge",
+        "enable_title_overlay": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "featured_collection_76nqnd": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Juniper Collection",
+        "collection": "juniper",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "show_view_all": true,
+        "full_width": true
+      }
+    },
+    "image_with_text_overlay_tHx8Rb": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Isla_sitting_Ex_c29a65da-000e-44b0-8a5e-327b5bc6f2ef.jpg",
+        "mobile_image": "shopify://shop_images/Banner_Mob_Juniper_Isla_Navy_Sitting_Ex_a3e16cf0-9ba8-4647-b525-4ceb93eb6771.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "image_with_text_overlay_N68VLk": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Isla_sitting_Ex_c29a65da-000e-44b0-8a5e-327b5bc6f2ef.jpg",
+        "mobile_image": "shopify://shop_images/Banner_Mob_Juniper_Isla_Navy_Sitting_Ex_a3e16cf0-9ba8-4647-b525-4ceb93eb6771.jpg",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    }
+  },
+  "order": [
+    "rich_text_jX7QgX",
+    "slideshow_zNW3nh",
+    "image_with_text_NjRT78",
+    "slideshow_pkacza",
+    "rich_text_frVD7k",
+    "slideshow_dUcEt4",
+    "slideshow_LA7iQK",
+    "slideshow_a7fHXF",
+    "slideshow_y4JRFm",
+    "slideshow_QCBgdp",
+    "slideshow_yxzrQC",
+    "slideshow_TnRLte",
+    "slideshow_njkf4m",
+    "gallery_YfAaP6",
+    "image_with_text_VryKft",
+    "rich_text_phz9jC",
+    "main",
+    "featured_collection_76nqnd",
+    "image_with_text_overlay_tHx8Rb",
+    "image_with_text_overlay_N68VLk"
+  ]
+}

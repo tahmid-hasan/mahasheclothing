@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1648990689e5ada899": {
+      "type": "rich-text",
+      "blocks": {
+        "164899068925473de9-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Wholesale Returns",
+            "use_h1": false
+          }
+        },
+        "164899068925473de9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>RETURNS - There are no returns or exchanges on items for change of mind. To be honest this has never been an issue. Once our items are ready for wholesale they are designed to absolute perfect. And please reach out anytime to discuss the best styles and prints for your store. We love the chance to talk about it. </p><p></p><p>FAULTY PRODUCTS - We pride ourselves on quality. All of our garments are pre-shrunk and colourfast. Every product that we send out is quality controlled. However from time to time a faulty item can slip through. If you have received a product with a manufacturing fault please send through images for assessment. Products that are deemed faulty will be either replaced or refunded.</p><p></p><p>PLEASE NOTE -   the majority of our fabrics are hand screen printed. It is a traditional and invaluable method of production and is part of the quality that makes MahaShe so beautiful. Small irregularities are seen as part of their uniqueness rather than faults.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "164899068925473de9-0",
+        "164899068925473de9-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "1648990080b2ae122e": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "82478716-6cb4-4002-872a-4b0089a9d351": {
+          "type": "question",
+          "settings": {
+            "title": "Returns",
+            "answer": "<p>There are no returns or exchanges on items for change of mind.<br/><br/>Please get in contact anytime to discuss the best styles and prints for your store.<br/><a href=\"mailto:wholesale@mahashe.com\">wholesale@mahashe.com</a><br/>(02) 6689 7059</p>"
+          }
+        },
+        "2e536e25-866a-48d1-9462-f339a1e61b41": {
+          "type": "question",
+          "settings": {
+            "title": "Faulty Products",
+            "answer": "<p>We pride ourselves on quality. All of our garments are pre-shrunk and colourfast. Every product that we send out is quality controlled. However from time to time a faulty item can slip through. If you have received a product with a manufacturing fault please send through images for assessment. Products that are deemed faulty will be either replaced or refunded.</p><p><br/>Please note that the majority of our fabrics are hand screen printed. It is a traditional and invaluable method of production and is part of the quality that makes MahaShe so beautiful. Small irregularities are seen as part of their uniqueness rather than faults.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "82478716-6cb4-4002-872a-4b0089a9d351",
+        "2e536e25-866a-48d1-9462-f339a1e61b41"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "f4ad5694-a823-401e-bec7-78b3f811e187": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Bruns_Shop_3_cd2b6186-0aec-4672-95df-2e69b3f1db06.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "1648990689e5ada899",
+    "1648990080b2ae122e",
+    "f4ad5694-a823-401e-bec7-78b3f811e187",
+    "main"
+  ]
+}

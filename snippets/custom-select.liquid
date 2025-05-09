@@ -91,13 +91,6 @@
         </li>
       {%- endif -%}
       {%- for value in option_values -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
         <li class="custom-select__option flex items-center js-option" id="{{ id }}-opt-{{ forloop.index0 }}" role="option"
             data-value="{{ value | escape }}"
             {%- if swatches %} data-swatch="{{ value | escape | downcase }}"
@@ -118,28 +111,52 @@
 {%- else -%}
   </custom-select>
 {%- endif -%}
-
+<div class="cc-select{% if label_inside %} cc-select--label-inside{% endif %} no-js-hidden" id="{{ id }}">
+  {%- if label and label_inside -%}{{ label_html }}{%- endif -%}
+  <button class="cc-select__btn" type="button"
+          aria-haspopup="listbox" aria-labelledby="{{ label_id }}"
+          {% if swatches and selected_value %} data-swatch="{{ selected_value | handle }}"{% endif %}>
+    {{- selected_name -}}
+    <svg class="cc-select__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </button>
+  <ul class="cc-select__listbox" role="listbox" tabindex="-1"
+      aria-hidden="true"{% if selected_value %} aria-activedescendant="{{ selected_id }}"{% endif %}>
+    {%- for value in option_values -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: value %}{%- endcapture -%}
+{%- if hide_resource == "true" -%}
+  {% continue %}
+{%- endif -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
+      <li class="cc-select__option js-option" id="{{ id }}-opt-{{ forloop.index0 }}" role="option"
+          data-value="{{ value | escape }}"
+          {% if swatches %} data-swatch="{{ value | handle }}"{% endif %}
+          {% if value == selected_value %} aria-selected="true"{% endif %}>
+        <span>{{- option_names[forloop.index0] -}}</span>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
 {%- if include_native -%}
   {%- if label -%}
     <label for="{{ id }}-native" class="js-hidden label{% if hide_label %} visually-hidden{% endif %}">{{ label }}</label>
   {%- endif -%}
-  <div class="js-hidden select inline-block relative">
-    <select class="custom-select__native" id="{{ id }}-native"{% if native_name %} name="{{ native_name }}"{% endif %}{% if native_form_id %} form="{{ native_form_id }}"{% endif %}>
-      {%- unless selected_value -%}
-        <option value="">{{ default_option }}</option>
-      {%- endunless -%}
-      {%- for value in option_values -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
+<div class="js-hidden select inline-block relative">
+  <select class="custom-select__native" id="{{ id }}-native"{% if native_name %} name="{{ native_name }}"{% endif %}{% if native_form_id %} form="{{ native_form_id }}"{% endif %}>
+    {%- unless selected_value -%}
+      <option value="">{{ default_option }}</option>
+    {%- endunless -%}
+    {%- for value in option_values -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: value %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
 
-        <option value="{{ value | escape }}"{% if value == selected_value %} selected{% endif %}>
-          {{- option_names[forloop.index0] -}}
-        </option>
-      {%- endfor -%}
-    </select>
-  </div>
-{%- endif -%}
+      <option value="{{ value | escape }}"{% if value == selected_value %} selected{% endif %}>
+        {{- option_names[forloop.index0] -}}
+      </option>
+    {%- endfor -%}
+  </select>
+</div>{%- endif -%}

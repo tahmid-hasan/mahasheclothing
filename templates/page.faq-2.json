@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "164899045337a8f1cd": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Maha-Banner-Postage-4_b416325a-e81a-46fe-ac22-f4aaa86610e1.jpg",
+        "mobile_image": "shopify://shop_images/Compost_pack_square.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "full image-overlay--bg-shadow"
+      }
+    },
+    "1648990689e5ada899": {
+      "type": "rich-text",
+      "blocks": {
+        "164899068925473de9-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "164899068925473de9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know shopping online is not always easy and we want your experience with us to be a pleasant one. If your item is not quite right please read the return options available to you.</p><p></p><p>Please note, we have different return policies for our online store and our <a href=\"/pages/boutique-returns-policy\" title=\"Boutique Returns Policy\">boutique</a>. </p><p>For online purchases please refer to our Online Returns Policy below. Lodge a return via our returns portal <a href=\"https://mahashe.com/a/return\" title=\"https://mahashe.com/a/return\">here</a>.</p><p>For orders purchased from our boutique, please refer to our <a href=\"/pages/boutique-returns-policy\" title=\"Boutique Returns Policy\">Boutique Returns Policy</a>.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "164899068925473de9-0",
+        "164899068925473de9-1"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "1648990080b2ae122e": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "164899008077fe85a7-0": {
+          "type": "question",
+          "settings": {
+            "title": "SUBMITTING A RETURN",
+            "answer": "<p>Please note, we have different policies for our online store and boutique. </p><p>ONLINE ORDERS  - Please <a href=\"https://mahashe.com/a/return\" title=\"https://mahashe.com/a/return\">click HERE</a> and follow the prompts.</p><p>Once the returned item/s are received back at our warehouse, we will process the refund/store credit/exchange within 5 business days. </p><p>We will notify you via email once we have processed your return.</p><p>BOUTIQUE purchases must be returned in store.</p>"
+          }
+        },
+        "164899008077fe85a7-1": {
+          "type": "question",
+          "settings": {
+            "title": "FULL PRICED ITEMS",
+            "answer": "<p>Eligible for - REFUND, EXCHANGE OR STORE CREDIT</p><p>Must be returned to us within 30 days of delivery. Orders placed between 1st December and 31st of December have 60 days to return their item/s.</p><p>Items need to be received by us in the exact condition that you received them. Tags still attached. Clothing neither washed nor worn.</p><p>Customers are responsible for return shipping cost. Within Australia we will cover the shipping cost of the exchange back to you.</p><p>NOTE: Refunds and Store Credits do not include postage.</p>"
+          }
+        },
+        "f19d5c8e-4b9e-4d9a-810f-028cee1335c3": {
+          "type": "question",
+          "settings": {
+            "title": "SALE ITEMS",
+            "answer": "<p>With a discount of 30% or less - Eligible for STORE CREDIT. (For items with a discount of 31% or more please see FINAL SALE ITEMS below.)</p><p>Must be returned to us within 30 days of delivery. Orders placed between 1st December and 31st of December have 60 days to return their item/s.</p><p>Items need to be received by us in the exact condition that you received them. Tags still attached. Clothing neither washed nor worn.</p><p>If you would like a different style or size instead, please place another order.</p><p>Customers are responsible for return shipping costs.</p>"
+          }
+        },
+        "e894837b-eb3e-4fed-a8ee-b2ccbef75593": {
+          "type": "question",
+          "settings": {
+            "title": "FINAL SALE ITEMS",
+            "answer": "<p>FINAL PURCHASE</p><p>Items with a discount of 31% or more are considered final sale and are not eligible for returns of any kind.</p><p>Please choose carefully as final sale items are a final purchase. Final sale items cannot be exchanged, credited or refunded. </p>"
+          }
+        },
+        "cc6d8d38-cf30-4559-bc94-e20fd98478cf": {
+          "type": "question",
+          "settings": {
+            "title": "REFUNDS",
+            "answer": "<p>Full Priced items only.</p><p>Sale items are NOT eligible for a refund.</p><p>Final sale items are not eligible for a refund. Final sale items are a final purchase.</p><p>Refunds exclude postage.  The refund will be paid back to the original payment method that the customer used to purchase the order.  Refunds are issued immediately but payment may take some time to show in your account.</p><p>Must be returned to us within 30 days from delivery. </p><p>Items need to be received by us in the exact condition that you received them. Tags still attached. Clothing neither washed nor worn.</p><p>Customers are responsible for return shipping costs.</p>"
+          }
+        },
+        "6ba35d81-a116-4694-a1be-2d0bc7d79573": {
+          "type": "question",
+          "settings": {
+            "title": "STORE CREDIT",
+            "answer": "<p>All items are eligible for a store credit EXCLUDING Final Sale Items.</p><p>Valid forever!</p><p>Excludes postage.</p><p>Store credit will be issued in the form of a gift card. The gift card will be issued immediately once we have received and approved your returned item/s.</p><p>Must be returned to us within 30 days of delivery. </p><p>Items need to be received by us in the exact condition that you received them. Tags still attached. Clothing neither washed nor worn.</p><p>Customers are responsible for return shipping costs.</p>"
+          }
+        },
+        "a28aa348-021f-419d-aaa2-d62bf761e99e": {
+          "type": "question",
+          "settings": {
+            "title": "EXCHANGES",
+            "answer": "<p>Full priced items only. </p><p>We will notify you via email when we have processed your exchange and send you a new tracking number for your new item/s.</p><p>Customers are responsible for return shipping cost. Within Australia we will cover the shipping cost of the exchange back to you.</p>"
+          }
+        },
+        "4d26b9ac-a8bf-4a6d-907a-02baa148f4ce": {
+          "type": "question",
+          "settings": {
+            "title": "CONDITIONS OF RETURNS",
+            "answer": "<p>Items must be returned to us within 30 days of delivery. </p><p>Items need to be received by us in the exact condition that you received them. Tags still attached. Clothing neither washed nor worn.</p><p>Customers are responsible for return shipping cost.</p><p>Once the returned item/s are received back at our warehouse, we will process the refund/store credit/exchange within 5 business days. </p><p>You will receive an email once we have processed your return.</p>"
+          }
+        },
+        "82478716-6cb4-4002-872a-4b0089a9d351": {
+          "type": "question",
+          "settings": {
+            "title": "FAULTY OR RECEIVED THE WRONG ITEM",
+            "answer": "<p>If you believe you have received a faulty or received a wrong item, please send photos to info@mahashe.com within 7 days.</p><p>We will rectify this as quickly as we can. We will cover all costs to have the item either replaced or refunded.</p><p>Please contact us within 7 days of receiving the item to make arrangements.</p>"
+          }
+        },
+        "7d438383-2477-4e1b-9b18-ae067a7b9556": {
+          "type": "question",
+          "settings": {
+            "title": "RETURN ADDRESS",
+            "answer": "<p>MAHASHE RETURNS </p><p>PO BOX 3167 UKI</p><p>NSW 2484 AUSTRALIA</p><p>PH: 02 6689 7059</p>"
+          }
+        }
+      },
+      "block_order": [
+        "164899008077fe85a7-0",
+        "164899008077fe85a7-1",
+        "f19d5c8e-4b9e-4d9a-810f-028cee1335c3",
+        "e894837b-eb3e-4fed-a8ee-b2ccbef75593",
+        "cc6d8d38-cf30-4559-bc94-e20fd98478cf",
+        "6ba35d81-a116-4694-a1be-2d0bc7d79573",
+        "a28aa348-021f-419d-aaa2-d62bf761e99e",
+        "4d26b9ac-a8bf-4a6d-907a-02baa148f4ce",
+        "82478716-6cb4-4002-872a-4b0089a9d351",
+        "7d438383-2477-4e1b-9b18-ae067a7b9556"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16497329757ca4529e": {
+      "type": "rich-text",
+      "blocks": {
+        "1649732975e3c51f70-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "1649732975e3c51f70-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MAHASHE RETURNS PO BOX 3167 UKI NSW 2484 AUSTRALIA PH: +61(0)2 6689 7059</p><p>We absolutely love to help out! If you have any issues or queries about your order please don’t hesitate to get in touch anytime.</p><p>EMAIL: <a href=\"mailto:info@mahashe.com\">info@mahashe.com</a></p><p>HQ PHONE: 02 6689 7059</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1649732975e3c51f70-0",
+        "1649732975e3c51f70-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "164899045337a8f1cd",
+    "1648990689e5ada899",
+    "1648990080b2ae122e",
+    "16497329757ca4529e",
+    "main"
+  ]
+}

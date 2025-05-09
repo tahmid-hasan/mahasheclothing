@@ -9,6 +9,79 @@
  */
 {
   "sections": {
+    "16489871177abaf893": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        "h1 {color: #ffffff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Dried-Protea-1.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "164898941576e608b2": {
+      "type": "rich-text",
+      "blocks": {
+        "1648989415630729bf-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "text_tAbXGG": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>HOLIDAY TRADING HOURS</strong></p><p>MahaShe Head Office will be closed from 21st December to 6th January. Any orders placed or returns received during this time will be shipped/processed from the 6th January.</p><p><em>We wish you all the best for the festive season </em>✨</p>",
+            "enlarge_text": true
+          }
+        },
+        "1648989415630729bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6></h6><h6>Get in Touch</h6><p>We pride ourselves on customer service & absolutely love hearing from you.<br/>We are more than happy to help with any questions you have about our sizing or products.</p><h6>Head Office</h6><p><a href=\"mailto:info@mahashe.com\">info@mahashe.com</a></p><p><a href=\"mailto:info@mahashe.com\">wholesale@mahashe.com</a></p><p>Phone: 02 6689 7059</p><p>9am - 5pm Monday - Friday </p><h6></h6><h6>Brunswick Heads Boutique</h6><p>14a The Terrace, Brunswick Heads, NSW 2483 AUSTRALIA</p><p>02 6685 1411</p><p>Open 7 days 9am - 5pm</p><p></p><p></p><p></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1648989415630729bf-0",
+        "text_tAbXGG",
+        "1648989415630729bf-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "16489882839d9697b6": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "1648988283bd3a9a46-0": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Brunswick Heads Boutique",
+            "answer": "<p>14a The Terrace, Brunswick Heads, NSW 2483 AUSTRALIA</p><p>Open 7 days 10am - 4pm</p><p>Phone 02 6685 1411</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1648988283bd3a9a46-0"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
     "main": {
       "type": "main-contact",
       "blocks": {
@@ -26,7 +99,9 @@
         },
         "message": {
           "type": "message_input",
-          "settings": {}
+          "settings": {
+            "half_width": false
+          }
         }
       },
       "block_order": [
@@ -34,10 +109,18 @@
         "email",
         "message"
       ],
-      "settings": {}
+      "settings": {
+        "show_page_title": false,
+        "use_columns": false,
+        "contact_title": "",
+        "contact_text": ""
+      }
     }
   },
   "order": [
+    "16489871177abaf893",
+    "164898941576e608b2",
+    "16489882839d9697b6",
     "main"
   ]
 }

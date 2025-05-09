@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "7ac6a968-fc19-4877-b301-4f77f546b0b7": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Mob_Aurora_Stevie_rack_shot_Ex_eaddfbb7-dcad-4358-94b4-9444763c1a8b.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "8eb27574-9d30-44f1-bf8e-04be9e40d044": {
+      "type": "gallery",
+      "settings": {
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "full_width": true,
+        "enable_carousel": true,
+        "overlay_style": "full",
+        "button_style": "secondary"
+      }
+    },
+    "a5224b90-6bc1-445b-b70e-fd4e4d368a86": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Aurora_1st_drop_rack_Ex_16f55d1b-d3d0-428a-9f92-3a6297a2e878.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "16498495626075621b": {
+      "type": "map",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "heading": "Our Boutique",
+        "address": "<p>14 The Terrace <br/>Brunswick Heads NSW Australia</p><p>OPEN 7 DAYS </p><p>10am - 4pm</p>",
+        "button": "Directions",
+        "show_pin": true,
+        "show_feature_image": true,
+        "feature_image": "shopify://shop_images/54942195-4A3C-4F45-BBD1-205B9C8A10BC.jpg",
+        "map_address": "14a The Terrace Brunswick heads",
+        "api_key": "AIzaSyDuYjW-OVaw-cl2-Nacoz-qx6PggPa5S9o",
+        "map_style": "retro",
+        "background_image": "shopify://shop_images/54942195-4A3C-4F45-BBD1-205B9C8A10BC.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7ac6a968-fc19-4877-b301-4f77f546b0b7",
+    "8eb27574-9d30-44f1-bf8e-04be9e40d044",
+    "a5224b90-6bc1-445b-b70e-fd4e4d368a86",
+    "16498495626075621b"
+  ]
+}

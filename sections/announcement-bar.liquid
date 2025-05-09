@@ -1,3 +1,12 @@
+{% comment %}Determine customer type{% endcomment %}
+{% assign customer_type = 'retail' %}
+{% for tag in customer.tags %}
+  {% if tag == 'wholesale' %}
+    {% assign customer_type = 'wholesale' %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 {% if section.blocks.size > 0 or section.settings.enable_language_selector or section.settings.enable_country_selector or section.settings.menu != blank %}
   {%- liquid
     assign longest_announcement = 0
@@ -35,26 +44,29 @@
       }
     {% endstyle %}
 
-    {%- for block in section.blocks offset: 1 -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
-      <div class="announcement-bg announcement-bg--inactive absolute inset-0"
-          data-index="{{ forloop.index }}"
-          style="
-            background:
-              {%- if block.settings.use_custom_colors %}
-                {{- block.settings.bg_gradient | default: block.settings.bg_color }}
-              {%- else %}
-                {{- section.settings.announcement_bar_gradient | default: section.settings.announcement_bar_col }}
-              {%- endif -%}
-          "></div>
-    {%- endfor -%}
-
+{%- capture announcement_html -%}
+  {%- if section.settings.announcement_show -%}
+    {%- if section.settings.announcement_link != blank -%}
+      <a class="announcement-bar__link" href="{% if customer_type == 'wholesale' %}{{ section.settings.announcement_link-wholesale }}{% else %}{{ section.settings.announcement_link }}{% endif %}">
+    {%- endif -%}
+    <div class="announcement-bar__inner">{% if customer_type == 'wholesale' %}{{ section.settings.announcement_text-wholesale }}{% else %}{{ section.settings.announcement_text }}{% endif %}</div>
+    {%- if section.settings.announcement_link != blank -%}
+      </a>
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- for block in section.blocks offset: 1 -%}
+  <div class="announcement-bg announcement-bg--inactive absolute inset-0"
+      data-index="{{ forloop.index }}"
+      style="
+        background:
+          {%- if block.settings.use_custom_colors %}
+            {{- block.settings.bg_gradient | default: block.settings.bg_color }}
+          {%- else %}
+            {{- section.settings.announcement_bar_gradient | default: section.settings.announcement_bar_col }}
+          {%- endif -%}
+      "></div>
+{%- endfor -%}
     <div class="container container--no-max relative">
       <div class="announcement-bar__left desktop-only">
         {% if section.settings.show_social_icons %}
@@ -66,13 +78,6 @@
         {%- if section.blocks.size > 0 -%}
           <div class="announcement-bar__announcements">
             {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
               {%- liquid
                 if block.settings.show_countdown
                   assign now = "now" | date: '%Y-%m-%dT%H:%M'
@@ -136,12 +141,12 @@
         {% if section.settings.menu != blank %}
           <span class="inline-menu">
             {% for link in linklists[section.settings.menu].links %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: link %}{%- endcapture -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: link %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
 
               <a class="inline-menu__link announcement-bar__link" href="{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
@@ -163,6 +168,44 @@
   "name": "Announcement bar",
   "class": "section-announcement-bar",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "announcement_show",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Retail Customers",
+      "info": "The below text and link are for retail customers"
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "announcement_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Wholesale Customers",
+      "info": "The below text and link are for retail wholesale"
+    },
+    {
+      "type": "text",
+      "id": "announcement_text-wholesale",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "announcement_link-wholesale",
+      "label": "Link"
+    },
     {
       "type": "range",
       "id": "message_font_size",
@@ -342,5 +385,4 @@
       ]
     }
   ]
-}
-{% endschema %}
+}{% endschema %}

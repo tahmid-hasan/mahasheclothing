@@ -1,0 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1649847100470ee324": {
+      "type": "rich-text",
+      "blocks": {
+        "164984710063f3081b-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Wholesale Delivery",
+            "use_h1": true
+          }
+        },
+        "164984710063f3081b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>Payment is required before delivery. Postage will be calculated at checkout and is capped at AU$40.<br/><br/>We aim to get your order out to you as quickly as possible, although please allow 1-2 business days after you have placed your order to the time of the dispatch date.<br/><br/>All wholesale orders within Australia go out via Australia Post express post service, usually taking between 2-5 business days depending on your location.<br/></p><p>PLEASE NOTE - Shipping promotions available to retail customers are not valid for wholesale orders.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "164984710063f3081b-0",
+        "164984710063f3081b-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "0d319d82-c477-4269-ac13-f1ae47521c8a": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Delivery_Information_9aa7796b-c272-4dd0-8f54-a71fba69ede3.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "1649847100470ee324",
+    "0d319d82-c477-4269-ac13-f1ae47521c8a",
+    "main"
+  ]
+}

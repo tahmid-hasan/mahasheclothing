@@ -18,47 +18,171 @@
         },
         "price": {
           "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "judgeme_preview_badge_product_page_dc318f6a": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "vendor": {
           "type": "vendor",
+          "disabled": true,
           "settings": {}
         },
         "divider": {
           "type": "divider",
-          "settings": {}
+          "settings": {
+            "show_in_quickbuy": false
+          }
         },
-        "variant-picker": {
-          "type": "variant-picker",
-          "settings": {}
-        },
-        "buy-buttons": {
-          "type": "buy-buttons",
-          "settings": {}
-        },
-        "description": {
+        "e56d3980-0b62-4423-993e-973ab2177147": {
           "type": "description",
+          "disabled": true,
+          "settings": {
+            "show_in_tab": true,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        },
+        "efb9d6c6-0bc5-4459-8c18-128c6ebe4a35": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}</p>",
+            "page": "",
+            "open": true,
+            "show_in_quickbuy": false
+          }
+        },
+        "666bd6e8-f501-4ea1-80ac-f2666075caf7": {
+          "type": "accordion",
+          "settings": {
+            "title": "Size & Fit",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.size_fit | metafield_tag }}</p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "fdd37fc0-9b2e-4039-b0f2-cd25aa26428c": {
+          "type": "accordion",
+          "settings": {
+            "title": "Delivery & Returns",
+            "icon": "",
+            "content": "<p><strong>DELIVERY</strong> </p><p>Within Australia & New Zealand:</p><ul><li>$10 flat rate for purchases <em>under </em>$150</li><li> FREE delivery for purchases <em>over</em> $150</li></ul><p>Outside of Australia & New Zealand $25 Flat Rate</p><p>View our full delivery details <a href=\"/pages/delivery\" target=\"_blank\" title=\"Delivery\">HERE</a></p><p><strong>RETURNS</strong></p><p>30 day returns. </p><p>FULL PRICED ITEMS are eligible for a refund, exchange or store credit. </p><p>SALE ITEMS are eligible for store credit.</p><p>FINAL SALE ITEMS  are a final purchase. No returns or exchanges. </p><p>View our full returns policy <a href=\"/pages/returns\" target=\"_blank\" title=\"Returns\">HERE</a></p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "86eb50ec-2d80-4c13-b42c-eae648ce7772": {
+          "type": "accordion",
+          "settings": {
+            "title": "Care Instructions",
+            "icon": "",
+            "content": "<p>CARE INSTRUCTIONS: </p><ul><li>Cold Gentle Machine Wash </li><li>Hang Dry In Shade</li><li>Reshape Whilst Damp</li><li>Do Not Soak</li><li>Warm Iron </li><li>Dry Cleanable</li></ul>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "3a3965eb-9531-481e-80dc-9ceae2be2932": {
+          "type": "sharing",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_7THfLm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
       "block_order": [
         "title",
         "price",
+        "judgeme_preview_badge_product_page_dc318f6a",
         "vendor",
         "divider",
-        "variant-picker",
-        "buy-buttons",
-        "description"
+        "e56d3980-0b62-4423-993e-973ab2177147",
+        "efb9d6c6-0bc5-4459-8c18-128c6ebe4a35",
+        "666bd6e8-f501-4ea1-80ac-f2666075caf7",
+        "fdd37fc0-9b2e-4039-b0f2-cd25aa26428c",
+        "86eb50ec-2d80-4c13-b42c-eae648ce7772",
+        "3a3965eb-9531-481e-80dc-9ceae2be2932",
+        "judge_me_reviews_preview_badge_7THfLm"
       ],
-      "settings": {}
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "gallery_size": "medium",
+        "enable_zoom": true,
+        "enable_video_looping": false
+      }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {}
+    "169512359924614255": {
+      "type": "apps",
+      "blocks": {
+        "0d36bd03-bea9-4202-bb4e-26fac07b96a6": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "0d36bd03-bea9-4202-bb4e-26fac07b96a6"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    },
+    "judgeme_section_review_widget_2795": {
+      "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_9a415ee9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_9a415ee9"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    },
+    "1651055051f46cbb1b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/2560px-Cotton_field_kv17.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "16510550275bbbc6cf": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/thin-plant-stems-in-sun.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "169512359924614255",
+    "judgeme_section_review_widget_2795",
+    "1651055051f46cbb1b",
+    "16510550275bbbc6cf"
   ]
 }

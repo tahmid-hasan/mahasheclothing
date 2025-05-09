@@ -1,0 +1,218 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "disabled": true,
+      "settings": {
+        "show_date": true,
+        "show_author": true,
+        "show_article_tags": true,
+        "show_sharing_icons": true,
+        "show_featured_image": true,
+        "full_width_image": true,
+        "featured_image_height": "huge",
+        "enable_title_overlay": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "image_with_text_overlay_p8QgAg": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        "h1 {color: #fff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Jo_Whitton_Blog_Banner.jpg",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "image_with_text_qPgyaa": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Bianca_Midi_dress_2_9da472bf-5f1b-4a14-8883-f1f1f9ee6cd6.jpg",
+        "image_width": 600,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "image_with_text_VpRpq6": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Buttercup_trouser_1_.2.jpg",
+        "image_width": 600,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "rich_text_jwQWg9": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dWfFcm": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>A mum of four beautiful children. How do you find balance between it all?</h6><p>Yes, I have four kids and I homeschooled them all! Crazy, huh! But I wouldn't have it any other way. My Quirky Cooking business started with a food blog which I began 15 years ago. At first I just worked on my blog at night after the kids went to bed, and sometimes during breaks from teaching and cooking. Later, as the kids grew and were able to do more of their school work independently, we would all work together. We'd all sit at the dining table with me working on my laptop and jumping up to test recipes while they worked, and it was nice to be right there to help them when they needed me, rather than in an office somewhere from 9-5. I think when you homeschool from the beginning, work and life just intermesh and it's not two separate things that you have to 'juggle'. Quirky Cooking grew into a family business just naturally, as my kids were always by my side. My 26 year-old daughter now works for me part time (and also manages a vanilla farm part time); and my 22 year-old son will be working with me part time this year as IT support. They've all been helpers at many of my events, and I love that Quirky Cooking is a way of life for them, too. They are now 26, 24, 22 and 20 years old, two have moved out and another is moving next year - but we are still very close and spend a lot of time together.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_dWfFcm"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": true
+      }
+    },
+    "gallery_YfAaP6": {
+      "type": "gallery",
+      "settings": {
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "full_width": false,
+        "enable_carousel": true,
+        "overlay_style": "full",
+        "button_style": "primary"
+      }
+    },
+    "image_with_text_VryKft": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Poppy_Teal_3.2_1b23031c-9a86-484c-94cf-6fc1f7a76c1d.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "rich_text_phz9jC": {
+      "type": "rich-text",
+      "blocks": {
+        "text_89B7HY": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>What inspires you the most when you are creating?</h6><p></p><p>Usually childhood memories of favourite foods. To be able to recreate something we loved as kids so that my family and friends approve despite all the healthy 'tweaks' I make is my ultimate goal! I also love colour and design (art being my first career), so now and then I just want to make something beautiful and really take the time to enjoy the process as well as delight my friends (and online community) with the finished product. I'm also really inspired by fresh, seasonal produce, especially if it's from my own garden. I love working out ways to use what I have.</p><h6></h6>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_89B7HY"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": true
+      }
+    },
+    "image_with_text_BwVzL3": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Biana_dress_6.2.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "left"
+      }
+    },
+    "image_with_text_NjRT78": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Buttercup_dress_7.jpg",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left"
+      }
+    },
+    "rich_text_jX7QgX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kXEzAm": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text",
+            "use_h1": false
+          }
+        },
+        "text_kDxWNJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Find Jo Whitton</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_FFjwNf": {
+          "type": "button",
+          "settings": {
+            "button_label": "www.quirkycooking.com.au",
+            "button_link": "https://quirkycooking.com.au/",
+            "button_style": "link"
+          }
+        },
+        "button_cHALNr": {
+          "type": "button",
+          "settings": {
+            "button_label": "@jowhitton",
+            "button_link": "https://www.instagram.com/jowhitton/?hl=en",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kXEzAm",
+        "text_kDxWNJ",
+        "button_FFjwNf",
+        "button_cHALNr"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "featured_collection_76nqnd": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Jo Whitton's look",
+        "collection": "jos-pieces",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "show_view_all": true,
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_p8QgAg",
+    "image_with_text_qPgyaa",
+    "image_with_text_VpRpq6",
+    "rich_text_jwQWg9",
+    "gallery_YfAaP6",
+    "image_with_text_VryKft",
+    "rich_text_phz9jC",
+    "image_with_text_BwVzL3",
+    "image_with_text_NjRT78",
+    "rich_text_jX7QgX",
+    "featured_collection_76nqnd"
+  ]
+}

@@ -1,3 +1,4 @@
+
 <div id="section-id-{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
   {% style %}
     #section-id-{{ section.id }} {
@@ -9,13 +10,6 @@
   <div class="store-messages messages-{{ section.blocks.size }} desktop-only">
     <div class="container">
       {%- for block in section.blocks -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: block %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
         {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
         {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
         <div class="message message-{{ forloop.index }}" {%- render 'animation-attrs', attrs: animation_attrs -%}>

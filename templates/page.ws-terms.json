@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "6e5c633d-9c39-40d8-b8de-5e570c321c40": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Banner_Ume.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "ced775a6-eff5-4439-970d-d48caaa7ab71": {
+      "type": "rich-text",
+      "blocks": {
+        "19bb7c8b-2097-4a39-9dcf-d3b4e527681f": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Hi THERE!"
+          }
+        },
+        "template--16193287946406__ced775a6-eff5-4439-970d-d48caaa7ab71-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Welcome",
+            "use_h1": false
+          }
+        },
+        "template--16193287946406__ced775a6-eff5-4439-970d-d48caaa7ab71-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We pride ourselves on the stores we partner with and thank you for representing MahaShe. Please read below for our wholesale terms and details on how to place an order. </p><p></p><p></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "19bb7c8b-2097-4a39-9dcf-d3b4e527681f",
+        "template--16193287946406__ced775a6-eff5-4439-970d-d48caaa7ab71-heading-1",
+        "template--16193287946406__ced775a6-eff5-4439-970d-d48caaa7ab71-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    },
+    "e477aed4-f1ca-42bd-ad00-e71bdaac8f80": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Wildflower_Banner_Buttercup_2.jpg",
+        "mobile_image": "shopify://shop_images/Wildflower_Banner_Mobile_2.jpg",
+        "height": "fixed",
+        "height_desktop": 660,
+        "height_mobile": 580,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "a0baa26a-3454-4f59-99a8-32ca5591e339": {
+      "type": "rich-text",
+      "blocks": {
+        "bc74cc9d-095d-450a-8a03-70510dbde9bd": {
+          "type": "heading",
+          "settings": {
+            "title": "Wholesale Terms",
+            "use_h1": false
+          }
+        },
+        "b1c1805a-8924-468b-86d2-2d177cc58b84": {
+          "type": "text",
+          "settings": {
+            "text": "<p> MINIMUM ORDERS</p><ul><li>$1500 for first time orders.</li><li>$400 for top up orders.</li></ul><p>$1500 is the minimum you need in your store to be able to tell the story of MahaShe and what a beautiful story it will be.<br/>We don’t post out individual customer orders. The top up minimum is strictly $400. Thanks for understanding.</p><p>Please allow 1-2 business days until time of dispatch date.</p><p><br/>HOW TO PLACE AN ORDER<br/></p><ul><li>Add items to your cart.</li><li>Proceed to checkout. Pay via: Paypal, credit card or bank transfer.</li><li>Pre-orders: use bank transfer option. Your order will go through without immediate payment required.</li></ul><p></p><p>PAYMENT</p><ul><li>GST will be added at checkout</li><li>Payment is via bank transfer, PayPal or credit card</li><li>Payment is required before delivery.</li></ul>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "bc74cc9d-095d-450a-8a03-70510dbde9bd",
+        "b1c1805a-8924-468b-86d2-2d177cc58b84"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "635472e1-6ec2-4943-a4c1-32cc41bcb2f9": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Maha-Summer23-NiceRack-5_38c1f9b4-cdd2-4324-8e40-7a314b737775.jpg",
+        "image_width": 700,
+        "image_position": "left",
+        "text_alignment": "center"
+      }
+    },
+    "18280269-f22a-41ed-8bdb-fa1185efe562": {
+      "type": "rich-text",
+      "blocks": {
+        "b49d5021-d798-4d2a-b9bd-84b4d826171e": {
+          "type": "heading",
+          "settings": {
+            "title": "Any Questions?",
+            "use_h1": false
+          }
+        },
+        "1e4489ed-e5f3-4181-8752-ec4dd658fb2d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We absolutely love to help out! If you have any issues or queries about your order or products please don’t hesitate to get in touch.</p><p>Office Hours 9am - 5pm</p><p>Monday - Friday</p><p>EMAIL: <a href=\"mailto:info@mahashe.com\">wholesale@mahashe.com</a></p><p>HQ PHONE: +61(0)2 6689 7059</p>",
+            "enlarge_text": false
+          }
+        },
+        "40dd41db-40a2-43be-a778-650b37cfed64": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET IN TOUCH",
+            "button_link": "shopify://pages/wholesale-contact-us",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "b49d5021-d798-4d2a-b9bd-84b4d826171e",
+        "1e4489ed-e5f3-4181-8752-ec4dd658fb2d",
+        "40dd41db-40a2-43be-a778-650b37cfed64"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6e5c633d-9c39-40d8-b8de-5e570c321c40",
+    "ced775a6-eff5-4439-970d-d48caaa7ab71",
+    "e477aed4-f1ca-42bd-ad00-e71bdaac8f80",
+    "a0baa26a-3454-4f59-99a8-32ca5591e339",
+    "635472e1-6ec2-4943-a4c1-32cc41bcb2f9",
+    "18280269-f22a-41ed-8bdb-fa1185efe562"
+  ]
+}

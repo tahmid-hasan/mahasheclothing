@@ -44,22 +44,8 @@
         {%- unless product_variant.product.has_only_default_variant -%}
           <p class="m-0">
             {%- for product_option in product_variant.product.options_with_values -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: product_option %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
               <strong>{{ product_option.name | escape }}:</strong>&nbsp;
               {%- for value in product_option.values -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                 {%- if product_option.selected_value == value -%}
                   <span>{{ value | escape }}</span>
                 {%- endif -%}
@@ -77,13 +63,6 @@
     <div class="drawer__content flex-auto">
       <ul role="list">
         {%- for availability in pick_up_availabilities -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: availability %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
           <li>
             {% unless forloop.first %}<hr>{% endunless %}
             <div class="font-semibold" role="heading" aria-level="3">{{ availability.location.name | escape }}</div>

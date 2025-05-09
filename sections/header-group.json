@@ -13,75 +13,77 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "blocks": {
-        "announcement-1": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "bg_color": "#202020",
-            "text_color": "#ffffff"
-          }
-        },
-        "announcement-2": {
-          "type": "announcement",
-          "settings": {
-            "text": "Announce <a href=\"#\">something<\/a> here",
-            "bg_color": "#f4f6f8",
-            "text_color": "#4c4c4b"
-          }
-        }
-      },
-      "block_order": [
-        "announcement-1",
-        "announcement-2"
-      ],
       "settings": {
-        "show_social_icons": true
+        "announcement_show": true,
+        "announcement_text": "FREE SHIPPING FOR ALL AUSTRALIAN & NZ ORDERS OVER $150 | 30 DAY RETURNS",
+        "announcement_link": "",
+        "announcement_text-wholesale": "Easy re-orders ~  Maximum postage price capped at $40",
+        "announcement_link-wholesale": "shopify://pages/wholesale",
+        "announcement_bar_col": "#f5f0ee",
+        "announcement_text_col": "#212121",
+        "show_social_icons": true,
+        "menu": ""
       }
     },
     "header": {
       "type": "header",
+      "custom_css": [],
       "settings": {
-        "logo": "{{ shop.brand.logo }}",
-        "logo_img_width_int": 150,
+        "logo": "shopify://shop_images/G_320x100_logo_Ex.jpg",
+        "logo_img_width_int": 255,
+        "mobile_logo_img_width_int": 130,
         "enable_sticky": true,
-        "menu_layout": "inline-menu-left"
+        "menu_linklist": "main-menu",
+        "menu_layout": "underneath",
+        "nav_featured_link": "",
+        "enable_mobile_promo_carousel": true,
+        "enable_nav_mob_products": true,
+        "nav_mob_products_title": "LATEST AURORA COLLECTION",
+        "nav_mob_products_collection": "new-arrivals",
+        "enable_search": true
       }
     },
     "store-messages": {
       "type": "store-messages",
       "blocks": {
-        "1601308104445": {
+        "1a48e79c-9a9a-4ea0-8c02-93a55044d9a1": {
           "type": "message",
+          "disabled": true,
           "settings": {
-            "heading": "",
-            "subheading": "Free shipping on orders over $100"
+            "heading": "Pre-existing wholesale accounts",
+            "subheading": "Please log in here",
+            "link_url": ""
           }
         },
-        "1601308125690": {
+        "f76e798f-f599-44e5-b610-6599aaebfc2b": {
           "type": "message",
+          "disabled": true,
           "settings": {
-            "heading": "",
-            "subheading": "Free Click & Collect to US stores*"
+            "heading": "Want to become a wholesale customer?",
+            "subheading": "Apply to become a MahaShe stockist HERE",
+            "link_url": ""
           }
         },
-        "1601308127822": {
+        "f613f8ea-386f-4676-ba53-eda2963f2b75": {
           "type": "message",
+          "disabled": true,
           "settings": {
-            "heading": "",
-            "subheading": "Free and easy domestic returns"
+            "heading": "Wildflower Collection",
+            "subheading": "GST will be added at checkout.",
+            "link_url": ""
           }
         }
       },
       "block_order": [
-        "1601308104445",
-        "1601308125690",
-        "1601308127822"
+        "1a48e79c-9a9a-4ea0-8c02-93a55044d9a1",
+        "f76e798f-f599-44e5-b610-6599aaebfc2b",
+        "f613f8ea-386f-4676-ba53-eda2963f2b75"
       ],
       "settings": {
         "head_not_home_only": false,
-        "head_not_mob_show": true,
-        "head_not_mob_text": "Free shipping on orders over $100"
+        "head_not_mob_show": false,
+        "head_not_mob_text": "jhbdfo",
+        "head_not_mob_url": ""
       }
     }
   },

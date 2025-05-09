@@ -10,7 +10,7 @@
 {
   "general": {
     "localization": {
-      "country_label": "国\/地域",
+      "country_label": "国/地域",
       "countries_error": "国の取得にエラーが発生。もう一度お試しください。",
       "language_label": "言語",
       "update": "更新"
@@ -81,7 +81,7 @@
   "products": {
     "product": {
       "add_to_cart": "カートに追加",
-      "added_to_cart_with_link_html": "<a href=\"{{ cart_url }}\">カート<\/a>に追加されました",
+      "added_to_cart_with_link_html": "<a href=\"{{ cart_url }}\">カート</a>に追加されました",
       "backorder": "...は取り寄せ中で入荷次第発送します。",
       "barcode": "バーコード:",
       "choose_a": "を選択する",
@@ -100,9 +100,9 @@
       "pickup_availability": {
         "check_other_stores": "他のストアで入手可能か確認",
         "pick_up_available": "受取可能",
-        "pick_up_available_at_html": "<strong>{{ location_name }}<\/strong>で受取可能",
+        "pick_up_available_at_html": "<strong>{{ location_name }}</strong>で受取可能",
         "pick_up_unavailable": "受取は現在利用不可",
-        "pick_up_unavailable_at_html": "受取は<strong>{{ location_name }}<\/strong>で現在利用不可",
+        "pick_up_unavailable_at_html": "受取は<strong>{{ location_name }}</strong>で現在利用不可",
         "refresh": "再読込",
         "unavailable": "受取を利用可能か読み込めませんでした",
         "view_store_info": "ストア情報を表示"
@@ -111,7 +111,7 @@
       "prev_product": "前",
       "price": {
         "unit_price": "単価",
-        "unit_price_separator": " \/ "
+        "unit_price_separator": " / "
       },
       "product_variants": "商品バリエーション",
       "quantity": "数量",
@@ -121,7 +121,7 @@
         "other": "{{ count }} レビュー"
       },
       "sale": "セール",
-      "shipping_policy_html": "次精算時に<a href=\"{{ link }}\">配送料<\/a>を算出。",
+      "shipping_policy_html": "次精算時に<a href=\"{{ link }}\">配送料</a>を算出。",
       "sku": "SKU:",
       "sold_out": "売切れ",
       "value_reduction_html": "{{ amount }}割引",
@@ -168,7 +168,7 @@
       "cart": "カート"
     },
     "footer": {
-      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}<\/a>."
+      "copyright_html": "&copy; {{ year }} <a href=\"{{ shop_url }}\">{{ shop_name }}</a>."
     },
     "faq_header": {
       "search_label": "よくある質問を検索する",
@@ -212,7 +212,7 @@
         "powered_by": "このショップは以下を使って構築されます"
       },
       "login_form": {
-        "admin_link_html": "あなたはストアオーナーですか。<a href=\"\/admin\">こちらでログイン<\/a>",
+        "admin_link_html": "あなたはストアオーナーですか。<a href=\"/admin\">こちらでログイン</a>",
         "heading": "パスワードを使ってストアにアクセス",
         "password_label": "パスワード",
         "password_placeholder": "パスワード",
@@ -277,11 +277,11 @@
       "title": "カート",
       "backorder": "商品は取り寄せ中で入荷次第発送します。",
       "free_shipping": "ご注文は無料配送の対象です！",
-      "free_shipping_deficit_html": "さらに<strong>{{ amount }}<\/strong>分購入して<strong>無料配送に！<\/strong>!",
+      "free_shipping_deficit_html": "さらに<strong>{{ amount }}</strong>分購入して<strong>無料配送に！</strong>!",
       "taxes_and_shipping_at_checkout": "税、ディスカウント、および配送料はチェックアウト時に計算されます",
-      "taxes_and_shipping_at_checkout_html": "税、ディスカウント、および<a href=\"{{ link }}\">配送料<\/a>はチェックアウト時に計算されます",
+      "taxes_and_shipping_at_checkout_html": "税、ディスカウント、および<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます",
       "taxes_included_shipping_at_checkout": "税込みで、配送料とディスカウントはチェックアアウト時に計算されます",
-      "taxes_included_shipping_at_checkout_html": "税込。<a href=\"{{ link }}\">配送料<\/a>とディスカウントはチェックアウト時に計算されます",
+      "taxes_included_shipping_at_checkout_html": "税込。<a href=\"{{ link }}\">配送料</a>とディスカウントはチェックアウト時に計算されます",
       "update": "カートを更新する"
     },
     "items": {
@@ -316,7 +316,7 @@
       "continue_shopping": "ショッピングを続行"
     },
     "terms": {
-      "agreement_html": "条<a href=\"{{ terms_url }}\" target=\"_blank\">件と返金ポリシーに同意します。<\/a>",
+      "agreement_html": "条<a href=\"{{ terms_url }}\" target=\"_blank\">件と返金ポリシーに同意します。</a>",
       "confirmation": "続行前に利用規約に同意しなければなりません。"
     }
   },

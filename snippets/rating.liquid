@@ -11,15 +11,25 @@
   <div class="cc-rating" role="img" data-rating-decimal="{{ rating_decimal }}" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: rating_value, rating_max: rating_value.scale_max }}">
     <span aria-hidden="true" class="cc-rating-stars">
       <span class="cc-rating-stars--inactive">
-        {%- liquid
-          for i in (1..5)
-            render 'rating-star-icon'
-          endfor
-        -%}
+        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+        {%- for i in (1..5) -%}
+        {%- capture hide_resource -%}{% render "wc_product_visibility", resource: i %}{%- endcapture -%}
+        {%- if hide_resource == "true" -%}
+          {% continue %}
+        {%- endif -%}
+        
+          {%- render 'rating-star-icon' -%}
+        
+        {%- endfor -%}
+        {%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
       </span>
       <span class="cc-rating-stars--active">
         {%- liquid
           for i in (1..rating_ceiling)
+            render "wc_product_visibility", resource: i
+            if $1 == "true"
+              continue
+            endif
             render 'rating-star-icon'
           endfor
         -%}

@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "name": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "email": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "message": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "message"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "use_columns": false,
+        "contact_title": "",
+        "contact_text": ""
+      }
+    },
+    "16489871177abaf893": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Eliza_Orchid_Elsy_Poppy_Peach_2_38b53a45-1d42-4209-a4e2-747015302226.jpg",
+        "mobile_image": "shopify://shop_images/230823_MAHASHE_Campaign_14_3707.jpg",
+        "height": "fixed",
+        "height_desktop": 500,
+        "height_mobile": 600,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "164898941576e608b2": {
+      "type": "rich-text",
+      "blocks": {
+        "1648989415630729bf-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "1648989415630729bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>GET IN TOUCH</p><p>We pride ourselves on customer service & absolutely love hearing from you.<br/>We are more than happy to help with any questions you have about our sizing or products.</p><p>Having trouble on where to start? We can put together an order for you based on the best selling styles and prints in your area.</p><p></p><p>Office Hours 9am - 5pm</p><p>Monday - Friday</p><p>EMAIL: <a href=\"mailto:info@mahashe.com\">wholesale@mahashe.com</a></p><p>HQ PHONE: +61(0)2 6689 7059</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1648989415630729bf-0",
+        "1648989415630729bf-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16489871177abaf893",
+    "164898941576e608b2"
+  ]
+}

@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
+        "overlay_style": "shadow",
+        "coll_desc_pos": "above",
+        "coll_num_per_page_int": 40,
+        "grid": 4,
+        "show_vendor": false,
+        "show_total": true,
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "filter_two_columns": false,
+        "enable_sticky_filter": true,
+        "image_position": "center center"
+      }
+    },
+    "1648878878eadd9000": {
+      "type": "collection-list",
+      "blocks": {
+        "e948c408-ed9d-4a00-a1ec-4db8eace6f1c": {
+          "type": "collection",
+          "settings": {
+            "collection": "marigold-1"
+          }
+        },
+        "2e0bd024-c889-4461-b0bf-fd37e97cee40": {
+          "type": "collection",
+          "settings": {
+            "collection": "dusk"
+          }
+        },
+        "03d57881-1a83-4230-ae48-2b027d4731bc": {
+          "type": "collection",
+          "settings": {
+            "collection": "eden"
+          }
+        },
+        "8a58e1c1-5747-4770-9bf8-fdfe230e896f": {
+          "type": "collection",
+          "settings": {
+            "collection": "revamped"
+          }
+        },
+        "092401b9-f88e-4f41-8d1a-278736b36e1d": {
+          "type": "collection",
+          "settings": {
+            "collection": "emerald-jade"
+          }
+        },
+        "592b4e7d-4592-4e90-bebe-15a08c62ed63": {
+          "type": "collection",
+          "settings": {
+            "collection": "artisan-magnolia"
+          }
+        }
+      },
+      "block_order": [
+        "e948c408-ed9d-4a00-a1ec-4db8eace6f1c",
+        "2e0bd024-c889-4461-b0bf-fd37e97cee40",
+        "03d57881-1a83-4230-ae48-2b027d4731bc",
+        "8a58e1c1-5747-4770-9bf8-fdfe230e896f",
+        "092401b9-f88e-4f41-8d1a-278736b36e1d",
+        "592b4e7d-4592-4e90-bebe-15a08c62ed63"
+      ],
+      "settings": {
+        "title": "MahaShe Collections",
+        "enable_carousel": false,
+        "grid": 3,
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1648878878eadd9000"
+  ]
+}

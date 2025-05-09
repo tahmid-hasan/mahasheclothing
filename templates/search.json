@@ -11,7 +11,17 @@
   "sections": {
     "main": {
       "type": "main-search",
-      "settings": {}
+      "settings": {
+        "show_vendor": false,
+        "coll_num_per_page_int": 24,
+        "grid": 4,
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "filter_two_columns": false,
+        "enable_sticky_filter": true
+      }
     }
   },
   "order": [

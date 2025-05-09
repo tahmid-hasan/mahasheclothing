@@ -6,20 +6,19 @@
     {% endif %}
 
     {% for part in paginate.parts %}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: part %}{%- endcapture -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop Start {%- endcomment -%}
+{%- capture hide_resource -%}{% render "wc_product_visibility", resource: part %}{%- endcapture -%}
 {%- if hide_resource == "true" -%}
   {% continue %}
 {%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
+{%- comment -%} Wholesale_Club_Product_Visibility_For_Loop End {%- endcomment -%}
 
       <span class="pagination__number{% if paginate.current_page == part.title %} underline underline--not-link{% endif %}">
         {%- if part.is_link -%}
           <a class="pagination__link text-current underline underline--on-hover" href="{{ part.url }}">{{ part.title }}</a>
         {%- else -%}
           {{- part.title -}}
-        {%- endif -%}
-      </span>
+        {%- endif -%}      </span>
     {% endfor %}
 
     {% if paginate.next %}

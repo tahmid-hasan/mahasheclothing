@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16489871177abaf893": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Mahashe_SH_04_315.jpg",
+        "mobile_image": "shopify://shop_images/Banner_Contact_-_MOBILE.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "164898941576e608b2": {
+      "type": "rich-text",
+      "blocks": {
+        "1648989415630729bf-0": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "use_h1": false
+          }
+        },
+        "1648989415630729bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>GET IN TOUCH</p><p>We pride ourselves on customer service & absolutely love hearing from you.<br/>We are more than happy to help with any questions you have about our sizing or products.</p><p>HEAD OFFICE</p><p><a href=\"mailto:info@mahashe.com\">info@mahashe.com</a><br/><a href=\"mailto:info@mahashe.com\">wholesale@mahashe.com</a><br/>Phone: 02 6689 7059<br/>9am - 5pm Monday - Thursday</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1648989415630729bf-0",
+        "1648989415630729bf-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "16489882839d9697b6": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "1648988283bd3a9a46-0": {
+          "type": "question",
+          "settings": {
+            "title": "Brunswick Heads Boutique",
+            "answer": "<p>14a The Terrace Brunswick Heads NSW 2483 AUSTRALIA</p><p>Open 7 days 10am - 4pm</p><p>Phone 02 6685 1411</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1648988283bd3a9a46-0"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "name": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "email": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "message": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "message"
+      ],
+      "settings": {
+        "show_page_title": false,
+        "use_columns": false,
+        "contact_title": "",
+        "contact_text": ""
+      }
+    }
+  },
+  "order": [
+    "16489871177abaf893",
+    "164898941576e608b2",
+    "16489882839d9697b6",
+    "main"
+  ]
+}

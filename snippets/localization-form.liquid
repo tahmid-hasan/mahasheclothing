@@ -52,13 +52,6 @@
         {%- if include_native -%}
           {%- capture country_values -%}
             {%- for country in localization.available_countries -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: country %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
               {{- country.iso_code -}}
               {%- unless forloop.last -%}|{%- endunless -%}
             {%- endfor -%}
@@ -66,13 +59,6 @@
 
           {%- capture country_names -%}
             {%- for country in localization.available_countries -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: country %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
               {{ country.name }} ({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})
               {%- unless forloop.last -%}|{%- endunless -%}
             {%- endfor -%}
@@ -90,13 +76,6 @@
             <div class="select inline-block relative">
               <select class="custom-select__native" id="{{ country_id }}-native" name="country_code">
                 {%- for value in country_values -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: value %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
                   <option value="{{ value | escape }}"{% if value == localization.country.iso_code %} selected{% endif %}>
                     {{- country_names[forloop.index0] -}}
                   </option>
@@ -111,13 +90,6 @@
     {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
       {%- capture language_values -%}
         {%- for language in localization.available_languages -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: language %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
           {{- language.iso_code -}}
           {%- unless forloop.last -%}|{%- endunless -%}
         {%- endfor -%}
@@ -125,13 +97,6 @@
 
       {%- capture language_names -%}
         {%- for language in localization.available_languages -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop Start {%- endcomment -%}
-{%- capture hide_resource -%}{% render "orbit_wholesale_product_visibility", resource: language %}{%- endcapture -%}
-{%- if hide_resource == "true" -%}
-  {% continue %}
-{%- endif -%}
-{%- comment -%} Wholesale_Hub_Product_Visibility_For_Loop End {%- endcomment -%}
-
           {{- language.endonym_name | capitalize -}}
           {%- unless forloop.last -%}|{%- endunless -%}
         {%- endfor -%}

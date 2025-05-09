@@ -22,7 +22,8 @@
       "blocks": {
         "subheading_g3DDcX": {
           "type": "subheading",
-          "settings": {}
+          "settings": {
+          }
         },
         "heading_iNdVkn": {
           "type": "heading",
@@ -350,7 +351,9 @@
       "type": "product-list",
       "settings": {
         "title": "",
-        "product_list": [],
+        "product_list": [
+
+        ],
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,

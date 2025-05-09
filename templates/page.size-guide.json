@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1649806356cc45b7c1": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        "h1 {color: #fff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Shopify_banner_Alice_Tigerlily_Ex.jpg",
+        "mobile_image": "shopify://shop_images/Shopify_banner_Alice_Tigerlily_Ex_f8c65cca-1054-4772-8492-1414b074c342.jpg",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "1649806373bf85f216": {
+      "type": "rich-text",
+      "blocks": {
+        "1649806373e6b805d9-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Sizing Explained",
+            "use_h1": true
+          }
+        },
+        "1649806373e6b805d9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the beautiful things about MahaShe is that our designs are crafted to flatter a wide range of shapes and sizes.</p><p>Made mostly from 100% cotton, there is little room for movement, yet the beautifully tailored cuts ensure a flattering, comfortable fit. This design precision is what gives our pieces their elegant, form-enhancing look.</p><p>Most of our garments are made with preshrunk cotton so you don’t need to worry about unexpected shrinkage after washing. Our cotton naturally stretches slightly with wear, much like a favourite pair of jeans, and gently moulds to your shape over time.</p><p>Our <a href=\"https://mahashe.com/search?type=product&options%5Bprefix%5D=last&q=handloomed\"><span style=\"text-decoration:underline\">handloomed</span></a> cotton styles, which are not pre-shrunk may experience shrinkage during washing, similar to regular cotton fabrics. However, much like denim, handloomed cotton tends to expand back to its original shape with wear. We recommend gently stretching the garment after washing but before drying to help maintain its shape. If you are uncertain about sizing with handloomed cotton, we suggest sizing up to ensure a comfortable fit consistent with your usual MahaShe fit.</p><p>Our <a href=\"https://mahashe.com/collections/stretch-cotton-1\"><span style=\"text-decoration:underline\">stretch cotton</span></a>, provides the perfect blend of comfort and flexibility with 95% cotton and 5% elastane allowing for easy movement while flattering your shape in all the right places. </p><p>Our size runs are from 6 to 18 (XS-XXXL). Exact measurements for each item are listed below the product description; simply click the plus sign next to the <strong>Size & Fit </strong>heading for details.</p><p>If you are unsure of sizing feel free to <a href=\"https://mahashe.com/contact/\"><span style=\"text-decoration:underline\">contact</span></a> us at anytime: <a href=\"https://mahashe.com/contact/\"><span style=\"text-decoration:underline\">info@mahashe.com</span></a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "1649806373e6b805d9-0",
+        "1649806373e6b805d9-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false
+      }
+    },
+    "16498070186b58c453": {
+      "type": "testimonials",
+      "blocks": {
+        "16498070188411106d-0": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Thank you so much for my lovely dress and top, both fitted perfectly! And WOW the speed of delivery was amazing. Very impressed. Will definitely be ordering more items in the future!",
+            "author": "Cath Knipe",
+            "image": "shopify://shop_images/Mob_Aurora_Susanna_Cassia_Ex.jpg",
+            "image_caption": "Shop New Arrivals",
+            "link": "shopify://collections/new-arrivals"
+          }
+        },
+        "16498070188411106d-1": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Thank you once again for a beautifully made dress really love the style and the fit is perfect . I am an older lady but your style and the sizing is just perfect . This is dress number SIX. I have recommended your clothing to lots of people.",
+            "author": "Pam Semmler",
+            "image": "shopify://shop_images/Mob_Aurora_Stevie_rack_shot_Ex_019ab66c-eab2-494d-b7f1-31f54a6d7e5d.jpg",
+            "image_caption": "Shop By Print",
+            "link": "https://mahashe.com/collections/mahashe-prints"
+          }
+        },
+        "testimonial_bbq8KH": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author": "Author's name",
+            "image_caption": "",
+            "link": ""
+          }
+        },
+        "testimonial_eGqjbG": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author": "Author's name",
+            "image_caption": "",
+            "link": ""
+          }
+        },
+        "5d643568-1d4d-4912-9589-3a630706ce01": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial": "I received my order (so quick !) thank you and I’m thrilled to say the dresses I chose fit me perfectly!  I am not usually an on-line shopper as I don’t have a “normal” figure so this is a big deal!",
+            "author": "Kathy Finch",
+            "image": "shopify://shop_images/Mob_Aurora_Men_s_Cassia_Ex_76724e26-d552-4184-a93d-edc168a7de8e.jpg",
+            "image_caption": "Shop Men's",
+            "link": "shopify://collections/mens-1"
+          }
+        }
+      },
+      "block_order": [
+        "16498070188411106d-0",
+        "16498070188411106d-1",
+        "testimonial_bbq8KH",
+        "testimonial_eGqjbG",
+        "5d643568-1d4d-4912-9589-3a630706ce01"
+      ],
+      "settings": {
+        "title": "mahashe customer love",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 30,
+        "quote_text_size_mobile": 20,
+        "image_shape": "square",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "1649806356cc45b7c1",
+    "1649806373bf85f216",
+    "16498070186b58c453",
+    "main"
+  ]
+}

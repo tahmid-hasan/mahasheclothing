@@ -14,41 +14,32 @@
     "cross-page-promos": {
       "type": "cross-page-promos",
       "blocks": {
-        "1478526632862": {
-          "type": "icon",
-          "settings": {
-            "icon": "truck",
-            "text": "Free delivery!",
-            "link_url": ""
-          }
-        },
         "1478526645605": {
           "type": "icon",
           "settings": {
-            "icon": "map_pin",
-            "text": "Your nearest store",
+            "icon": "heart",
+            "text": "Ethically Made",
             "link_url": ""
           }
         },
         "1478526647261": {
           "type": "icon",
           "settings": {
-            "icon": "price_tag",
-            "text": "Gift cards",
+            "icon": "leaf",
+            "text": "Natural Fabrics",
             "link_url": ""
           }
         },
         "1478527611164": {
           "type": "icon",
           "settings": {
-            "icon": "heart",
-            "text": "Student discount",
+            "icon": "truck",
+            "text": "Free Shipping over $150",
             "link_url": ""
           }
         }
       },
       "block_order": [
-        "1478526632862",
         "1478526645605",
         "1478526647261",
         "1478527611164"
@@ -58,32 +49,46 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "1601308717434": {
+        "b4914348-f4e5-46e5-b476-3a93f4822fbc": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "image_width": 150,
+            "title": "WITH LOVE",
+            "text": "<p>MahaShe </p>",
+            "image_width": 100,
             "show_social_icons": true,
             "soc_icons_large": false
           }
         },
-        "1601308671932": {
+        "1601374650582": {
           "type": "menu",
           "settings": {
-            "menu": "footer"
+            "title": "Customer Care",
+            "menu": "customer-care"
           }
         },
-        "1601308656020": {
+        "822a0632-d409-43e2-b37e-1631de2cf3b1": {
+          "type": "menu",
+          "settings": {
+            "title": "Discover",
+            "menu": "discover"
+          }
+        },
+        "1601374580731": {
           "type": "newsletter",
           "settings": {
-            "show_social_icons": false,
+            "title": "Enjoy 10% off your first order",
+            "text": "<p>Sign up for new collection launches, sales, VIP specials & all wonderful things MahaShe.</p><p>After you have signed up you will receive an email with your 10% discount code.</p><p><strong>Please Note:</strong> If you have already subscribed to our emails you will not receive an email with the code.</p>",
+            "show_social_icons": true,
             "soc_icons_large": false
           }
         }
       },
       "block_order": [
-        "1601308717434",
-        "1601308671932",
-        "1601308656020"
+        "b4914348-f4e5-46e5-b476-3a93f4822fbc",
+        "1601374650582",
+        "822a0632-d409-43e2-b37e-1631de2cf3b1",
+        "1601374580731"
       ],
       "settings": {
         "lower_menu": "",
