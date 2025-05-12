@@ -18,9 +18,9 @@
           "type": "announcement",
           "settings": {
             "text": "FREE SHIPPING FOR ALL AUSTRALIAN & NZ ORDERS OVER $150 | 30 DAY RETURNS",
-            "link": "shopify://pages/wholesale",
+            "link": "",
             "text_wholesale": "Easy re-orders ~  Maximum postage price capped at $40",
-            "link_wholesale": "",
+            "link_wholesale": "shopify://pages/wholesale",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",

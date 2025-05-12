@@ -20,8 +20,10 @@
             "slide_link": "",
             "subheading": "NEW ARRIVALS ONLINE NOW",
             "title": "AURORA",
+            "heading_max_width": 15,
             "title_size": 60,
             "title_size_mobile": 30,
+            "use_h1": false,
             "text": "<p></p><p>AUTUMN/WINTER 25</p><p></p>",
             "enlarge_text": true,
             "button_label_1": "Shop NEW",
@@ -39,8 +41,10 @@
             "slide_link": "",
             "subheading": "",
             "title": "AURORA",
+            "heading_max_width": 15,
             "title_size": 64,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "<p>Available Now</p>",
             "enlarge_text": false,
             "button_label_1": "SHOP NEW",
@@ -58,8 +62,10 @@
             "slide_link": "",
             "subheading": "Fall in love with our new styles",
             "title": "New Reversible Jacket",
+            "heading_max_width": 15,
             "title_size": 90,
             "title_size_mobile": 42,
+            "use_h1": false,
             "text": "<p>TWO IN ONE</p>",
             "enlarge_text": false,
             "button_label_1": "VIEW HERE",
@@ -77,8 +83,10 @@
             "slide_link": "shopify://collections/hand-loomed-cotton",
             "subheading": "",
             "title": "SHOP BY PRINT",
+            "heading_max_width": 15,
             "title_size": 90,
             "title_size_mobile": 42,
+            "use_h1": false,
             "text": "<p>Find the perfect styles in all your favourite prints</p>",
             "enlarge_text": true,
             "button_label_1": "EXPLORE HERE",
@@ -96,8 +104,10 @@
             "slide_link": "",
             "subheading": "100% cotton corduroy",
             "title": "Buttery Soft Cotton Corduroy",
+            "heading_max_width": 15,
             "title_size": 90,
             "title_size_mobile": 42,
+            "use_h1": false,
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Shop Cotton Corduroy",
@@ -114,8 +124,10 @@
             "slide_link": "",
             "subheading": "Tell your story",
             "title": "Two line\nslide heading",
+            "heading_max_width": 15,
             "title_size": 84,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "<p>And optional subtext</p>",
             "enlarge_text": true,
             "button_label_1": "Shop this",
@@ -133,8 +145,10 @@
             "slide_link": "",
             "subheading": "100% Cotton",
             "title": "NEW FABRIC",
+            "heading_max_width": 15,
             "title_size": 64,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "<p>Yarn-Dyed White Check</p>",
             "enlarge_text": true,
             "button_label_1": "EXPLORE HERE",
@@ -153,8 +167,10 @@
             "slide_link": "shopify://collections/all-flash-sale",
             "subheading": "AUTUMN EQUINOX",
             "title": "SALE",
+            "heading_max_width": 15,
             "title_size": 112,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "<p>UP TO 60% OFF</p><p>Limited Time Only</p>",
             "enlarge_text": true,
             "button_label_1": "SHOP NOW",
@@ -182,8 +198,11 @@
         "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "shadow",
+        "transition": "fade",
+        "navigation": "arrows",
         "autoplay": false,
-        "autoplay_speed": 4
+        "autoplay_speed": 4,
+        "accessibility_info": ""
       }
     },
     "1635927863703110df": {
@@ -218,7 +237,8 @@
       "settings": {
         "height": "medium",
         "text_alignment": "center",
-        "full_width": false
+        "full_width": false,
+        "color_scheme": "default"
       }
     },
     "featured_collection_RbQcDq": {
@@ -231,6 +251,7 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true
       }
@@ -246,8 +267,10 @@
             "slide_link": "",
             "subheading": "",
             "title": "",
+            "heading_max_width": 15,
             "title_size": 84,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "",
             "enlarge_text": true,
             "button_label_1": "",
@@ -265,8 +288,10 @@
             "slide_link": "",
             "subheading": "",
             "title": "Natural Fibres",
+            "heading_max_width": 15,
             "title_size": 84,
             "title_size_mobile": 46,
+            "use_h1": false,
             "text": "",
             "enlarge_text": true,
             "button_label_1": "",
@@ -289,8 +314,11 @@
         "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "shadow",
+        "transition": "fade",
+        "navigation": "arrows",
         "autoplay": true,
-        "autoplay_speed": 7
+        "autoplay_speed": 7,
+        "accessibility_info": ""
       }
     },
     "16359278867b92de38": {
@@ -300,8 +328,10 @@
         "image": "shopify://shop_images/Ziggy_Poppy_Peach_2.jpg",
         "image_2": "shopify://shop_images/Kalina_dress_Violet_-_4x5_00abb0e1-0633-44b0-8dbc-d7fa74827dc6.jpg",
         "image_width": 700,
+        "image_link": "",
         "image_position": "left",
-        "text_alignment": "left"
+        "text_alignment": "left",
+        "color_scheme": "default"
       }
     },
     "16359278676808bea5": {
@@ -313,19 +343,81 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true
       }
     },
     "16359279164ff7d3f3": {
       "type": "gallery",
+      "blocks": {
+        "media_wyGgRX": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Mob_Aurora_Brianna_Cornflower_Ex.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "SHOP DRESSES",
+            "link": "shopify://collections/all-dresses",
+            "text_alignment": "center center"
+          }
+        },
+        "media_tBy6ad": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Mob_Aurora_Audrey_Luna_Ex.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "SHOP LATEST",
+            "link": "shopify://collections/new-arrivals",
+            "text_alignment": "center center"
+          }
+        },
+        "media_3qMQ6a": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Mob_Aurora_Zuri_Lazuli_Ex.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "SHOP JACKETS",
+            "link": "shopify://collections/jackets-1",
+            "text_alignment": "center center"
+          }
+        },
+        "media_Vwbpn7": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Mob_Aurora_Rack_2nd_Drop_Ex.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "SHOP BY PRINT",
+            "link": "shopify://collections/mahashe-prints",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "media_wyGgRX",
+        "media_tBy6ad",
+        "media_3qMQ6a",
+        "media_Vwbpn7"
+      ],
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
         "desktop_image_height": 850,
         "mobile_image_height": 480,
         "title_size": 30,
         "title_size_mobile": 22,
         "enable_margin": true,
+        "enable_row_spacing": true,
         "full_width": true,
+        "color_scheme": "default",
         "enable_carousel": false,
         "overlay_style": "full image-overlay--bg-shadow",
         "button_style": "secondary"
@@ -338,28 +430,36 @@
           "type": "collection",
           "settings": {
             "collection": "mahashe-prints",
-            "image": "shopify://shop_images/230823_MAHASHE_Campaign_16_3852_8ecf6a6f-807e-448f-99fe-184bb85ec719.jpg"
+            "image": "shopify://shop_images/230823_MAHASHE_Campaign_16_3852_8ecf6a6f-807e-448f-99fe-184bb85ec719.jpg",
+            "subheading": "",
+            "button_label": ""
           }
         },
         "e3f08231-94c0-43ec-b8d7-ee219c20dc87": {
           "type": "collection",
           "settings": {
             "collection": "basics",
-            "image": "shopify://shop_images/230823_MAHASHE_Campaign_14_3707_712d80c3-2dc1-4bc7-a4a1-2ba7d59beff7.jpg"
+            "image": "shopify://shop_images/230823_MAHASHE_Campaign_14_3707_712d80c3-2dc1-4bc7-a4a1-2ba7d59beff7.jpg",
+            "subheading": "",
+            "button_label": ""
           }
         },
         "003342c2-b344-4fbb-aded-4d5f4957937f": {
           "type": "collection",
           "settings": {
             "collection": "outlet",
-            "image": "shopify://shop_images/230823_MAHASHE_Campaign_13_3675.jpg"
+            "image": "shopify://shop_images/230823_MAHASHE_Campaign_13_3675.jpg",
+            "subheading": "",
+            "button_label": ""
           }
         },
         "1c2abb7d-238b-47a7-99ee-d7c97b81e54f": {
           "type": "collection",
           "settings": {
             "collection": "poppy-peach",
-            "image": "shopify://shop_images/Wildflower_Homepage.jpg"
+            "image": "shopify://shop_images/Wildflower_Homepage.jpg",
+            "subheading": "",
+            "button_label": ""
           }
         }
       },
@@ -374,7 +474,17 @@
         "title": "Wildflower",
         "enable_carousel": false,
         "grid": 4,
-        "full_width": true
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "32294bb5-e8af-4dfc-a20f-b8e56b48a17a": {
@@ -386,6 +496,7 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true
       }
@@ -472,6 +583,7 @@
         "quote_text_size": 22,
         "quote_text_size_mobile": 19,
         "image_shape": "square",
+        "color_scheme": "default",
         "autoplay": true,
         "autoplay_speed": 5
       }
@@ -480,12 +592,17 @@
       "type": "gallery",
       "disabled": true,
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
         "desktop_image_height": 800,
         "mobile_image_height": 500,
         "title_size": 22,
         "title_size_mobile": 20,
         "enable_margin": true,
+        "enable_row_spacing": true,
         "full_width": false,
+        "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "full",
         "button_style": "secondary"
@@ -501,29 +618,94 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true
       }
     },
     "1649852711a55f4bdd": {
       "type": "image-with-text",
+      "blocks": {
+        "heading_BWGfde": {
+          "type": "heading",
+          "settings": {
+            "title": "Better for the planet",
+            "use_h1": false
+          }
+        },
+        "text_ChKY7Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Committed to sustainability from the ground up. From compostable garment bags and reusable POLLAST!C post satchels to natural fibres, and timeless styles. We’re continually working towards providing quality clothing with the least environmental and social impact possible.</p>",
+            "enlarge_text": false
+          }
+        },
+        "button_EpVc6E": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/our-story",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BWGfde",
+        "text_ChKY7Y",
+        "button_EpVc6E"
+      ],
       "settings": {
         "image": "shopify://shop_images/Compost_Pack_2_edb7a435-de8e-461f-9903-46fd8ec4077d.jpg",
         "image_width": 700,
+        "image_link": "",
         "image_position": "right",
-        "text_alignment": "center"
+        "text_alignment": "center",
+        "color_scheme": "default"
       }
     },
     "8edb7806-7df0-4818-83cb-fd35cdf1bd3f": {
       "type": "gallery",
-      "disabled": true,
+      "blocks": {
+        "media_tyXgG6": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Mob_Aurora_Men_s_Ocean_Ex.jpg",
+            "enlarge_media": false,
+            "subheading": "Gallery",
+            "title": "Tell your story",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_mVKbVx": {
+          "type": "media",
+          "settings": {
+            "enlarge_media": false,
+            "subheading": "Gallery",
+            "title": "Tell your story",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "media_tyXgG6",
+        "media_mVKbVx"
+      ],
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "adapt",
         "desktop_image_height": 800,
         "mobile_image_height": 480,
         "title_size": 30,
         "title_size_mobile": 20,
         "enable_margin": false,
+        "enable_row_spacing": true,
         "full_width": true,
+        "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "full",
         "button_style": "secondary"
@@ -539,6 +721,7 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true
       }
@@ -549,6 +732,7 @@
         "163592857728b8bdc2-0": {
           "type": "text_block",
           "settings": {
+            "enable_media": true,
             "image": "shopify://shop_images/Maha-Fabric-Summer23-7.jpg",
             "title": "Handloom",
             "text": "<p>We are so proud to be using this handmade fabric & supporting artisans keep this ancient tradition alive. Handloom is an ancient part of Indian culture. Finding these crafts is like finding hidden gems.</p>",
@@ -559,6 +743,7 @@
         "163592857728b8bdc2-1": {
           "type": "text_block",
           "settings": {
+            "enable_media": true,
             "image": "shopify://shop_images/Maha-Fabric-Summer23.jpg",
             "title": "Our Cotton",
             "text": "<p>Our most used fabric is an incredibly high quality, durable cotton. This is what we are known for. We still have customers from over 15 years ago still wearing our first collection dresses!</p>",
@@ -569,6 +754,7 @@
         "163592857728b8bdc2-2": {
           "type": "text_block",
           "settings": {
+            "enable_media": true,
             "image": "shopify://shop_images/Maha-Fabric-Summer23-2.jpg",
             "title": "Cotton Corduroy",
             "text": "<p>We source and work with a high quality cotton corduroy.  You will feel the difference when you wear it. It softens and moulds to your body with age, making it more comfortable by the day. </p>",
@@ -585,20 +771,28 @@
       "disabled": true,
       "settings": {
         "title": "SHOP BY PRINT",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
         "text_alignment": "left",
-        "button_style": "secondary"
+        "button_style": "secondary",
+        "color_scheme": "default"
       }
     },
     "gallery_GLy8GC": {
       "type": "gallery",
       "disabled": true,
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
         "desktop_image_height": 460,
         "mobile_image_height": 400,
         "title_size": 30,
         "title_size_mobile": 22,
         "enable_margin": true,
+        "enable_row_spacing": true,
         "full_width": false,
+        "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "full",
         "button_style": "primary"
@@ -607,12 +801,17 @@
     "6f2a4e53-f995-4429-a3ad-a0b1f6727011": {
       "type": "gallery",
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
         "desktop_image_height": 800,
         "mobile_image_height": 500,
         "title_size": 22,
         "title_size_mobile": 20,
         "enable_margin": true,
+        "enable_row_spacing": true,
         "full_width": false,
+        "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "full",
         "button_style": "secondary"
@@ -623,8 +822,10 @@
       "settings": {
         "image": "shopify://shop_images/Mob_Aurora_Stevie_Check_Ex_efb71f61-ecf9-4d66-92c0-d1abdf92cb66.jpg",
         "image_width": 700,
+        "image_link": "",
         "image_position": "left",
-        "text_alignment": "left"
+        "text_alignment": "left",
+        "color_scheme": "default"
       }
     },
     "e9035575-9d98-40ea-83c3-34b4a1bd256a": {
@@ -654,7 +855,8 @@
       "settings": {
         "height": "small",
         "text_alignment": "center",
-        "full_width": true
+        "full_width": true,
+        "color_scheme": "default"
       }
     },
     "9e2d0695-06ac-4652-a909-914a4fbaa349": {
@@ -667,6 +869,7 @@
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
+        "color_scheme": "default",
         "show_view_all": false,
         "full_width": true
       }
@@ -674,12 +877,17 @@
     "b1f95003-196b-4314-b5ac-850dce433760": {
       "type": "gallery",
       "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
         "desktop_image_height": 800,
         "mobile_image_height": 580,
         "title_size": 30,
         "title_size_mobile": 20,
         "enable_margin": false,
+        "enable_row_spacing": true,
         "full_width": true,
+        "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "full",
         "button_style": "secondary"
@@ -711,14 +919,16 @@
         "af1edead-701d-4079-9736-d6a3a43d163d"
       ],
       "settings": {
-        "full_width": false
+        "full_width": false,
+        "show_space": true
       }
     },
     "16489860542f68f76c": {
       "type": "newsletter",
       "settings": {
         "title": "Sign up to our newsletter",
-        "subheading": "<p>Be the first to know about all things MahaShe. New seasons, products and sales.</p>"
+        "subheading": "<p>Be the first to know about all things MahaShe. New seasons, products and sales.</p>",
+        "color_scheme": "default"
       }
     },
     "1635928697c562053a": {
@@ -726,6 +936,7 @@
       "disabled": true,
       "settings": {
         "full_width": true,
+        "color_scheme": "1",
         "heading": "Our Boutique",
         "address": "<p>14a The Terrace<br/>Brunswick Heads NSW</p><p>Open 7 Days</p><p>10am - 4pm</p>",
         "button": "Directions",
@@ -734,6 +945,7 @@
         "feature_image": "shopify://shop_images/Dusk_Top_Our_Story_2.jpg",
         "map_address": "14a The terrace Brunswick Heads NSW 2483",
         "api_key": "AIzaSyDuYjW-OVaw-cl2-Nacoz-qx6PggPa5S9o",
+        "map_type": "embed",
         "map_style": "silver"
       }
     }
